@@ -9,10 +9,25 @@ const MyNavbar = () => {
     setIsDropdownOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="navbar navbar-dark fixed-top">
       <div className="container-fluid">
-        <Link to="/">Kentaro</Link>
+        <Link
+          to="/"
+          onClick={() => {
+            setIsDropdownOpen(false);
+            scrollToTop();
+          }}
+        >
+          Kentaro
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -29,7 +44,7 @@ const MyNavbar = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-300}
                 duration={500}
                 className="nav-link"
                 onClick={handleDropdownItemClick}
@@ -42,7 +57,7 @@ const MyNavbar = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-250}
                 duration={500}
                 className="nav-link"
                 onClick={handleDropdownItemClick}
