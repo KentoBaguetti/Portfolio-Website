@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
+
+* {
+  font-family: "Protest Strike", sans-serif;
+  background-color: #012a4a;
+  color: #a9d6e5;
+}
+/* Navbar */
+
+.navbar {
+  padding: 20;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+
+.navbar h1 {
+  color: #a9d6e5;
+}
+
+.navbar .links {
+  color: #a9d6e5;
+  margin-left: auto;
+  transform: scale(1.25);
+}
+
+.navbar a {
+  color: #a9d6e5;
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  justify-content: center;
+}
+
+.navbar a:hover {
+  color: #01497c;
+}
+
+/* Home */
+.home-container {
+  margin-top: 5%;
+}
+
+.home-title {
+  font-size: 448px;
+}
+
+.lead {
+  color: #61a5c2;
+}
+
+.zoomable-image {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.1);
+}
+
+/* Highlight cursor */
+
+.highlight-cursor {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: lighten;
+  filter: blur(40px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.highlight-cursor:hover {
+  animation: pulse 0.5s infinite;
+}
+
+/* About Section */
+.about {
+  margin-top: 100px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #61a5c2;
+}
+
+.about-body {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Projects */
+
+.projects {
+  margin-top: 10%;
+}
+
+.project-headtitle {
+  margin-bottom: 2%;
+  color: #61a5c2;
+  text-align: center;
+}
+
+.project-title {
+  color: #a9d6e5;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.project-body {
+  color: #61a5c2;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+
+.contact {
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.contact-header {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.contact-header h2 {
+  font-size: 70px;
+}
+
+.contact-header p {
+  color: #61a5c2;
+  font-size: 30px;
+}
+
+.email p {
+  font-size: 60px;
+  color: #a9d6e5;
+}
+
+.social-header {
+  text-decoration: underline;
+}
+
+.bi {
+  font-size: 60px;
+}
+
+.list-inline-item.social {
+  margin-right: 10px;
+}
+
+.list-inline-item.social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-inline-item.social a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  color: #a9d6e5;
+}
+
+.footer .text-muted {
+  color: #a9d6e5 !important;
+}
+
+.footer-container {
+  columns: #a9d6e5;
+}
