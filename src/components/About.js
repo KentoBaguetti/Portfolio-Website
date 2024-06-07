@@ -12,8 +12,8 @@ const About = () => {
         product development.
       </p>
       <p className="about-body">
-        I currently learning about how to build scalable and efficient backend
-        software as well as developing machine learning models.
+        I am currently learning about how to build scalable and efficient
+        backend software as well as developing machine learning models.
       </p>
     </div>
   );
