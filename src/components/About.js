@@ -15,6 +15,11 @@ const About = () => {
         I am currently learning about how to build scalable and efficient
         backend software as well as developing machine learning models.
       </p>
+      <p>
+        I am happy to learn and experience new things that interest me!
+        Currently looking for <span className="bold-word">2025</span>{" "}
+        opportunities!
+      </p>
     </div>
   );
 };

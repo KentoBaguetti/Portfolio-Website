@@ -166,6 +166,13 @@
   line-height: 1.5;
 }
 
+.bold-word {
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+  color: #caf0f8;
+}
+
 /* Work Experience */
 .workExperience {
   max-width: 800px;
