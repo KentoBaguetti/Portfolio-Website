@@ -5,6 +5,7 @@
   background-color: #012a4a;
   color: #a9d6e5;
 }
+
 /* Navbar */
 
 .navbar {
@@ -60,6 +61,12 @@
 
 .zoomable-image:hover {
   transform: scale(1.1);
+}
+
+/* Type */
+.typewriter-text span {
+  font-size: 24px;
+  color: #61a5c2;
 }
 
 /* Highlight cursor */

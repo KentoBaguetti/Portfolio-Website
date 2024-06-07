@@ -1,4 +1,5 @@
 import logo from "../assets/kenvlogo2.png";
+import Type from "./Type";
 
 const Home = () => {
   return (
@@ -9,9 +10,10 @@ const Home = () => {
         </div>
         <div className="col-lg-6 mx-auto">
           <h1 className="home-title display-2 lh-1 mb-3">Kentaro Barnes</h1>
-          <p className="home-body lead">
+          <Type />
+          {/* <p className="home-body lead">
             Software Engineer & Computer Science Student
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
