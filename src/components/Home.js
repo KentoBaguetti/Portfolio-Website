@@ -1,4 +1,4 @@
-import logo from "../assets/kenvlogo2.png";
+import logo from "../assets/kenvlogo2.jpeg";
 import Type from "./Type";
 
 const Home = () => {
