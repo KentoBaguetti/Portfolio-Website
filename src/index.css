@@ -109,12 +109,48 @@
   animation: pulse 0.5s infinite;
 }
 
+/* Personal Info Page */
+.btn-container {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pi-btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: solid 1px #61a5c2;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pi-btn:hover {
+  background-color: #01497c;
+  color: #a9d6e5;
+  transform: scale(1.1);
+}
+
+.pi-btn.active {
+  background-color: #a9d6e5;
+  color: #01497c; /* Highlight the active button with a different color */
+}
+
+.pi-title {
+  font-size: 40px;
+  margin-top: 2%;
+  margin-bottom: 10px;
+  color: #61a5c2;
+  text-align: center;
+}
+
 /* About Section */
 .about {
-  margin-top: 100px;
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 10%;
+
   padding: 20px;
   text-align: center;
 }
@@ -128,6 +164,56 @@
 .about-body {
   font-size: 18px;
   line-height: 1.5;
+}
+
+/* Work Experience */
+.workExperience {
+  max-width: 800px;
+  margin: 0 auto;
+
+  padding: 20px;
+}
+
+.workList {
+  margin: 0 auto;
+  margin-top: 3%;
+  text-align: left;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.workList h4,
+.workList p {
+  margin: 10px 0;
+}
+
+.companyName {
+  color: #61a5c2;
+}
+
+.swe-role {
+  font-style: italic;
+}
+
+/* Education */
+.educationList {
+  margin: 0 auto;
+  margin-top: 3%;
+  text-align: left;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.educationList li {
+  list-style: none;
+}
+
+.degree {
+  font-style: italic;
+}
+
+.schoolname {
+  color: #61a5c2;
 }
 
 /* Projects */

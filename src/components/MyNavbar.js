@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const MyNavbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,6 +13,14 @@ const MyNavbar = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  };
+
+  const handleScroll = (target) => {
+    scroll.scrollTo(target, {
+      duration: 0,
+      delay: 0,
+      smooth: "linear",
     });
   };
 
@@ -41,11 +49,11 @@ const MyNavbar = () => {
           <ul className="navbar-nav me-auto mb-2">
             <li className="nav-item">
               <ScrollLink
-                to="about"
+                to="personalInfo"
                 spy={true}
                 smooth={true}
                 offset={-300}
-                duration={500}
+                duration={0} // Set duration to 0 for instant scrolling
                 className="nav-link"
                 onClick={handleDropdownItemClick}
               >
@@ -57,8 +65,8 @@ const MyNavbar = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-250}
-                duration={500}
+                offset={-170}
+                duration={0} // Set duration to 0 for instant scrolling
                 className="nav-link"
                 onClick={handleDropdownItemClick}
               >
@@ -71,7 +79,7 @@ const MyNavbar = () => {
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
+                duration={0} // Set duration to 0 for instant scrolling
                 className="nav-link"
                 onClick={handleDropdownItemClick}
               >

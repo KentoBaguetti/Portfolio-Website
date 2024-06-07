@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import HighlightCursor from "./components/HighlightCursor";
+import PersonalInfo from "./components/PersonalInfo";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -14,7 +15,7 @@ function App() {
       <div className="App">
         <MyNavbar />
         <Home />
-        <About />
+        <PersonalInfo />
         <Projects />
         <Contact />
         <Footer />
