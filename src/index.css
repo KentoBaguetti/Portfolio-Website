@@ -39,6 +39,11 @@
   color: #01497c;
 }
 
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
 /* Home */
 .home-container {
   margin-top: 5%;
