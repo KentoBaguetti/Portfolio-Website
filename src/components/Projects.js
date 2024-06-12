@@ -33,7 +33,7 @@ const projects = [
   {
     title: "Blog App",
     description:
-      "Blog web app built using React for the frontend and node + express + axios for the backend.",
+      "A CRUD blog web app built using React for the frontend and node + express + axios for the backend.",
     image: blogpic,
     link: "https://github.com/KentoBaguetti/React-Blog-App",
   },
