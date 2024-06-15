@@ -223,6 +223,28 @@
   color: #61a5c2;
 }
 
+/* Skills */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skill-list {
+  margin: 0 auto;
+  margin-top: 3%;
+  text-align: left;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.skill-header {
+  color: #61a5c2;
+}
+
 /* Projects */
 .projects {
   margin-top: 10%;

@@ -1,6 +1,7 @@
 import About from "./About";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
+import Skills from "./Skills";
 import { useState } from "react";
 
 const PersonalInfo = () => {
@@ -14,6 +15,8 @@ const PersonalInfo = () => {
         return <WorkExperience />;
       case "education":
         return <Education />;
+      case "skills":
+        return <Skills />;
       default:
         return null;
     }
@@ -44,6 +47,13 @@ const PersonalInfo = () => {
           value="education"
         >
           Education
+        </button>
+        <button
+          onClick={() => setActiveComponent("skills")}
+          className={`pi-btn ${activeComponent === "skills" ? "active" : ""}`}
+          value="skill"
+        >
+          Skills
         </button>
       </div>
       {renderComponent()}
