@@ -10,7 +10,10 @@ const Home = () => {
           <img src={kenImg} className="zoomable-image" alt="Boku da" />
         </div>
         <div className="col-lg-6 mx-auto">
-          <h1 className="home-title display-2 lh-1 mb-3">Kentaro Barnes</h1>
+          <h2 className="home-title-small display-4 lh-1 mb-3">Hello, I'm</h2>
+          <h1 className="home-title display-2 lh-1 mb-3">
+            <strong>Kentaro Barnes</strong>
+          </h1>
           <Type />
           {/* <p className="home-body lead">
             Software Engineer & Computer Science Student

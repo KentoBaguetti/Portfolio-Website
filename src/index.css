@@ -53,8 +53,9 @@
   font-size: 448px;
 }
 
-.lead {
+.home-title-small {
   color: #61a5c2;
+  font-size: 300px;
 }
 
 .zoomable-image {
