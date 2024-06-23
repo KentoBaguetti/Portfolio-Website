@@ -40,7 +40,7 @@ const projects = [
   {
     title: "Maze Navigation Visualizer",
     description:
-      "Python maze search visualizer using BFS and backtracking algorithms",
+      "Python maze search visualizer using the algorithms BFS, Backtracking and Dijkstras",
     image: mazepic,
     link: "https://github.com/KentoBaguetti/Maze-Solver",
   },
