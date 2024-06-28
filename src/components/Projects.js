@@ -8,7 +8,7 @@ import netflixLogo from "../assets/netflixLogo.jpeg";
 import foodpic from "../assets/foodpic.jpg";
 import blogpic from "../assets/blogapp.png";
 import mazepic from "../assets/mazeIMG.png";
-import debatebotpic from "../assets/debatebot.jpeg";
+import debatebotpic from "../assets/animeLawyerMemeKing.webp";
 
 const projects = [
 	{
