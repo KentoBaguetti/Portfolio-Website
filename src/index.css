@@ -2,51 +2,109 @@
 
 * {
   font-family: "Protest Strike", sans-serif;
-  background-color: #012a4a;
-  color: #a9d6e5;
+  background-color: #FFFFFF;
+  color: #333333;
 }
 
 /* Navbar */
-
-.navbar {
-  padding: 20;
-  display: flex;
-  align-items: center;
-  max-width: 100;
-  margin: 0 auto;
-  border-bottom: 1px solid #01497c;
-}
-
-.navbar h1 {
-  color: #a9d6e5;
-}
-
-.navbar .links {
-  color: #a9d6e5;
-  margin-left: auto;
-  transform: scale(1.25);
-}
-
-.navbar a {
-  color: #a9d6e5;
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-  justify-content: center;
-}
-
-.navbar a:hover {
-  color: #01497c;
-}
-
-.navbar-toggler {
+.navbar-transparent {
+  background-color: transparent;
   border: none;
-  background: transparent;
+  box-shadow: none;
+  padding: 0; 
+}
+
+/* Styling for the main bubble */
+.bubble {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; 
+  color: #000; 
+  padding: 10px 20px;
+  border-radius: 50px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1010; 
+  text-align: center; 
+  line-height: 1.2;
+}
+
+/* Bubble hover effect */
+.bubble:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Dropdown menu styling */
+.dropdown-menu-bubble {
+  position: absolute;
+  top: 70px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out; 
+  z-index: 1000; 
+  background-color: transparent; 
+  padding: 0;
+  margin: 0; 
+  border: none; 
+}
+
+/* Show dropdown menu */
+.dropdown-menu-bubble.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Container for the bubble items */
+.bubble-container {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+  padding: 0;
+  margin: 0;
+}
+
+/* Bubble items in the dropdown menu */
+.bubble-item {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #ffffff; 
+  color: #000; 
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap; 
+  border: none; 
+  margin: 0; 
+  width: 90px; 
+  height: 40px; 
+  line-height: 1.2; 
+}
+
+/* Hover effect for dropdown bubbles */
+.bubble-item:hover {
+  transform: scale(1.05);
+}
+
+/* Additional reset styles */
+.bubble-container,
+.dropdown-menu-bubble {
+  background-color: transparent !important; 
 }
 
 /* Home */
 .home-container {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .home-title {
@@ -54,7 +112,7 @@
 }
 
 .home-title-small {
-  color: #61a5c2;
+  color: #333333;
   font-size: 300px;
 }
 
@@ -62,17 +120,15 @@
   transition: transform 0.3s ease-in-out;
   transform: scale(1);
   max-width: 100%;
-  max-height: 400px;
+  max-height: 550px;
+  border-radius: 20px;
 }
 
-.zoomable-image:hover {
-  transform: scale(1.1);
-}
 
 /* Type */
 .typewriter-text span {
   font-size: 24px;
-  color: #61a5c2;
+  color: #333333;
 }
 
 /* Highlight cursor */
@@ -121,7 +177,7 @@
 .pi-btn {
   margin-left: 5px;
   margin-right: 5px;
-  border: solid 1px #61a5c2;
+  border: solid 1px #333333;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -129,21 +185,23 @@
 }
 
 .pi-btn:hover {
-  background-color: #01497c;
-  color: #a9d6e5;
+  background-color: #706C61;
+  border-color: #706C61;
+  color: #FFFFFF;
   transform: scale(1.1);
 }
 
 .pi-btn.active {
-  background-color: #a9d6e5;
-  color: #01497c; /* Highlight the active button with a different color */
+  background-color: #706C61;
+  border-color: #706C61;
+  color: #FFFFFF; 
 }
 
 .pi-title {
   font-size: 40px;
   margin-top: 2%;
   margin-bottom: 10px;
-  color: #61a5c2;
+  color: #333333;
   text-align: center;
 }
 
@@ -159,7 +217,7 @@
 .about-title {
   font-size: 40px;
   margin-bottom: 10px;
-  color: #61a5c2;
+  color: #333333;
 }
 
 .about-body {
@@ -171,7 +229,7 @@
   font-size: larger;
   font-style: italic;
   font-weight: bold;
-  color: #caf0f8;
+  color: #000;
 }
 
 /* Work Experience */
@@ -196,7 +254,7 @@
 }
 
 .companyName {
-  color: #61a5c2;
+  color: #706C61;
 }
 
 .swe-role {
@@ -221,7 +279,7 @@
 }
 
 .schoolname {
-  color: #61a5c2;
+  color: #706C61;
 }
 
 /* Skills */
@@ -243,7 +301,7 @@
 }
 
 .skill-header {
-  color: #61a5c2;
+  color: #706C61;
 }
 
 /* Projects */
@@ -254,20 +312,20 @@
 
 .project-headtitle {
   margin-bottom: 2%;
-  color: #61a5c2;
+  color: #333333;
   text-align: center;
   font-size: 1.8rem;
 }
 
 .project-title {
-  color: #a9d6e5;
+  color: #333333;
   font-style: italic;
   text-decoration: underline;
   font-size: 1.2rem;
 }
 
 .project-body {
-  color: #61a5c2;
+  color: #000;
   font-size: 1rem;
 }
 
@@ -290,12 +348,16 @@
 }
 
 .card {
-  transition: transform 0.3s ease-in-out;
+  border: 2px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
   margin: 10px;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .slick-prev,
@@ -326,6 +388,7 @@
   }
 }
 
+
 /* Contact */
 
 .contact {
@@ -344,13 +407,13 @@
 }
 
 .contact-header p {
-  color: #61a5c2;
+  color: #333333;
   font-size: 30px;
 }
 
 .email p {
   font-size: 60px;
-  color: #a9d6e5;
+  color: #000;
 }
 
 .social-header {
@@ -412,13 +475,13 @@
 
 .footer {
   text-align: center;
-  color: #a9d6e5;
+  color: #333333;
 }
 
 .footer .text-muted {
-  color: #a9d6e5 !important;
+  color: #333333 !important;
 }
 
 .footer-container {
-  columns: #a9d6e5;
+  columns: #333333;
 }

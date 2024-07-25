@@ -25,6 +25,7 @@ const PersonalInfo = () => {
   return (
     <div className="personalInfo">
       <div className="btns-pInfo btn-container">
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => setActiveComponent("about")}
           className={`pi-btn ${activeComponent === "about" ? "active" : ""}`}
@@ -32,6 +33,7 @@ const PersonalInfo = () => {
         >
           About
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => setActiveComponent("work")}
           className={`pi-btn ${activeComponent === "work" ? "active" : ""}`}
@@ -39,6 +41,7 @@ const PersonalInfo = () => {
         >
           Work Experience
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => setActiveComponent("education")}
           className={`pi-btn ${
@@ -48,6 +51,7 @@ const PersonalInfo = () => {
         >
           Education
         </button>
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
         <button
           onClick={() => setActiveComponent("skills")}
           className={`pi-btn ${activeComponent === "skills" ? "active" : ""}`}
