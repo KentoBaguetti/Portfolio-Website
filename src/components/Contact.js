@@ -16,7 +16,6 @@ const Contact = () => {
 
       <div className="row mt-4">
         <div className="col">
-          <h3 className="social-header">Social Media</h3>
           <ul className="list-inline">
             <li className="list-inline-item social">
               <svg
