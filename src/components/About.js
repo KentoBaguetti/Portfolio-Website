@@ -8,6 +8,7 @@ const About = () => {
       </p>
       <p className="about-body">
         I am a Software Engineering Intern at ConsignAI developing backend
+        solutions and a Computer Science Student at the University of British
         Columbia
       </p>
       <p className="about-body">
