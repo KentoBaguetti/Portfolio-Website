@@ -469,12 +469,6 @@
   .list-inline-item.social a {
     font-size: 20px;
   }
-
-  .social-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 /* Footer */
