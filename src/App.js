@@ -1,6 +1,6 @@
 import MyNavbar from "./components/MyNavbar";
 import Home from "./components/Home";
-import About from "./components/About";
+import FadeSection from "./components/FadeSection";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -14,11 +14,21 @@ function App() {
     <Router>
       <div className="App">
         <MyNavbar />
-        <Home />
-        <PersonalInfo />
-        <Projects />
-        <Contact />
-        <Footer />
+        <FadeSection>
+          <Home />
+        </FadeSection>
+        <FadeSection>
+          <PersonalInfo />
+        </FadeSection>
+        <FadeSection>
+          <Projects />
+        </FadeSection>
+        <FadeSection>
+          <Contact />
+        </FadeSection>
+        <FadeSection>
+          <Footer />
+        </FadeSection>
         <HighlightCursor />
       </div>
     </Router>

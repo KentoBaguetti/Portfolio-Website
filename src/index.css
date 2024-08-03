@@ -2,9 +2,26 @@
 
 * {
   font-family: "Protest Strike", sans-serif;
-  background-color: #FFFFFF;
-  color: #333333;
+  background-color: #181818;
+  color: #f2eedf;
 }
+
+/* Fade ssection */
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 
 /* Navbar */
 .navbar-transparent {
@@ -21,8 +38,8 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff; 
-  color: #000; 
+  background-color: #f2eedf; 
+  color: #181818; 
   padding: 10px 20px;
   border-radius: 50px; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
@@ -77,8 +94,8 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  background-color: #ffffff; 
-  color: #000; 
+  background-color: #f2eedf; 
+  color: #181818; 
   padding: 10px 20px;
   border-radius: 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -114,7 +131,7 @@
 }
 
 .home-title-small {
-  color: #333333;
+  color: #f2eedf;
   font-size: 300px;
 }
 
@@ -130,7 +147,7 @@
 /* Type */
 .typewriter-text span {
   font-size: 24px;
-  color: #333333;
+  color: #f2eedf;
 }
 
 /* Highlight cursor */
@@ -180,7 +197,7 @@
   user-select: none;
   margin-left: 5px;
   margin-right: 5px;
-  border: solid 1px #333333;
+  border: solid 1px #f2eedf;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -188,29 +205,29 @@
 }
 
 .pi-btn:hover {
-  background-color: #706C61;
-  border-color: #706C61;
-  color: #FFFFFF;
+  background-color: #f2eedf;
+  border-color: #f2eedf;
+  color: #181818;
   transform: scale(1.1);
 }
 
 .pi-btn.active {
-  background-color: #706C61;
-  border-color: #706C61;
-  color: #FFFFFF; 
+  background-color: #f2eedf;
+  border-color: #181818;
+  color: #181818; 
 }
 
 .pi-title {
   font-size: 40px;
   margin-top: 2%;
   margin-bottom: 10px;
-  color: #333333;
+  color: #f2eedf;
   text-align: center;
 }
 
 /* About Section */
 .about {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 
   padding: 20px;
@@ -218,13 +235,13 @@
 }
 
 .about-title {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 10px;
-  color: #333333;
+  color: #f2eedf;
 }
 
 .about-body {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -232,7 +249,7 @@
   font-size: larger;
   font-style: italic;
   font-weight: bold;
-  color: #000;
+  color: #f2eedf;
 }
 
 /* Work Experience */
@@ -257,7 +274,7 @@
 }
 
 .companyName {
-  color: #706C61;
+  color: #aaaaaa;
 }
 
 .swe-role {
@@ -282,7 +299,7 @@
 }
 
 .schoolname {
-  color: #706C61;
+  color: #aaaaaa;
 }
 
 /* Skills */
@@ -304,7 +321,8 @@
 }
 
 .skill-header {
-  color: #706C61;
+  color: #aaaaaa;
+  font-size: 24px;
 }
 
 /* Projects */
@@ -315,20 +333,20 @@
 
 .project-headtitle {
   margin-bottom: 2%;
-  color: #333333;
+  color: #f2eedf;
   text-align: center;
   font-size: 1.8rem;
 }
 
 .project-title {
-  color: #333333;
+  color: #aaaaaa;
   font-style: italic;
   text-decoration: underline;
   font-size: 1.2rem;
 }
 
 .project-body {
-  color: #000;
+  color: #f2eedf;
   font-size: 1rem;
 }
 
@@ -410,13 +428,13 @@
 }
 
 .contact-header p {
-  color: #333333;
+  color: #f2eedf;
   font-size: 30px;
 }
 
 .email p {
   font-size: 60px;
-  color: #000;
+  color: #f2eedf;
 }
 
 .social-header {
@@ -478,13 +496,13 @@
 
 .footer {
   text-align: center;
-  color: #333333;
+  color: #f2eedf;
 }
 
 .footer .text-muted {
-  color: #333333 !important;
+  color: #f2eedf !important;
 }
 
 .footer-container {
-  columns: #333333;
+  columns: #f2eedf;
 }
