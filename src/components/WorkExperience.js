@@ -4,9 +4,7 @@ const WorkExperience = () => {
       <h1 className="pi-title">Work Experience</h1>
       <div className="workList">
         <h4 className="companyName">Consign AI 🇨🇦</h4>
-        <p className="swe-role">
-          Software Engineering Intern | Feb 2024 - Current
-        </p>
+        <p className="swe-role">Software Engineer | June 2024 - Current</p>
         <ul className="job-desc">
           <li>
             Designed and implemented a MongoDB database to manage data processed
@@ -19,7 +17,20 @@ const WorkExperience = () => {
           <li>
             Implemented user authentication within the dashboard and database 🔒
           </li>
+          <li>
+            Developed Python scripts to preprocess new customer information from
+            Excel to csv files for the RPA scripts 🐍
+          </li>
+        </ul>
+        <p className="swe-role">
+          Software Engineering Intern | Feb 2024 - May 2024
+        </p>
+        <ul className="job-desc">
           <li>Debugged RPA scripts to improve efficiency and accuracy 🎯</li>
+          <li>
+            Researched viable database integrations for scalability and
+            flexibility 📚
+          </li>
         </ul>
       </div>
     </div>
