@@ -14,9 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <MyNavbar />
-        <FadeSection>
-          <Home />
-        </FadeSection>
+        <Home />
         <FadeSection>
           <PersonalInfo />
         </FadeSection>

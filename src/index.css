@@ -449,7 +449,6 @@
 }
 
 /* Footer */
-
 .footer {
   text-align: center;
   color: #f2eedf;
@@ -461,4 +460,26 @@
 
 .footer-container {
   columns: #f2eedf;
+}
+
+.backToTop {
+  display: inline-block;
+  background-color: #f2eedf;
+  color: #181818;
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 5%;
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+/* Hover effect for footer bubble */
+.backToTop:hover {
+  transform: scale(1.05);
 }
