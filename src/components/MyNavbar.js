@@ -13,70 +13,47 @@ const MyNavbar = () => {
       <div className="container-fluid">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div
-          className="bubble"
+          className="bubble-container"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          Kentaro...
-        </div>
-        <div className={`dropdown-menu-bubble ${isDropdownOpen ? "show" : ""}`}>
-          <div className="bubble-container">
-            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-            <div
-              className="bubble-item"
-              onClick={() => {
-                handleDropdownItemClick();
-                // Add scroll behavior if needed
-              }}
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+          <div className="bubble-item" onClick={handleDropdownItemClick}>
+            <ScrollLink
+              to="personalInfo"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              duration={0}
+              className="nav-link"
             >
-              <ScrollLink
-                to="personalInfo"
-                spy={true}
-                smooth={true}
-                offset={-300}
-                duration={0}
-                className="nav-link"
-              >
-                About
-              </ScrollLink>
-            </div>
-            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-            <div
-              className="bubble-item"
-              onClick={() => {
-                handleDropdownItemClick();
-                // Add scroll behavior if needed
-              }}
+              About
+            </ScrollLink>
+          </div>
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+          <div className="bubble-item" onClick={handleDropdownItemClick}>
+            <ScrollLink
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-170}
+              duration={0}
+              className="nav-link"
             >
-              <ScrollLink
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-170}
-                duration={0}
-                className="nav-link"
-              >
-                Projects
-              </ScrollLink>
-            </div>
-            {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-            <div
-              className="bubble-item"
-              onClick={() => {
-                handleDropdownItemClick();
-                // Add scroll behavior if needed
-              }}
+              Projects
+            </ScrollLink>
+          </div>
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+          <div className="bubble-item" onClick={handleDropdownItemClick}>
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={0}
+              className="nav-link"
             >
-              <ScrollLink
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={0}
-                className="nav-link"
-              >
-                Contact
-              </ScrollLink>
-            </div>
+              Contact
+            </ScrollLink>
           </div>
         </div>
       </div>
