@@ -24,7 +24,9 @@ function App() {
         <FadeSection>
           <Contact />
         </FadeSection>
-        <Footer />
+        <FadeSection>
+          <Footer />
+        </FadeSection>
         <HighlightCursor />
       </div>
     </Router>
