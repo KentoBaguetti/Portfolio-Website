@@ -9,8 +9,6 @@ const FadeSection = ({ children }) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
           setVisible(true);
-        } else {
-          setVisible(false);
         }
       }
     });
