@@ -5,7 +5,7 @@ const Skills = () => {
       <ul className="skill-list">
         <li>
           <strong className="skill-header">Programming Languages: </strong>
-          Python, Typescript, C++, Java, Javascript
+          Python, Typescript, C++, Java, Javascript, GO, SQL
         </li>
         <li>
           <strong className="skill-header">Backend Technologies: </strong>Node,
@@ -16,7 +16,8 @@ const Skills = () => {
           HTML, CSS, Bootstrap
         </li>
         <li>
-          <strong className="skill-header">Database: </strong>MongoDB, Mongoose
+          <strong className="skill-header">Database: </strong>MongoDB, Mongoose,
+          PostgreSQL
         </li>
         <li>
           <strong className="skill-header">Version Control: </strong>Git, Github
