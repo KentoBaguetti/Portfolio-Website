@@ -9,7 +9,7 @@ const Skills = () => {
         </li>
         <li>
           <strong className="skill-header">Backend Technologies: </strong>Node,
-          Express, Axios, Restful APIs
+          Express, Axios, Restful APIs, Docker
         </li>
         <li>
           <strong className="skill-header">UI Technologies: </strong>React,
