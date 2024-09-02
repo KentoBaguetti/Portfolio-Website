@@ -3,9 +3,7 @@ const Contact = () => {
     <div className="container contact">
       <div className="contact-header">
         <h2>Get in Touch</h2>
-        <p>
-          You can reach out to me via email or connect with me on social media:
-        </p>
+        <p>You can reach out to me via email or connect with me on LinkedIn:</p>
       </div>
 
       <div className="row">
