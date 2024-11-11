@@ -1,4 +1,4 @@
-import kenImg from "../assets/kenpfp.webp";
+import kenImg from "../assets/IMG_5840.webp";
 import Type from "./Type";
 
 const Home = () => {
