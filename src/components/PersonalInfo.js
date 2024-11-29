@@ -2,9 +2,9 @@ import About from "./About";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
-import { useState } from "react";
+import React, { useState, memo } from "react";
 
-const PersonalInfo = () => {
+const PersonalInfo = memo(() => {
   const [activeComponent, setActiveComponent] = useState("about");
 
   const renderComponent = () => {
@@ -63,6 +63,6 @@ const PersonalInfo = () => {
       {renderComponent()}
     </div>
   );
-};
+});
 
 export default PersonalInfo;
