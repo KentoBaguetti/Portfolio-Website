@@ -2,7 +2,7 @@ import React from "react";
 import Type from "./Type";
 import KenImg from "../assets/IMG_5840.webp";
 
-// first component that should be loaded in
+// first component that should be loaded in s
 const Home = () => {
   return (
     <div className="home-container container col-xxl-8 px-4 py-5">
