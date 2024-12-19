@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
 * {
-	font-family: "Protest Strike", sans-serif;
+	font-family: "Oxanium", "Source Code Pro", "Protest Strike", sans-serif;
 	background-color: #181818;
-	color: #f2eedf;
+	color: white;
 }
 
 /* Fade ssection */
@@ -49,7 +50,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #f2eedf;
+	background-color: white;
 	color: #181818;
 	padding: 10px 20px;
 	border-radius: 50px;
@@ -65,12 +66,10 @@
 	line-height: 1.2;
 }
 
-/* Hover effect for dropdown bubbles */
 .bubble-item:hover {
 	transform: scale(1.05);
 }
 
-/* Additional reset styles */
 .bubble-container,
 .dropdown-menu-bubble {
 	background-color: transparent !important;
@@ -78,50 +77,96 @@
 
 /* Home */
 .home-container {
-	margin-top: 2%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 0 2rem;
+	box-sizing: border-box;
 }
 
-.home-title {
-	font-size: 448px;
+.hero-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
 }
 
-.home-title-small {
-	color: #f2eedf;
-	font-size: 300px;
+@media (min-width: 992px) {
+	.hero-section {
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 900px;
+		width: 100%;
+		gap: 2rem;
+	}
 }
 
-.zoomable-image {
-	transition: transform 0.3s ease-in-out;
-	transform: scale(1);
-	max-width: 100%;
-	max-height: 550px;
-	border-radius: 20px;
+.text-container {
+	max-width: 600px;
+}
+
+.intro-text {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin: 0;
+	color: #e0e0e0;
+}
+
+.name-title {
+	font-size: 4rem;
+	font-weight: 800;
+	margin: 0.5rem 0 0.5rem 0;
+	color: #ffffff;
+	line-height: 1.1;
+}
+
+.subtitle {
+	font-size: 1.2rem;
+	color: #c0c0c0;
+	margin-bottom: 1rem;
+}
+
+.profile-image {
+	width: 400px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 20%;
+	filter: grayscale(60%);
+	transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.profile-image:hover {
+	filter: grayscale(0%);
+	transform: scale(1.05);
+}
+
+@media (max-width: 991px) {
+	.text-container,
+	.image-container {
+		margin: 0;
+	}
+}
+
+.profile-image {
+	width: 400px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 20%;
+	filter: grayscale(60%);
+	transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.profile-image.hovered {
+	filter: grayscale(0%);
+	transform: scale(1.05);
 }
 
 /* Type */
 .typewriter-text span {
 	font-size: 24px;
-	color: #f2eedf;
-}
-
-/* Highlight cursor */
-
-.highlight-cursor {
-	transition: transform 0.2s ease-out;
-	position: fixed;
-	width: 600px;
-	height: 600px;
-	border-radius: 50%;
-	background: radial-gradient(
-		circle,
-		rgba(255, 255, 255, 0.075) 0%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	pointer-events: none;
-	z-index: 9999;
-	transform: translate(-50%, -50%);
-	mix-blend-mode: lighten;
-	filter: blur(40px);
+	color: white;
 }
 
 @keyframes pulse {
@@ -153,7 +198,7 @@
 	user-select: none;
 	margin-left: 5px;
 	margin-right: 5px;
-	border: solid 1px #f2eedf;
+	border: solid 1px white;
 	border-radius: 8px;
 	padding: 8px;
 	text-align: center;
@@ -161,14 +206,14 @@
 }
 
 .pi-btn:hover {
-	background-color: #f2eedf;
-	border-color: #f2eedf;
+	background-color: white;
+	border-color: white;
 	color: #181818;
 	transform: scale(1.1);
 }
 
 .pi-btn.active {
-	background-color: #f2eedf;
+	background-color: white;
 	border-color: #181818;
 	color: #181818;
 }
@@ -177,7 +222,7 @@
 	font-size: 40px;
 	margin-top: 2%;
 	margin-bottom: 10px;
-	color: #f2eedf;
+	color: white;
 	text-align: center;
 }
 
@@ -230,7 +275,7 @@
 }
 
 .companyName {
-	color: #aaaaaa;
+	color: white;
 }
 
 .swe-role {
@@ -295,14 +340,14 @@
 }
 
 .project-title {
-	color: #aaaaaa;
+	color: whitesmoke;
 	font-style: italic;
 	text-decoration: underline;
 	font-size: 1.2rem;
 }
 
 .project-body {
-	color: #f2eedf;
+	color: white;
 	font-size: 1rem;
 }
 
@@ -369,7 +414,7 @@
 
 .contact {
 	margin-top: 15%;
-	margin-bottom: 10%;
+	margin-bottom: 2.5%;
 }
 
 .contact-header {
@@ -383,13 +428,13 @@
 }
 
 .contact-header p {
-	color: #f2eedf;
+	color: white;
 	font-size: 30px;
 }
 
 .email p {
 	font-size: 60px;
-	color: #f2eedf;
+	color: white;
 }
 
 .social-header {
@@ -450,20 +495,20 @@
 /* Footer */
 .footer {
 	text-align: center;
-	color: #f2eedf;
+	color: white;
 }
 
 .footer .text-muted {
-	color: #f2eedf !important;
+	color: white !important;
 }
 
 .footer-container {
-	columns: #f2eedf;
+	columns: white;
 }
 
 .backToTop {
 	display: inline-block;
-	background-color: #f2eedf;
+	background-color: white;
 	color: #181818;
 	padding: 15px 30px;
 	border-radius: 50px;

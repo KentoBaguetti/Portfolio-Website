@@ -7,7 +7,6 @@ const FadeSection = lazy(() => import("./components/FadeSection"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
-const HighlightCursor = lazy(() => import("./components/HighlightCursor"));
 const PersonalInfo = lazy(() => import("./components/PersonalInfo"));
 
 function App() {
@@ -26,8 +25,9 @@ function App() {
           <FadeSection>
             <Contact />
           </FadeSection>
-          <Footer />
-          <HighlightCursor />
+          <FadeSection>
+            <Footer />
+          </FadeSection>
         </div>
       </Suspense>
     </Router>

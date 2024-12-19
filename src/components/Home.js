@@ -1,26 +1,31 @@
-import React from "react";
-import Type from "./Type";
+import React, { useState } from "react";
 import KenImg from "../assets/IMG_5840.webp";
+import Type from "./Type.js";
 
-// first component that should be loaded in s
 const Home = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    // Once hovered, we set this to true and never reset it.
+    setIsHovered(true);
+  };
+
   return (
-    <div className="home-container container col-xxl-8 px-4 py-5">
-      <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div className="col-10 col-sm-8 col-lg-6 mx-auto">
+    <div className="home-container">
+      <div className="hero-section">
+        <div className="text-container">
+          <h2 className="intro-text">Hi, I’m</h2>
+          <h1 className="name-title">Kentaro Barnes</h1>
+          <Type />
+        </div>
+        <div className="image-container">
           <img
             src={KenImg}
             loading="lazy"
-            className="zoomable-image"
-            alt="Boku da"
+            className={`profile-image ${isHovered ? "hovered" : ""}`}
+            alt="Kentaro Barnes"
+            onMouseEnter={handleMouseEnter}
           />
-        </div>
-        <div className="col-lg-6 mx-auto">
-          <h2 className="home-title-small display-4 lh-1 mb-3">Hello, I'm</h2>
-          <h1 className="home-title display-2 lh-1 mb-3">
-            <strong>Kentaro Barnes</strong>
-          </h1>
-          <Type />
         </div>
       </div>
     </div>
