@@ -1,14 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Syncopate:wght@400;700&display=swap");
-* {
-	font-family: "Oxanium", "Source Code Pro", "Protest Strike", sans-serif;
-	background-color: #181818;
-	color: white;
+
+/* Light mode defaults */
+:root {
+	--bg-color: #ffffff;
+	--text-color: #000000;
 }
 
-/* Fade ssection */
+/* Dark mode variables override */
+.dark-mode {
+	--bg-color: #0e0e0e;
+	--text-color: #ffffff;
+}
 
+* {
+	font-family: "Oxanium", "Source Code Pro", "Protest Strike", sans-serif;
+	box-sizing: border-box;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Bubble Items & Navbar */
+.bubble-container {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 10px 0;
+	width: 100%;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1010;
+	background-color: transparent !important;
+}
+
+/* Unified bubble-item styling to rely on variables */
+.bubble-item {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	border-style: solid;
+	border-color: var(--text-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	border-radius: 50px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+
+	margin: 0;
+	width: 90px;
+	height: 40px;
+	line-height: 1.2;
+}
+
+.bubble-item:hover {
+	transform: scale(1.05);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+.navbar-icon {
+	color: var(--text-color);
+	background-color: transparent;
+	transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out,
+		background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .icon-bubble {
+	background-color: var((--bg-color));
+	width: 25px;
+}
+
+.icon-bubble:hover {
+	transform: scale(1.05);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+/* Fade section */
 .fade-section {
 	opacity: 0;
 	transform: translateY(20vh);
@@ -29,50 +105,6 @@
 	border: none;
 	box-shadow: none;
 	padding: 0;
-}
-
-/* Container for the bubble items */
-.bubble-container {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-	padding: 10px 0;
-	width: 100%;
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1010;
-}
-
-/* Bubble items in the dropdown menu */
-.bubble-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: white;
-	color: #181818;
-	padding: 10px 20px;
-	border-radius: 50px;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-	transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
-	text-align: center;
-	white-space: nowrap;
-	border: none;
-	margin: 0;
-	width: 90px;
-	height: 40px;
-	line-height: 1.2;
-}
-
-.bubble-item:hover {
-	transform: scale(1.05);
-}
-
-.bubble-container,
-.dropdown-menu-bubble {
-	background-color: transparent !important;
 }
 
 /* Home */
@@ -111,23 +143,24 @@
 	font-size: 1.5rem;
 	font-weight: 300;
 	margin: 0;
-	color: #e0e0e0;
+	color: var(--text-color);
 }
 
 .name-title {
 	font-size: 4rem;
-	font-weight: 800;
+	font-weight: 300;
 	margin: 0.5rem 0 0.5rem 0;
-	color: #ffffff;
+	color: var(--text-color);
 	line-height: 1.1;
 }
 
 .subtitle {
 	font-size: 1.2rem;
-	color: #c0c0c0;
+	color: var(--text-color);
 	margin-bottom: 1rem;
 }
 
+.image-container img,
 .profile-image {
 	width: 400px;
 	height: 500px;
@@ -142,6 +175,11 @@
 	transform: scale(1.05);
 }
 
+.profile-image.hovered {
+	filter: grayscale(0%);
+	transform: scale(1.05);
+}
+
 @media (max-width: 991px) {
 	.text-container,
 	.image-container {
@@ -149,24 +187,10 @@
 	}
 }
 
-.profile-image {
-	width: 400px;
-	height: 500px;
-	object-fit: cover;
-	border-radius: 20%;
-	filter: grayscale(60%);
-	transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.profile-image.hovered {
-	filter: grayscale(0%);
-	transform: scale(1.05);
-}
-
 /* Type */
 .typewriter-text span {
 	font-size: 24px;
-	color: white;
+	color: var(--text-color);
 }
 
 @keyframes pulse {
@@ -198,31 +222,32 @@
 	user-select: none;
 	margin-left: 5px;
 	margin-right: 5px;
-	border: solid 1px white;
+	border: solid 1px var(--text-color);
 	border-radius: 8px;
 	padding: 8px;
 	text-align: center;
 	cursor: pointer;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .pi-btn:hover {
-	background-color: white;
-	border-color: white;
-	color: #181818;
+	background-color: var(--text-color);
+	color: var(--bg-color);
 	transform: scale(1.1);
 }
 
 .pi-btn.active {
-	background-color: white;
-	border-color: #181818;
-	color: #181818;
+	background-color: var(--text-color);
+	color: var(--bg-color);
 }
 
 .pi-title {
 	font-size: 40px;
 	margin-top: 2%;
 	margin-bottom: 10px;
-	color: white;
+	color: var(--text-color);
 	text-align: center;
 }
 
@@ -230,7 +255,6 @@
 .about {
 	max-width: 1000px;
 	margin: 0 auto;
-
 	padding: 20px;
 	text-align: center;
 }
@@ -238,7 +262,7 @@
 .about-title {
 	font-size: 30px;
 	margin-bottom: 10px;
-	color: #f2eedf;
+	color: var(--text-color);
 }
 
 .about-body {
@@ -250,14 +274,13 @@
 	font-size: larger;
 	font-style: italic;
 	font-weight: bold;
-	color: #aaaaaa;
+	color: var(--text-color);
 }
 
 /* Work Experience */
 .workExperience {
 	max-width: 800px;
 	margin: 0 auto;
-
 	padding: 20px;
 }
 
@@ -275,7 +298,7 @@
 }
 
 .companyName {
-	color: white;
+	color: var(--text-color);
 }
 
 .swe-role {
@@ -300,11 +323,10 @@
 }
 
 .schoolname {
-	color: #aaaaaa;
+	color: var(--text-color);
 }
 
 /* Skills */
-
 .skills {
 	display: flex;
 	justify-content: center;
@@ -322,7 +344,7 @@
 }
 
 .skill-header {
-	color: #aaaaaa;
+	color: var(--text-color);
 	font-size: 24px;
 }
 
@@ -334,20 +356,20 @@
 
 .project-headtitle {
 	margin-bottom: 2%;
-	color: #f2eedf;
+	color: var(--text-color);
 	text-align: center;
 	font-size: 1.8rem;
 }
 
 .project-title {
-	color: whitesmoke;
+	color: var(--text-color);
 	font-style: italic;
 	text-decoration: underline;
 	font-size: 1.2rem;
 }
 
 .project-body {
-	color: white;
+	color: var(--text-color);
 	font-size: 1rem;
 }
 
@@ -370,7 +392,7 @@
 }
 
 .card {
-	border: 2px solid #ddd;
+	border: 2px solid var(--text-color);
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -378,8 +400,8 @@
 }
 
 .card:hover {
-	transform: scale(1.05); /* Slightly enlarge the card on hover */
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+	transform: scale(1.05); 
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 .slick-prev,
@@ -411,7 +433,6 @@
 }
 
 /* Contact */
-
 .contact {
 	margin-top: 15%;
 	margin-bottom: 2.5%;
@@ -428,13 +449,13 @@
 }
 
 .contact-header p {
-	color: white;
+	color: var(--text-color);
 	font-size: 30px;
 }
 
 .email p {
 	font-size: 60px;
-	color: white;
+	color: var(--text-color);
 }
 
 .social-header {
@@ -484,7 +505,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 15px; /* Add some space between icons */
+		margin-bottom: 15px; 
 	}
 
 	.list-inline-item.social a {
@@ -495,23 +516,25 @@
 /* Footer */
 .footer {
 	text-align: center;
-	color: white;
+	color: var(--text-color);
 }
 
 .footer .text-muted {
-	color: white !important;
+	color: var(--text-color) !important;
 }
 
 .footer-container {
-	columns: white;
+	columns: var(--text-color);
 }
 
 .backToTop {
 	display: inline-block;
-	background-color: white;
-	color: #181818;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 	padding: 15px 30px;
 	border-radius: 50px;
+	border-style: solid;
+	border-color: var(--text-color);;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 	transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
@@ -523,7 +546,7 @@
 	text-decoration: none;
 }
 
-/* Hover effect for footer bubble */
 .backToTop:hover {
 	transform: scale(1.05);
 }
+

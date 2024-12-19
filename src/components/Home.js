@@ -6,7 +6,6 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    // Once hovered, we set this to true and never reset it.
     setIsHovered(true);
   };
 

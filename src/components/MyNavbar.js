@@ -1,22 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const MyNavbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const handleDropdownItemClick = () => {
     setIsDropdownOpen(false);
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  const darkModeIcon = (
+    <FontAwesomeIcon icon={faMoon} className="navbar-icon" />
+  );
+  const lightModeIcon = (
+    <FontAwesomeIcon icon={faSun} className="navbar-icon" />
+  );
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark-mode");
+    } else {
+      document.documentElement.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
+
   return (
     <nav className="navbar navbar-transparent fixed-top">
       <div className="container-fluid">
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <div
           className="bubble-container"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
           <div className="bubble-item" onClick={handleDropdownItemClick}>
             <ScrollLink
               to="personalInfo"
@@ -29,7 +49,7 @@ const MyNavbar = () => {
               About
             </ScrollLink>
           </div>
-          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+
           <div className="bubble-item" onClick={handleDropdownItemClick}>
             <ScrollLink
               to="projects"
@@ -42,7 +62,7 @@ const MyNavbar = () => {
               Projects
             </ScrollLink>
           </div>
-          {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+
           <div className="bubble-item" onClick={handleDropdownItemClick}>
             <ScrollLink
               to="contact"
@@ -54,6 +74,16 @@ const MyNavbar = () => {
             >
               Contact
             </ScrollLink>
+          </div>
+
+          <div
+            className="bubble-item icon-bubble"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleTheme();
+            }}
+          >
+            {isDarkMode ? lightModeIcon : darkModeIcon}
           </div>
         </div>
       </div>
