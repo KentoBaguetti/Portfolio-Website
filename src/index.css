@@ -551,7 +551,7 @@
 	transform: scale(1.05);
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 	.bubble-container {
 		display: flex;
 		justify-content: center;
