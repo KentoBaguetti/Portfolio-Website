@@ -573,7 +573,7 @@
 		min-height: 100vh;
 		padding: 0 2rem;
 		box-sizing: border-box;
-		padding-top: 0px;
+		margin-top: 50px;
 	}
 
 	.about-body {
