@@ -3,8 +3,8 @@ const About = () => {
     <div className="about">
       <h1 className="about-title pi-title">About Me</h1>
       <p className="about-body">
-        My name is Kentaro Barnes (バーンズ健太郎) and I enjoy building things
-        and brainrotting myself with leetode
+        Hi! My name is Kentaro Barnes (バーンズ健太郎) and I enjoy building
+        things as well as solving interesting problems
       </p>
       <p className="about-body">
         I am a Software Engineering Intern at ConsignAI developing backend
@@ -13,7 +13,7 @@ const About = () => {
       </p>
       <p className="about-body">
         I'm currently learning about how to build scalable and efficient backend
-        software as well as trying to cook a mid rare steak first try
+        software
       </p>
       <p>
         I am happy to learn and experience new things that interest me!

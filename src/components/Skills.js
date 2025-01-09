@@ -17,7 +17,7 @@ const Skills = () => {
         </li>
         <li>
           <strong className="skill-header">Database: </strong>MongoDB, Mongoose,
-          PostgreSQL
+          PostgreSQL, Redis
         </li>
         <li>
           <strong className="skill-header">Version Control: </strong>Git, Github
