@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import KenImg from "../assets/IMG_5840.webp";
+import KenImg from "../assets/newImg.webp";
 import Type from "./Type.js";
 
 const Home = () => {
