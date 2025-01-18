@@ -13,7 +13,7 @@ const About = () => {
       </p>
       <p className="about-body">
         I'm currently learning about how to build scalable and efficient backend
-        software
+        software as well as building ML models
       </p>
       <p>
         I am happy to learn and experience new things that interest me!
