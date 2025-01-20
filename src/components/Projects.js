@@ -6,7 +6,7 @@ import useWindowSize from "./useWindowSize"; // Assuming the hook is in the same
 import portfolioWebsiteSS from "../assets/portfolioWebsiteSS.png";
 import netflixLogo from "../assets/netflixLogo.jpeg";
 import foodpic from "../assets/foodpic.jpg";
-import blogpic from "../assets/blogapp.png";
+import FutureParkImg from "../assets/FuturePark.png";
 import mazepic from "../assets/mazeIMG.png";
 import debatebotpic from "../assets/animeLawyerMemeKing.webp";
 
@@ -32,11 +32,11 @@ const projects = [
     link: "https://github.com/KentoBaguetti/blogrecipeapp",
   },
   {
-    title: "Blog App",
+    title: "Parking Finder",
     description:
-      "A CRUD blog web app built using React for the frontend and node + express + axios for the backend.",
-    image: blogpic,
-    link: "https://github.com/KentoBaguetti/React-Blog-App",
+      "A collaborative hackathon project to help users find parking in Vancouver",
+    image: FutureParkImg,
+    link: "https://github.com/KentoBaguetti/V2-ParkingFinder",
   },
   {
     title: "Maze Navigation Visualizer",
