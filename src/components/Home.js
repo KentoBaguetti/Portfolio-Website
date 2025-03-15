@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import KenImg from "../assets/newImg.webp";
+import sb_img from "../assets/IMG_0501 Large.webp";
 import Type from "./Type.js";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
         </div>
         <div className="image-container">
           <img
-            src={KenImg}
+            src={sb_img}
             loading="lazy"
             className={`profile-image ${isHovered ? "hovered" : ""}`}
             alt="Kentaro Barnes"
