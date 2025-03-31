@@ -1,8 +1,10 @@
-import React, { useRef, useEffect, useState } from "react";
+// biome-ignore lint/style/useImportType: <explanation>
+import React from "react";
+import { useRef, useEffect, useState } from "react";
 
-const FadeSection = ({ children }) => {
+const FadeSection: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [isVisible, setVisible] = useState(false);
-	const domRef = useRef();
+	const domRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -13,9 +15,15 @@ const FadeSection = ({ children }) => {
 			}
 		});
 
-		observer.observe(domRef.current);
+		if (domRef.current) {
+			observer.observe(domRef.current);
+		}
 
-		return () => observer.unobserve(domRef.current);
+		return () => {
+			if (domRef.current) {
+				observer.unobserve(domRef.current);
+			}
+		};
 	}, []);
 
 	return (
