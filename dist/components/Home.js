@@ -37,7 +37,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
-const newImg_webp_1 = __importDefault(require("../assets/newImg.webp"));
 const IMG_0501_Large_webp_1 = __importDefault(require("../assets/IMG_0501 Large.webp"));
 const Type_js_1 = __importDefault(require("./Type.js"));
 const Home = () => {
