@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import sb_img from "../assets/IMG_0501 Large.webp";
-import Type from "./Type.js";
+import Type from "./Type";
 
 const Home = () => {
 	const [isHovered, setIsHovered] = useState(false);
