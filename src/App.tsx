@@ -10,28 +10,28 @@ const Footer = lazy(() => import("./components/Footer"));
 const PersonalInfo = lazy(() => import("./components/PersonalInfo"));
 
 function App() {
-  return (
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className="App">
-          <MyNavbar />
-          <Home />
-          <FadeSection>
-            <PersonalInfo />
-          </FadeSection>
-          <FadeSection>
-            <Projects />
-          </FadeSection>
-          <FadeSection>
-            <Contact />
-          </FadeSection>
-          <FadeSection>
-            <Footer />
-          </FadeSection>
-        </div>
-      </Suspense>
-    </Router>
-  );
+	return (
+		<Router>
+			<Suspense fallback={<div>Loading...</div>}>
+				<div className="App">
+					<MyNavbar />
+					<Home />
+					<FadeSection>
+						<PersonalInfo />
+					</FadeSection>
+					<FadeSection>
+						<Projects />
+					</FadeSection>
+					<FadeSection>
+						<Contact />
+					</FadeSection>
+					<FadeSection>
+						<Footer />
+					</FadeSection>
+				</div>
+			</Suspense>
+		</Router>
+	);
 }
 
 export default App;
