@@ -6,7 +6,7 @@ const WorkExperience = () => {
 			<h1 className="pi-title">Work Experience</h1>
 			<div className="workList">
 				<h4 className="companyName">Consign AI 🇨🇦</h4>
-				<p className="swe-role">Software Engineer | June 2024 - Current</p>
+				<p className="swe-role">Software Engineer | June 2024 - March 2025</p>
 				<p className="swe-role">Automation</p>
 				<ul className="job-desc">
 					<li>
