@@ -8,10 +8,10 @@ export default function Hero() {
 	return (
 		<Tilt
 			tiltReverse={true}
-			tiltMaxAngleX={6}
-			tiltMaxAngleY={6}
+			tiltMaxAngleX={10}
+			tiltMaxAngleY={10}
 			transitionSpeed={1000}
-			perspective={1500}
+			perspective={1000}
 			gyroscope={false}
 			trackOnWindow={true}
 			className="flex flex-auto justify-center items-center h-screen w-screen"
