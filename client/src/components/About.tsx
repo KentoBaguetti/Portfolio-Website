@@ -30,7 +30,7 @@ export default function About() {
 				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
 			>
 				{/* Left: Title */}
-				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 flex items-center justify-center w-full md:w-[275px] h-[60px] md:h-[275px]">
+				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 items-center justify-center w-full md:w-[275px] h-[60px] md:h-[275px]">
 					<TypeWriter
 						key={isInView ? "in-view" : "out-of-view"}
 						onInit={(typewriter) => {
