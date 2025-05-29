@@ -38,7 +38,7 @@ export default function Hero() {
 					<p className=" text-3xl text-center md:text-6xl font-bold md:text-left">
 						Kentaro Barnes
 					</p>
-					<div className="text-xl text-center w-[290] lg:text-2xl md:text-left">
+					<div className="text-xl text-center w-[290] lg:text-xl md:text-left">
 						<TypeWriter
 							options={{
 								strings: [
