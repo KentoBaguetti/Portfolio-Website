@@ -34,11 +34,9 @@ export default function About({ onClick, isExpanded }: AboutProps) {
 				transition={{ duration: 0.6, ease: "easeOut" }}
 				className={`border-solid border-4 ${
 					isExpanded
-						? "border-blue-500 dark:border-blue-400"
+						? "border-blue-500 dark:border-blue-500"
 						: "border-zinc-900/80"
-				} dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6 cursor-pointer hover:shadow-2xl transition-all duration-300 ${
-					isExpanded ? "ring-2 ring-blue-300 dark:ring-blue-500" : ""
-				}`}
+				} dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6 cursor-pointer hover:shadow-2xl transition-all duration-300 `}
 				onClick={onClick}
 			>
 				{/* Left: Title */}

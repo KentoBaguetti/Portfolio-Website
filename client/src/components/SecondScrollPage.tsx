@@ -28,7 +28,7 @@ export default function SecondScrollPage() {
 							transition={{ duration: 0.5, ease: "easeInOut" }}
 							className="w-1/2 flex items-center justify-center pr-4"
 						>
-							<div className="border-solid border-4 border-blue-500 dark:border-blue-400 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-full p-8">
+							<div className="border-solid border-4 border-blue-700 dark:border-blue-700 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-full p-8">
 								<div className="h-full flex flex-col justify-center">
 									<h2 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">
 										More About Me
@@ -76,9 +76,9 @@ export default function SecondScrollPage() {
 							transition={{ duration: 0.5, ease: "easeInOut" }}
 							className="w-1/2 flex items-center justify-center pl-4"
 						>
-							<div className="border-solid border-4 border-green-500 dark:border-green-400 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-full p-8">
+							<div className="border-solid border-4 border-blue-700 dark:border-blue-700 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-full p-8">
 								<div className="h-full flex flex-col justify-center">
-									<h2 className="text-3xl font-bold mb-6 text-green-600 dark:text-green-400">
+									<h2 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">
 										Experience Details
 									</h2>
 									<div className="space-y-6">

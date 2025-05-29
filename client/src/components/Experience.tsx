@@ -34,15 +34,15 @@ export default function Experience({ onClick, isExpanded }: ExperienceProps) {
 				transition={{ duration: 0.4, ease: "easeOut" }}
 				className={`border-solid border-4 ${
 					isExpanded
-						? "border-green-500 dark:border-green-400"
+						? "border-blue-700 dark:border-blue-700"
 						: "border-zinc-900/80"
-				} dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6 cursor-pointer hover:shadow-2xl transition-all duration-300 ${
-					isExpanded ? "ring-2 ring-green-300 dark:ring-green-500" : ""
-				}`}
+				} dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6 cursor-pointer hover:shadow-2xl transition-all duration-300
+					
+				`}
 				onClick={onClick}
 			>
 				{/* Left: Title */}
-				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 flex items-center justify-center w-full md:w-[275px] h-[80px] md:h-[275px]">
+				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 items-center justify-center w-full md:w-[275px] h-[80px] md:h-[275px]">
 					<TypeWriter
 						key={isInView ? "in-view" : "out-of-view"}
 						onInit={(typewriter) => {
