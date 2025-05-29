@@ -4,15 +4,10 @@ import * as motion from "motion/react-client";
 import { useInView } from "motion/react";
 import TypeWriter from "typewriter-effect";
 
-interface ExperienceProps {
-	onClick: () => void;
-	isExpanded: boolean;
-}
-
-export default function Experience({ onClick, isExpanded }: ExperienceProps) {
+export default function Experience() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {
-		amount: 0.3,
+		amount: 0.3, // Changed from "all" to 0.3 for better mobile detection
 		once: false,
 	});
 
@@ -32,14 +27,8 @@ export default function Experience({ onClick, isExpanded }: ExperienceProps) {
 					opacity: isInView ? 1 : 0,
 				}}
 				transition={{ duration: 0.4, ease: "easeOut" }}
-				className={`border-solid border-4 ${
-					isExpanded
-						? "border-blue-700 dark:border-blue-700"
-						: "border-zinc-900/80"
-				} dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 bg-white shadow-xl w-full h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6 cursor-pointer hover:shadow-2xl transition-all duration-300
-					
-				`}
-				onClick={onClick}
+				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
+				onClick={() => console.log("Clicked")}
 			>
 				{/* Left: Title */}
 				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 items-center justify-center w-full md:w-[275px] h-[80px] md:h-[275px]">
