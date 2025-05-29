@@ -1,5 +1,68 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import * as motion from "motion/react-client";
+import { useInView } from "motion/react";
+import TypeWriter from "typewriter-effect";
 
 export default function Experience() {
-	return <div>Experience</div>;
+	const ref = useRef(null);
+	const isInView = useInView(ref, {
+		amount: 0.3, // Changed from "all" to 0.3 for better mobile detection
+		once: false,
+	});
+
+	useEffect(() => {
+		console.log(`The element ${isInView ? "is" : "IS NOT"} in view`);
+	}, [isInView]);
+
+	return (
+		<div
+			ref={ref}
+			className="relative mx-auto w-full max-w-2xl p-2 md:p-8 flex items-center justify-center"
+		>
+			<motion.div
+				initial={{ x: 100, opacity: 0 }}
+				animate={{
+					x: isInView ? 0 : 100,
+					opacity: isInView ? 1 : 0,
+				}}
+				transition={{ duration: 0.4, ease: "easeOut" }}
+				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
+				onClick={() => console.log("Clicked")}
+			>
+				{/* Left: Title */}
+				<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 flex items-center justify-center w-full md:w-[275px] h-[80px] md:h-[275px]">
+					<TypeWriter
+						key={isInView ? "in-view" : "out-of-view"}
+						onInit={(typewriter) => {
+							typewriter.typeString("Experience").start();
+						}}
+						options={{
+							autoStart: true,
+							loop: false,
+							cursor: "|",
+						}}
+					/>
+					<div className="text-sm">
+						<TypeWriter
+							key={isInView ? "in-view" : "out-of-view"}
+							onInit={(typewriter) => {
+								typewriter.typeString("Click Me!").start();
+							}}
+							options={{
+								autoStart: true,
+								loop: false,
+								cursor: "|",
+							}}
+						/>
+					</div>
+				</div>
+				{/* Right: Details */}
+				<div className="flex flex-col justify-center gap-1 md:gap-3 text-sm md:text-lg md:flex-1">
+					<p>• Software Engineer | Consign AI</p>
+					<p>• Software Engineering Intern | Consign AI</p>
+				</div>
+			</motion.div>
+		</div>
+	);
 }

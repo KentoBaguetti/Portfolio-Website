@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 import TypeWriter from "typewriter-effect";
 
 const cardClass =
-	"flex flex-col flex-auto justify-center items-center border-solid border-4 border-gray-200 rounded-4xl shadow-2xl w-full max-w-md mx-8";
+	"flex flex-col flex-auto justify-center items-center border-solid border-4 border-zinc-900/80 rounded-4xl shadow-2xl w-full max-w-md px-2 dark:text-gray-200";
 const mdCardClass =
 	"md:flex md:flex-row md:flex-auto md:justify-center md:items-center md:border-solid md:border-4 md:border-gray-200 md:rounded-4xl md:shadow-2xl md:max-w-2xl";
 
@@ -19,7 +19,7 @@ export default function Hero() {
 			perspective={1000}
 			gyroscope={true}
 			trackOnWindow={true}
-			className="flex flex-auto justify-center items-center h-screen w-screen"
+			className="flex flex-auto justify-center items-center h-screen w-full"
 		>
 			<div className={`${cardClass} ${mdCardClass}`}>
 				<div className="m-3">
@@ -31,14 +31,14 @@ export default function Hero() {
 						className="rounded-3xl opacity-100"
 					/>
 				</div>
-				<div className="m-3 text-gray-200">
-					<p className=" text-xl text-center md:text-2xl md:text-left">
+				<div className="m-3 w-[275px]">
+					<p className="text-xl text-center md:text-2xl md:text-left">
 						Hi, I&#39;m
 					</p>
-					<p className=" text-3xl text-center md:text-6xl font-bold md:text-left">
+					<p className="text-3xl text-center md:text-6xl font-bold md:text-left">
 						Kentaro Barnes
 					</p>
-					<div className="text-xl text-center w-[290] lg:text-xl md:text-left">
+					<div className="text-xl text-center w-[290px] lg:text-xl md:text-left">
 						<TypeWriter
 							options={{
 								strings: [
