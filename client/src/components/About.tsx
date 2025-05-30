@@ -105,7 +105,7 @@ export default function About() {
 						</div>
 						{/* Right: Details */}
 						<div className="flex flex-col justify-center gap-1 md:gap-3 text-xs md:text-lg md:flex-1 flex-1 overflow-y-auto">
-							<ul className="list-disc pl-5">
+							<ul className="list-disc pl-5 py-2">
 								<li>
 									Third year Computer Science student at UBC from Japan and
 									Canada
