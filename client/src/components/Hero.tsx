@@ -29,8 +29,13 @@ export default function Hero() {
 						src="/ken.jpeg"
 						width={275}
 						height={275}
+						priority={true}
 						alt="Image of Kentaro Barnes"
 						className="rounded-3xl opacity-100"
+						loading="eager"
+						quality={80} 
+						placeholder="blur" 
+						blurDataURL="data:image/jpeg;base64,..."
 					/>
 				</div>
 				<div className="m-3 w-[275px]">
