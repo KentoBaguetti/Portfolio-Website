@@ -971,6 +971,9 @@ client-only@0.0.1:
   version "0.1.0"
   resolved "file:"
   dependencies:
+    "@emotion/react" "^11.14.0"
+    "@emotion/styled" "^11.14.0"
+    "@mui/material" "^7.1.0"
     client "file:"
     clsx "^2.1.1"
     motion "^12.15.0"
