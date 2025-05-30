@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import TypeWriter from "typewriter-effect";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const cardClass =
 	"flex flex-col flex-auto justify-center items-center border-solid border-4 border-zinc-900/80 rounded-4xl shadow-2xl w-full max-w-md px-2 dark:text-gray-200";
@@ -51,6 +53,32 @@ export default function Hero() {
 								delay: 60,
 							}}
 						/>
+					</div>
+					<div className="flex flex-row items-center justify-center md:justify-start md:flex md:flex-row md:mt-2">
+						<a
+							href="https://www.github.com/KentoBaguetti"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="mx-2"
+						>
+							<FaGithub size={30} />
+						</a>
+						<a
+							href="https://www.linkedin.com/in/barneskentaro/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="mx-2"
+						>
+							<FaLinkedin size={30} />
+						</a>
+						<a
+							href="mailto:kentaro.barnes5@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="mx-2"
+						>
+							<MdEmail size={30} />
+						</a>
 					</div>
 				</div>
 			</div>
