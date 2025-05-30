@@ -59,7 +59,7 @@ export default function Hero() {
 							href="https://www.github.com/KentoBaguetti"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mx-2"
+							className="mx-2 hover:scale-125"
 						>
 							<FaGithub size={30} />
 						</a>
@@ -67,7 +67,7 @@ export default function Hero() {
 							href="https://www.linkedin.com/in/barneskentaro/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mx-2"
+							className="mx-2 hover:scale-125"
 						>
 							<FaLinkedin size={30} />
 						</a>
@@ -75,7 +75,7 @@ export default function Hero() {
 							href="mailto:kentaro.barnes5@gmail.com"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mx-2"
+							className="mx-2 hover:scale-125"
 						>
 							<MdEmail size={30} />
 						</a>
