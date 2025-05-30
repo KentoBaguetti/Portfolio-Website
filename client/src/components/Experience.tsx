@@ -92,7 +92,7 @@ export default function Experience() {
 					</div>
 				</div>
 				{/* Right: Details */}
-				<div className="flex flex-col justify-center gap-1 md:gap-3 text-sm md:text-lg md:flex-1">
+				<div className="flex flex-col justify-center gap-1 md:gap-3 text-sm md:text-xl md:flex-1">
 					<p>• Software Engineer | Consign AI</p>
 					<p>• Software Engineering Intern | Consign AI</p>
 				</div>
