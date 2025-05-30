@@ -59,7 +59,7 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<div className="text-gray-200 min-h-screen min-w-screen flex justify-center items-center ">
+		<div className=" dark:text-gray-200 min-h-screen min-w-screen flex justify-center items-center ">
 			<div
 				ref={ref}
 				className="relative mx-auto grid h-60 w-full place-content-center"
@@ -255,8 +255,8 @@ function ProjectCard({
 								label={point}
 								className="m-1"
 								sx={{
-									color: "#E5E7EB",
-									borderColor: "#E5E7EB",
+									color: "var(--chip-text-color)",
+									borderColor: "var(--chip-border-color)",
 								}}
 							/>
 						))}
