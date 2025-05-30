@@ -1,7 +1,5 @@
 import Hero from "@/components/Hero";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import * as motion from "motion/react-client";
-import type { Variants } from "motion/react";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 
