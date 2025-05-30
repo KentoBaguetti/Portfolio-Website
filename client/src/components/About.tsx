@@ -15,9 +15,6 @@ export default function About() {
 
 	const [expanded, setExpanded] = useState(false);
 	const [total, setTotal] = useState(0);
-	const [easy, setEasy] = useState(0);
-	const [medium, setMedium] = useState(0);
-	const [hard, setHard] = useState(0);
 
 	useEffect(() => {
 		if (!isInView) {
@@ -26,11 +23,8 @@ export default function About() {
 		const fetchStats = async () => {
 			const stats = await getLeetcodeStats();
 			if (stats) {
-				const { total: t, easy: e, medium: m, hard: h } = stats;
+				const { total: t } = stats;
 				setTotal(t);
-				setEasy(e);
-				setMedium(m);
-				setHard(h);
 			} else {
 				console.log("Failed to fetch Leetcode stats.");
 			}
@@ -44,7 +38,7 @@ export default function About() {
 			className="relative mx-auto w-full max-w-2xl p-2 md:p-8 flex items-center justify-center"
 		>
 			<motion.div
-				initial={{ x: -200, opacity: 0 }}
+				initial={{ x: -400, opacity: 0 }}
 				animate={{
 					x: isInView ? 0 : -100,
 					opacity: isInView ? (expanded ? 0 : 1) : 0,
@@ -99,16 +93,28 @@ export default function About() {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.4, ease: "easeOut" }}
-						className="absolute top-0 left-0 right-0 z-10 border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full h-[200px] md:h-auto flex flex-col gap-2 md:gap-4 p-3 md:p-8 overflow-y-auto"
+						className="absolute top-0 left-0 right-0 z-10 border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
 						onClick={() => {
 							if (expanded) setExpanded(false);
 							else setExpanded(true);
 						}}
 					>
-						<div>
-							<ul className="list-disc">
-								<li>Third year Computer Science student at UBC</li>
+						{/* Left: Title */}
+						<div className="flex flex-col text-2xl md:text-4xl font-bold text-center md:text-left md:flex-1 items-center justify-center w-full md:w-[275px] h-[60px] md:h-[275px]">
+							<div>More about me!</div>
+						</div>
+						{/* Right: Details */}
+						<div className="flex flex-col justify-center gap-1 md:gap-3 text-xs md:text-lg md:flex-1 flex-1 overflow-y-auto">
+							<ul className="list-disc pl-5 space-y-2">
+								<li>
+									Third year Computer Science student at UBC from Japan and
+									Canada
+								</li>
 								<li>Proficient in full-stack development</li>
+								<li>
+									Eager to learn more about blockchain development and backend
+									development
+								</li>
 								<li>
 									Hobbies: Football, Programming, Cooking, Snowboarding, Hiking
 								</li>

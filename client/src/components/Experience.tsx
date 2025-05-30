@@ -52,7 +52,7 @@ export default function Experience() {
 			className="relative mx-auto w-full max-w-2xl p-2 md:p-8 flex items-center justify-center"
 		>
 			<motion.div
-				initial={{ x: 200, opacity: 0 }}
+				initial={{ x: 400, opacity: 0 }}
 				animate={{
 					x: isInView ? 0 : 100,
 					opacity: isInView ? (expanded ? 0 : 1) : 0,
