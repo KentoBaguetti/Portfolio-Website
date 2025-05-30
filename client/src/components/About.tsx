@@ -106,7 +106,10 @@ export default function About() {
 						{/* Right: Details */}
 						<div className="flex flex-col justify-center gap-1 md:gap-3 text-xs md:text-lg md:flex-1 flex-1 overflow-y-auto">
 							<ul className="list-disc pl-5">
-								<li>Third year Computer Science student at UBC</li>
+								<li>
+									Third year Computer Science student at UBC from Japan and
+									Canada
+								</li>
 								<li>Proficient in full-stack development</li>
 								<li>
 									Hobbies: Football, Programming, Cooking, Snowboarding, Hiking
