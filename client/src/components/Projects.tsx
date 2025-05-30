@@ -59,7 +59,7 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<div className=" dark:text-gray-200 min-h-screen min-w-screen flex justify-center items-center ">
+		<div className=" dark:text-gray-200 min-h-screen min-w-screen flex justify-center items-center hardware-accelerated">
 			<div
 				ref={ref}
 				className="relative mx-auto grid h-60 w-full place-content-center"

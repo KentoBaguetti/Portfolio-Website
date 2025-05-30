@@ -21,7 +21,7 @@ export default function Hero() {
 			perspective={1000}
 			gyroscope={true}
 			trackOnWindow={true}
-			className="flex flex-auto justify-center items-center h-screen w-full"
+			className="flex flex-auto justify-center items-center h-screen w-full hardware-accelerated"
 		>
 			<div className={`${cardClass} ${mdCardClass}`}>
 				<div className="m-3">

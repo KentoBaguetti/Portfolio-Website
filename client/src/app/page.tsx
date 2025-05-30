@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
 	return (
-		<AuroraBackground>
+		<AuroraBackground className="hardware-accelerated ">
 			<div className="h-screen flex justify-center items-center px-4">
 				<Hero />
 			</div>
