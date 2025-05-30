@@ -1,7 +1,11 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+// import useState from "react";
 import * as motion from "motion/react-client";
 import { useInView } from "motion/react";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import Chip from "@mui/material/Chip";
 
 const projectBoxStyle = "border-gray-200 border-4 rounded-3xl p-3";
 
@@ -39,7 +43,7 @@ function WavyFeaturedProjects() {
 }
 
 export default function Projects() {
-	const [isMobile, setIsMobile] = useState(false);
+	// const [isMobile, setIsMobile] = useState(false);
 
 	const ref = useRef(null);
 	const isInView = useInView(ref, { amount: 0.0, margin: "-300px" });
@@ -49,77 +53,111 @@ export default function Projects() {
 	}, [isInView]);
 
 	useEffect(() => {
-		const mediaQuery = window.matchMedia("(max-width: 768px)");
-		setIsMobile(mediaQuery.matches);
+		// const mediaQuery = window.matchMedia("(max-width: 768px)");
+		// setIsMobile(mediaQuery.matches);
 	}, []);
 
 	return (
 		<div className="text-gray-200 min-h-screen min-w-screen flex justify-center items-center ">
 			<div
 				ref={ref}
-				className="relative mx-auto grid h-60 w-11/12 place-content-center"
+				className="relative mx-auto grid h-60 w-full place-content-center"
 			>
 				<motion.div
-					className={`absolute bottom-0 left-[41%] top-0 w-[18%] ${projectBoxStyle}`}
+					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
 					initial={{ y: 0, x: 0, opacity: 0 }}
 					animate={{
 						y: isInView ? "-80%" : "0%",
 						x: isInView ? "-120%" : "0%",
 						opacity: isInView ? 1 : 0,
 					}}
-					transition={{ duration: 0.6, delay: 0.1 }}
 					whileHover={{ scale: 1.2 }}
+					whileTap={{ scale: 0.95 }}
+					style={{ cursor: "pointer" }}
 				>
-					Box 1
+					<ProjectCard
+						name={projectsObj.Sonura.name}
+						githubLink={projectsObj.Sonura.githubLink}
+						shortDesc={projectsObj.Sonura.shortDesc}
+						techStack={projectsObj.Sonura.techStack}
+						imgUrl={projectsObj.Sonura.imgUrl}
+						imgAlt={projectsObj.Sonura.imgAlt}
+					/>
 				</motion.div>
 				<motion.div
-					className={`absolute bottom-0 left-[41%] top-0 w-[18%] ${projectBoxStyle}`}
+					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
 					initial={{ y: 0, x: 0, opacity: 0 }}
 					animate={{
 						y: isInView ? "80%" : "0%",
 						x: isInView ? "-120%" : "0%",
 						opacity: isInView ? 1 : 0,
 					}}
-					transition={{ duration: 0.6, delay: 0.2 }}
 					whileHover={{ scale: 1.2 }}
+					whileTap={{ scale: 0.95 }}
+					style={{ cursor: "pointer" }}
 				>
-					Box 2
+					<ProjectCard
+						name={projectsObj.DebateBot.name}
+						githubLink={projectsObj.DebateBot.githubLink}
+						shortDesc={projectsObj.DebateBot.shortDesc}
+						techStack={projectsObj.DebateBot.techStack}
+						imgUrl={projectsObj.DebateBot.imgUrl}
+						imgAlt={projectsObj.DebateBot.imgAlt}
+					/>
 				</motion.div>
 				<motion.div
-					className={`absolute bottom-0 left-[41%] top-0 w-[18%] ${projectBoxStyle}`}
+					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
 					initial={{ y: 0, x: 0, opacity: 0 }}
 					animate={{
 						y: isInView ? "-80%" : "0%",
 						x: isInView ? "120%" : "0%",
 						opacity: isInView ? 1 : 0,
 					}}
-					transition={{ duration: 0.6, delay: 0.3 }}
 					whileHover={{ scale: 1.2 }}
+					whileTap={{ scale: 0.95 }}
+					style={{ cursor: "pointer" }}
 				>
-					Box 3
+					<ProjectCard
+						name={projectsObj.Shuukan.name}
+						githubLink={projectsObj.Shuukan.githubLink}
+						shortDesc={projectsObj.Shuukan.shortDesc}
+						techStack={projectsObj.Shuukan.techStack}
+						imgUrl={projectsObj.Shuukan.imgUrl}
+						imgAlt={projectsObj.Shuukan.imgAlt}
+					/>
 				</motion.div>
 				<motion.div
-					className={`absolute bottom-0 left-[41%] top-0 w-[18%] ${projectBoxStyle}`}
+					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
 					initial={{ y: 0, x: 0, opacity: 0 }}
 					animate={{
 						y: isInView ? "80%" : "0%",
 						x: isInView ? "120%" : "0%",
 						opacity: isInView ? 1 : 0,
 					}}
-					transition={{ duration: 0.6, delay: 0.4 }}
 					whileHover={{ scale: 1.2 }}
+					whileTap={{ scale: 0.95 }}
+					style={{ cursor: "pointer" }}
 				>
-					Box 4
+					<ProjectCard
+						name={projectsObj.Portfolio.name}
+						githubLink={projectsObj.Portfolio.githubLink}
+						shortDesc={projectsObj.Portfolio.shortDesc}
+						techStack={projectsObj.Portfolio.techStack}
+						imgUrl={projectsObj.Portfolio.imgUrl}
+						imgAlt={projectsObj.Portfolio.imgAlt}
+					/>
 				</motion.div>
 				<motion.div
-					className={`absolute bottom-0 left-[41%] top-0 w-[18%] ${projectBoxStyle} flex flex-col justify-center items-center`}
+					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle} flex flex-col justify-center items-center`}
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{
-						opacity: isInView ? 1 : 0,
-						scale: isInView ? 1 : 0.8,
+						opacity: isInView ? 1 : 1,
+						scale: isInView ? 1 : 0.9,
 					}}
 					transition={{ duration: 0.5 }}
 					whileHover={{ scale: 1.2 }}
+					whileTap={{ scale: 0.95 }}
+					style={{ cursor: "pointer" }}
 				>
 					<WavyFeaturedProjects />
 				</motion.div>
@@ -133,4 +171,97 @@ interface projectDetails {
 	githubLink: string;
 	shortDesc: string;
 	techStack: string[];
+	imgUrl: string;
+	imgAlt: string;
+}
+
+const projectsObj = {
+	Sonura: {
+		name: "Sonura",
+		githubLink: "https://github.com/marlotea/sonura",
+		shortDesc: "Tinder-swipe style Spotify recommendation full-stack app",
+		techStack: ["NextJS", "Python", "FastAPI", "Tailwind", "PostgreSQL"],
+		imgUrl: "/Spotify_logo_without_text.svg.webp",
+		imgAlt: "Spotify logo",
+	},
+	DebateBot: {
+		name: "Debate Bot",
+		githubLink: "https://github.com/KentoBaguetti/Debate-Bot",
+		shortDesc:
+			"ChatBot made with the OpenAI API with the sole purpose of arguing and ragebaiting the user",
+		techStack: ["TypeScript", "ReactJS", "NodeJS", "OpenAI API", "Express"],
+		imgUrl: "",
+		imgAlt: "Ace Lawyer",
+	},
+	Shuukan: {
+		name: "Shuukan",
+		githubLink: "https://github.com/KentoBaguetti/Shuukan",
+		shortDesc:
+			"Pomodoro app with a weekly schedule to keep you on track of your habits made for students when they gotta lock in for finals",
+		techStack: ["TypeScript", "React Native", "Tailwind", "Expo"],
+		imgUrl: "",
+		imgAlt: "No img",
+	},
+	Portfolio: {
+		name: "Portfolio Website",
+		githubLink: "https://github.com/KentoBaguetti/Portfolio-Website",
+		shortDesc: "My Portfolio website to teach me frontend",
+		techStack: ["TypeScript", "NextJS", "Tailwind"],
+		imgUrl: "",
+		imgAlt: "No img",
+	},
+};
+
+function ProjectCard({
+	name,
+	githubLink,
+	shortDesc,
+	techStack,
+	imgUrl,
+	imgAlt,
+}: projectDetails) {
+	return (
+		<div className="flex flex-row flex-auto items-center h-full ">
+			{imgUrl.length > 0 ? (
+				<Image
+					src={imgUrl}
+					alt={imgAlt}
+					width={100}
+					height={100}
+					className="w-1/4 mx-3"
+				/>
+			) : null}
+
+			<div className="flex flex-col">
+				<div className="text-lg flex flex-row items-center font-bold">
+					<h1>{name}</h1>
+					<a
+						href={githubLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="mx-2 hover:scale-125"
+					>
+						<FaGithub size={24} />
+					</a>
+				</div>
+				<div className="text-sm">
+					<p>{shortDesc}</p>
+					<div>
+						{techStack.map((point, index) => (
+							<Chip
+								variant="outlined"
+								key={index}
+								label={point}
+								className="m-1"
+								sx={{
+									color: "#E5E7EB",
+									borderColor: "#E5E7EB",
+								}}
+							/>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
