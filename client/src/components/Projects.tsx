@@ -7,7 +7,8 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import Chip from "@mui/material/Chip";
 
-const projectBoxStyle = "border-gray-200 border-4 rounded-3xl p-3";
+const projectBoxStyle =
+	"border-zinc-900/80 dark:border-gray-200 border-4 rounded-3xl p-3";
 
 function WavyFeaturedProjects() {
 	const text = "Featured Projects";
