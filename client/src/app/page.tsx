@@ -1,3 +1,4 @@
+"use client"
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -18,7 +19,7 @@ export default function Home() {
 		// 		<Projects />
 		// 	</div>
 		// </div>
-		<IPadBackground>Test</IPadBackground>
+		<IPadBackground onHomeClick={() => console.log("Clicked")}>Test</IPadBackground>
 			
 	);
 }
