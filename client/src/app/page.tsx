@@ -16,11 +16,17 @@ export default function Home() {
 			// Check for mobile devices
 			const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 			
-			// Check for low memory
-			const hasLowMemory = (navigator as any).deviceMemory && (navigator as any).deviceMemory < 4;
+			// Check for low memory with proper typing
+			const navigatorWithMemory = navigator as Navigator & {
+				deviceMemory?: number;
+			};
+			const hasLowMemory = navigatorWithMemory.deviceMemory && navigatorWithMemory.deviceMemory < 4;
 			
-			// Check for slow CPU
-			const hasSlowCPU = (navigator as any).hardwareConcurrency && (navigator as any).hardwareConcurrency <= 2;
+			// Check for slow CPU with proper typing
+			const navigatorWithConcurrency = navigator as Navigator & {
+				hardwareConcurrency?: number;
+			};
+			const hasSlowCPU = navigatorWithConcurrency.hardwareConcurrency && navigatorWithConcurrency.hardwareConcurrency <= 2;
 			
 			return isMobile || hasLowMemory || hasSlowCPU;
 		};
