@@ -40,9 +40,9 @@ export default function Home() {
 		let lastTime = 0;
 		let frames = 0;
 		let rafId: number;
-		let startTime = Date.now();
+		const startTime = Date.now();
 		let hasDecided = false;
-		let fpsReadings: number[] = [];
+		const fpsReadings: number[] = [];
 
 		const checkPerformance = (currentTime: number) => {
 			// Only start measuring after 5 seconds to let page fully load
