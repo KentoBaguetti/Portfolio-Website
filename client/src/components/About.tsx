@@ -44,7 +44,7 @@ export default function About() {
 					opacity: isInView ? (expanded ? 0 : 1) : 0,
 				}}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
+				className="hover:cursor-pointer border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
 				onClick={() => {
 					if (expanded) setExpanded(false);
 					else setExpanded(true);
@@ -93,7 +93,7 @@ export default function About() {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.4, ease: "easeOut" }}
-						className="absolute top-0 left-0 right-0 z-10 border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
+						className="hover:cursor-pointer absolute top-0 left-0 right-0 z-10 border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-xl w-full min-h-[200px] md:h-auto flex flex-col md:flex-row items-center md:items-stretch p-3 md:p-8 gap-2 md:gap-6"
 						onClick={() => {
 							if (expanded) setExpanded(false);
 							else setExpanded(true);
