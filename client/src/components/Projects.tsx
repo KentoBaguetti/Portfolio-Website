@@ -47,7 +47,9 @@ export default function Projects() {
 	// const [isMobile, setIsMobile] = useState(false);
 
 	const ref = useRef(null);
+	const mobileRef = useRef(null);
 	const isInView = useInView(ref, { amount: 0.0, margin: "-300px" });
+	const isMobileInView = useInView(mobileRef, { amount: 0.0, margin: "-100px" });
 
 	useEffect(() => {
 		console.log(`User is ${isInView ? "in" : "not in"} view`);
@@ -59,109 +61,222 @@ export default function Projects() {
 	}, []);
 
 	return (
-		<div className=" dark:text-gray-200 min-h-screen min-w-screen flex justify-center items-center">
-			<div
-				ref={ref}
-				className="relative mx-auto grid h-60 w-full place-content-center"
-			>
-				<motion.div
-					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
-					initial={{ y: 0, x: 0, opacity: 0 }}
-					animate={{
-						y: isInView ? "-80%" : "0%",
-						x: isInView ? "-120%" : "0%",
-						opacity: isInView ? 1 : 0,
-					}}
-					whileHover={{ scale: 1.2 }}
-					whileTap={{ scale: 0.95 }}
-					style={{ cursor: "pointer" }}
+		<div className="dark:text-gray-200 min-h-screen min-w-screen flex flex-col justify-center items-center">
+			{/* Desktop layout */}
+			<div className="hidden md:block w-full max-w-6xl">
+				<div
+					ref={ref}
+					className="relative mx-auto h-60 w-full place-content-center"
 				>
-					<ProjectCard
-						name={projectsObj.Sonura.name}
-						githubLink={projectsObj.Sonura.githubLink}
-						shortDesc={projectsObj.Sonura.shortDesc}
-						techStack={projectsObj.Sonura.techStack}
-						imgUrl={projectsObj.Sonura.imgUrl}
-						imgAlt={projectsObj.Sonura.imgAlt}
-					/>
-				</motion.div>
+					<motion.div
+						className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
+						initial={{ y: 0, x: 0, opacity: 0 }}
+						animate={{
+							y: isInView ? "-80%" : "0%",
+							x: isInView ? "-120%" : "0%",
+							opacity: isInView ? 1 : 0,
+						}}
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Sonura.name}
+							githubLink={projectsObj.Sonura.githubLink}
+							shortDesc={projectsObj.Sonura.shortDesc}
+							techStack={projectsObj.Sonura.techStack}
+							imgUrl={projectsObj.Sonura.imgUrl}
+							imgAlt={projectsObj.Sonura.imgAlt}
+						/>
+					</motion.div>
+					<motion.div
+						className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
+						initial={{ y: 0, x: 0, opacity: 0 }}
+						animate={{
+							y: isInView ? "80%" : "0%",
+							x: isInView ? "-120%" : "0%",
+							opacity: isInView ? 1 : 0,
+						}}
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.DebateBot.name}
+							githubLink={projectsObj.DebateBot.githubLink}
+							shortDesc={projectsObj.DebateBot.shortDesc}
+							techStack={projectsObj.DebateBot.techStack}
+							imgUrl={projectsObj.DebateBot.imgUrl}
+							imgAlt={projectsObj.DebateBot.imgAlt}
+						/>
+					</motion.div>
+					<motion.div
+						className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
+						initial={{ y: 0, x: 0, opacity: 0 }}
+						animate={{
+							y: isInView ? "-80%" : "0%",
+							x: isInView ? "120%" : "0%",
+							opacity: isInView ? 1 : 0,
+						}}
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Shuukan.name}
+							githubLink={projectsObj.Shuukan.githubLink}
+							shortDesc={projectsObj.Shuukan.shortDesc}
+							techStack={projectsObj.Shuukan.techStack}
+							imgUrl={projectsObj.Shuukan.imgUrl}
+							imgAlt={projectsObj.Shuukan.imgAlt}
+						/>
+					</motion.div>
+					<motion.div
+						className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
+						initial={{ y: 0, x: 0, opacity: 0 }}
+						animate={{
+							y: isInView ? "80%" : "0%",
+							x: isInView ? "120%" : "0%",
+							opacity: isInView ? 1 : 0,
+						}}
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Portfolio.name}
+							githubLink={projectsObj.Portfolio.githubLink}
+							shortDesc={projectsObj.Portfolio.shortDesc}
+							techStack={projectsObj.Portfolio.techStack}
+							imgUrl={projectsObj.Portfolio.imgUrl}
+							imgAlt={projectsObj.Portfolio.imgAlt}
+						/>
+					</motion.div>
+					<motion.div
+						className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle} flex flex-col justify-center items-center`}
+						initial={{ opacity: 0, scale: 0.8 }}
+						animate={{
+							opacity: isInView ? 1 : 1,
+							scale: isInView ? 1 : 0.9,
+						}}
+						transition={{ duration: 0.5 }}
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<WavyFeaturedProjects />
+					</motion.div>
+				</div>
+			</div>
+
+			{/* Mobile layout */}
+			<div className="md:hidden flex flex-col items-center space-y-6 px-4 py-8">
+				{/* Featured Projects title */}
 				<motion.div
-					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
-					initial={{ y: 0, x: 0, opacity: 0 }}
-					animate={{
-						y: isInView ? "80%" : "0%",
-						x: isInView ? "-120%" : "0%",
-						opacity: isInView ? 1 : 0,
-					}}
-					whileHover={{ scale: 1.2 }}
-					whileTap={{ scale: 0.95 }}
-					style={{ cursor: "pointer" }}
-				>
-					<ProjectCard
-						name={projectsObj.DebateBot.name}
-						githubLink={projectsObj.DebateBot.githubLink}
-						shortDesc={projectsObj.DebateBot.shortDesc}
-						techStack={projectsObj.DebateBot.techStack}
-						imgUrl={projectsObj.DebateBot.imgUrl}
-						imgAlt={projectsObj.DebateBot.imgAlt}
-					/>
-				</motion.div>
-				<motion.div
-					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
-					initial={{ y: 0, x: 0, opacity: 0 }}
-					animate={{
-						y: isInView ? "-80%" : "0%",
-						x: isInView ? "120%" : "0%",
-						opacity: isInView ? 1 : 0,
-					}}
-					whileHover={{ scale: 1.2 }}
-					whileTap={{ scale: 0.95 }}
-					style={{ cursor: "pointer" }}
-				>
-					<ProjectCard
-						name={projectsObj.Shuukan.name}
-						githubLink={projectsObj.Shuukan.githubLink}
-						shortDesc={projectsObj.Shuukan.shortDesc}
-						techStack={projectsObj.Shuukan.techStack}
-						imgUrl={projectsObj.Shuukan.imgUrl}
-						imgAlt={projectsObj.Shuukan.imgAlt}
-					/>
-				</motion.div>
-				<motion.div
-					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle}`}
-					initial={{ y: 0, x: 0, opacity: 0 }}
-					animate={{
-						y: isInView ? "80%" : "0%",
-						x: isInView ? "120%" : "0%",
-						opacity: isInView ? 1 : 0,
-					}}
-					whileHover={{ scale: 1.2 }}
-					whileTap={{ scale: 0.95 }}
-					style={{ cursor: "pointer" }}
-				>
-					<ProjectCard
-						name={projectsObj.Portfolio.name}
-						githubLink={projectsObj.Portfolio.githubLink}
-						shortDesc={projectsObj.Portfolio.shortDesc}
-						techStack={projectsObj.Portfolio.techStack}
-						imgUrl={projectsObj.Portfolio.imgUrl}
-						imgAlt={projectsObj.Portfolio.imgAlt}
-					/>
-				</motion.div>
-				<motion.div
-					className={`absolute bottom-0 left-[37%] top-0 w-[25%] ${projectBoxStyle} flex flex-col justify-center items-center`}
+					className={`${projectBoxStyle} flex flex-col justify-center items-center p-6`}
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{
-						opacity: isInView ? 1 : 1,
-						scale: isInView ? 1 : 0.9,
+						opacity: 1,
+						scale: 1,
 					}}
 					transition={{ duration: 0.5 }}
-					whileHover={{ scale: 1.2 }}
+					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					style={{ cursor: "pointer" }}
 				>
 					<WavyFeaturedProjects />
 				</motion.div>
+
+				{/* Project cards in column */}
+				<div ref={mobileRef} className="flex flex-col space-y-4 w-full max-w-sm">
+					<motion.div
+						className={`w-full ${projectBoxStyle}`}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{
+							y: isMobileInView ? 0 : 50,
+							opacity: isMobileInView ? 1 : 0,
+						}}
+						transition={{ delay: 0.1 }}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Sonura.name}
+							githubLink={projectsObj.Sonura.githubLink}
+							shortDesc={projectsObj.Sonura.shortDesc}
+							techStack={projectsObj.Sonura.techStack}
+							imgUrl={projectsObj.Sonura.imgUrl}
+							imgAlt={projectsObj.Sonura.imgAlt}
+						/>
+					</motion.div>
+
+					<motion.div
+						className={`w-full ${projectBoxStyle}`}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{
+							y: isMobileInView ? 0 : 50,
+							opacity: isMobileInView ? 1 : 0,
+						}}
+						transition={{ delay: 0.2 }}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.DebateBot.name}
+							githubLink={projectsObj.DebateBot.githubLink}
+							shortDesc={projectsObj.DebateBot.shortDesc}
+							techStack={projectsObj.DebateBot.techStack}
+							imgUrl={projectsObj.DebateBot.imgUrl}
+							imgAlt={projectsObj.DebateBot.imgAlt}
+						/>
+					</motion.div>
+
+					<motion.div
+						className={`w-full ${projectBoxStyle}`}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{
+							y: isMobileInView ? 0 : 50,
+							opacity: isMobileInView ? 1 : 0,
+						}}
+						transition={{ delay: 0.3 }}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Shuukan.name}
+							githubLink={projectsObj.Shuukan.githubLink}
+							shortDesc={projectsObj.Shuukan.shortDesc}
+							techStack={projectsObj.Shuukan.techStack}
+							imgUrl={projectsObj.Shuukan.imgUrl}
+							imgAlt={projectsObj.Shuukan.imgAlt}
+						/>
+					</motion.div>
+
+					<motion.div
+						className={`w-full ${projectBoxStyle}`}
+						initial={{ y: 50, opacity: 0 }}
+						animate={{
+							y: isMobileInView ? 0 : 50,
+							opacity: isMobileInView ? 1 : 0,
+						}}
+						transition={{ delay: 0.4 }}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						style={{ cursor: "pointer" }}
+					>
+						<ProjectCard
+							name={projectsObj.Portfolio.name}
+							githubLink={projectsObj.Portfolio.githubLink}
+							shortDesc={projectsObj.Portfolio.shortDesc}
+							techStack={projectsObj.Portfolio.techStack}
+							imgUrl={projectsObj.Portfolio.imgUrl}
+							imgAlt={projectsObj.Portfolio.imgAlt}
+						/>
+					</motion.div>
+				</div>
 			</div>
 		</div>
 	);
