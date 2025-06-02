@@ -13,13 +13,13 @@ const Experience = dynamic(() => import('./Experience'), {
 
 export default function SecondScrollPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-      <Suspense fallback={<div className="h-96 w-full flex items-center justify-center">Loading...</div>}>
+    <div className="min-h-screen flex flex-col md:flex-row justify-center items-center px-4 gap-8 ">
+      <Suspense fallback={<div className="h-full w-full flex items-center justify-center">Loading...</div>}>
         <div className="w-full">
           <About />
         </div>
       </Suspense>
-      <Suspense fallback={<div className="h-96 w-full flex items-center justify-center">Loading...</div>}>
+      <Suspense fallback={<div className="h-full w-full flex items-center justify-center">Loading...</div>}>
         <div className="w-full">
           <Experience />
         </div>

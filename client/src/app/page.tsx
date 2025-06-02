@@ -1,9 +1,8 @@
 "use client"
 import Hero from "@/components/Hero";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import About from "@/components/About";
-import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import SecondScrollPage from "@/components/SecondScrollPage";
 import AnimatedBackground from "@/components/ui/animated-background";
 import { useEffect, useState } from 'react';
 
@@ -87,8 +86,7 @@ export default function Home() {
 					<Hero />
 				</div>
 				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8">
-					<About />
-					<Experience />
+				<SecondScrollPage />
 				</div>
 				<div className="">
 					<Projects />
@@ -100,8 +98,7 @@ export default function Home() {
 					<Hero />
 				</div>
 				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8">
-					<About />
-					<Experience />
+					<SecondScrollPage />
 				</div>
 				<div className="">
 					<Projects />
