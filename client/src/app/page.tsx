@@ -82,25 +82,25 @@ export default function Home() {
 	return (
 		canHandleComplexAnimation ? (
 			<AuroraBackground>
-				<div className="h-screen flex justify-center items-center px-4">
+				<div className="h-screen flex justify-center items-center px-4 hardware-accelerated">
 					<Hero />
 				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8">
+				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
 				<SecondScrollPage />
 				</div>
-				<div className="">
+				<div className="hardware-accelerated">
 					<Projects />
 				</div>
 			</AuroraBackground>
 		) : (
 			<AnimatedBackground>
-				<div className="h-screen flex justify-center items-center px-4">
+				<div className="h-screen flex justify-center items-center px-4 hardware-accelerated">
 					<Hero />
 				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8">
+				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
 					<SecondScrollPage />
 				</div>
-				<div className="">
+				<div className="hardware-accelerated">
 					<Projects />
 				</div>
 			</AnimatedBackground>
