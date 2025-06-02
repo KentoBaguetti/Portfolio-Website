@@ -1,35 +1,8 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import * as motion from "motion/react-client";
-import { AnimatePresence } from "motion/react";
 import { useInView } from "motion/react";
 import TypeWriter from "typewriter-effect";
-
-function ExpandedExperience({
-	position,
-	company,
-	date,
-	bulletPoints,
-}: {
-	position: string;
-	company: string;
-	date: string;
-	bulletPoints: string[];
-}) {
-	return (
-		<div className="flex flex-col dark:text-gray-200 ">
-			<h1 className="text-xl">
-				{position} | {company}
-			</h1>
-			<h2 className="text-sm text-gray-400">{date}</h2>
-			<ul className="list-disc pl-5">
-				{bulletPoints.map((point, index) => (
-					<li key={index}>{point}</li>
-				))}
-			</ul>
-		</div>
-	);
-}
 
 export default function Experience() {
 	const ref = useRef(null);
@@ -38,13 +11,10 @@ export default function Experience() {
 		once: false,
 	});
 
-
-	
-
 	return (
 		<div
 			ref={ref}
-			className="relative mx-auto w-full h-screen p-0 md:p-2 flex items-center justify-center"
+			className="relative mx-auto w-full h-auto md:h-screen p-0 md:p-2 flex items-center justify-center"
 		>
 			<motion.div
 				initial={{ x: 400, opacity: 0 }}
@@ -53,7 +23,7 @@ export default function Experience() {
 					opacity: isInView ? 1 : 0,
 				}}
 				transition={{ duration: 0.4, ease: "easeOut" }}
-				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-10/12 h-10/12"
+				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-10/12 h-auto md:h-10/12"
 				
 			>
 				<div className="flex flex-col p-3">

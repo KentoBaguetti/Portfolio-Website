@@ -4,7 +4,6 @@ import * as motion from "motion/react-client";
 import { useInView } from "motion/react";
 import TypeWriter from "typewriter-effect";
 import getLeetcodeStats from "../../utils/leetcodeEndpoint";
-import { AiOutlineSpotify } from "react-icons/ai";
 
 export default function About() {
 	const ref = useRef(null);
@@ -31,7 +30,7 @@ export default function About() {
 	return (
 		<div
 			ref={ref}
-			className="relative mx-auto w-full h-screen p-0 md:p-2 flex items-center justify-center"
+			className="relative mx-auto w-full h-auto md:h-screen p-0 md:p-2 flex items-center justify-center"
 		>
 			<motion.div
 				initial={{ x: -200, opacity: 0 }}
