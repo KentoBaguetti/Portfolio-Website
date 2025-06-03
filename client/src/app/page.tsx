@@ -2,7 +2,8 @@
 import Hero from "@/components/Hero";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import Projects from "@/components/Projects";
-import SecondScrollPage from "@/components/SecondScrollPage";
+import Experience from "@/components/Experience/Experience";
+import About from "@/components/About";
 import AnimatedBackground from "@/components/ui/animated-background";
 import { useEffect, useState } from 'react';
 
@@ -86,7 +87,10 @@ export default function Home() {
 					<Hero />
 				</div>
 				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-				<SecondScrollPage />
+					<About />
+				</div>
+				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+					<Experience />
 				</div>
 				<div className="hardware-accelerated">
 					<Projects />
@@ -98,7 +102,10 @@ export default function Home() {
 					<Hero />
 				</div>
 				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-					<SecondScrollPage />
+					<About />
+				</div>
+				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+					<Experience />
 				</div>
 				<div className="hardware-accelerated">
 					<Projects />

@@ -39,10 +39,10 @@ export default function About() {
 					opacity: isInView ? 1 : 0,
 				}}
 				transition={{ duration: 0.6, ease: "easeOut" }}
-				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-10/12 h-auto md:h-10/12"
+				className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-6/12 h-auto md:h-auto"
 			>
 					<div className="flex flex-col p-3">
-						<div className="text-3xl text-center font-bold p-4">
+						<div className="text-3xl text-center font-bold px-1">
 						<TypeWriter
 							key={isInView ? "in-view" : "out-of-view"}
 							onInit={(typewriter) => {

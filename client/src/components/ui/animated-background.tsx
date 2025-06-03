@@ -27,7 +27,7 @@ export default function AnimatedBackground({ children }: {children: React.ReactN
 
           /* Light mode gradient */
           .animated-bg {
-            background: linear-gradient(45deg, #3b82f6, #a5b4fc, #93c5fd, #ddd6fe, #60a5fa);
+            background: linear-gradient(45deg, #f8fafc, #ffffff, #e0f2fe, #f0f9ff, #f1f5f9);
             background-size: 400% 400%;
           }
 
