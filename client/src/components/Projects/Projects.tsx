@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <div
       ref={ref}
-      className="relative w-full h-auto p-4 flex flex-col items-center justify-center space-y-8 min-h-screen dark:text-gray-200"
+      className="relative ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8 dark:text-gray-200"
     >
       <motion.div
         className={`w-full max-w-4xl ${projectBoxStyle}`}
@@ -28,8 +28,8 @@ export default function Projects() {
           y: isInView ? 0 : 50,
           opacity: isInView ? 1 : 0,
         }}
-        transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-        whileHover={{ scale: 1.02 }}
+        transition={{ delay: 0.0, duration: 0.6, ease: "easeOut" }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         style={{ cursor: "pointer", transformOrigin: "center" }}
       >
