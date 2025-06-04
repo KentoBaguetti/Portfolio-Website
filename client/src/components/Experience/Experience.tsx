@@ -26,7 +26,6 @@ export default function Experience() {
         className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-10/12 h-auto md:h-auto"
       >
         <div className="flex flex-col p-3">
-          <div className="text-3xl text-center font-bold p-4"></div>
           <div className="p-8">
             <div>
               <div>
