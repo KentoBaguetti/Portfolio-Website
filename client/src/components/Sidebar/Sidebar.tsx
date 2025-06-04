@@ -8,18 +8,24 @@ export default function Sidebar({
   activeComponent: string;
 }) {
   return (
-    <div className="text-2xl flex flex-col space-y-8 dark:text-gray-200 w-full items-center bg-transparent md:block hidden">
+    <div className="text-2xl flex flex-col space-y-8 dark:text-gray-200 w-full items-center bg-transparent md:block">
       <div className="xl:w-56 lg:w-48 md:w-40 text-left mx-auto">
-        {activeComponent == "Home" ? "<Home />" : "Home"}
+        <a href="#Home">{activeComponent == "Home" ? "<Home />" : "Home"}</a>
       </div>
       <div className="xl:w-56 lg:w-48 md:w-40 text-left mx-auto">
-        {activeComponent == "About" ? "<About />" : "About"}
+        <a href="#About">
+          {activeComponent == "About" ? "<About />" : "About"}
+        </a>
       </div>
       <div className="xl:w-56 lg:w-48 md:w-40 text-left mx-auto">
-        {activeComponent == "Experience" ? "<Experience />" : "Experience"}
+        <a href="#Experience">
+          {activeComponent == "Experience" ? "<Experience />" : "Experience"}
+        </a>
       </div>
       <div className="xl:w-56 lg:w-48 md:w-40 text-left mx-auto">
-        {activeComponent == "Projects" ? "<Projects />" : "Projects"}
+        <a href="#Projects">
+          {activeComponent == "Projects" ? "<Projects />" : "Projects"}
+        </a>
       </div>
     </div>
   );
