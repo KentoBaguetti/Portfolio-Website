@@ -3,7 +3,7 @@ import Hero from "@/components/Hero/Hero";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import Projects from "@/components/Projects/Projects";
 import Experience from "@/components/Experience/Experience";
-import About from "@/components/About";
+import About from "@/components/About/About";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import AnimatedBackground from "@/components/ui/animated-background";
 import { useEffect, useState, useRef } from "react";
@@ -97,11 +97,33 @@ export default function Home() {
     <>
       {canHandleComplexAnimation ? (
         <AuroraBackground>
-          <Hero />
+          <div className="flex flex-row">
+            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
+              <Sidebar activeComponent="Home" />
+            </div>
+
+            <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
+              <div className="mr-[20%]">
+                <Hero />
+              </div>
+
+              <About />
+              <Experience />
+              <Projects />
+            </div>
+          </div>
         </AuroraBackground>
       ) : (
         <AnimatedBackground>
-          <Hero />
+          <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
+            <Sidebar />
+          </div>
+          <div className="ml-[20%] w-4/5 overflow-x-hidden">
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+          </div>
         </AnimatedBackground>
       )}
     </>
