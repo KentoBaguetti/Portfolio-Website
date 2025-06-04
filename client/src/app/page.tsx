@@ -158,21 +158,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
               >
                 <Projects />
               </div>
@@ -197,13 +197,25 @@ export default function Home() {
                 <Hero />
               </div>
 
-              <div ref={aboutRef} id="About" className="w-full">
+              <div
+                ref={aboutRef}
+                id="About"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <About />
               </div>
-              <div ref={experienceRef} id="Experience" className="w-full">
+              <div
+                ref={experienceRef}
+                id="Experience"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Experience />
               </div>
-              <div ref={projectsRef} id="Projects" className="w-full">
+              <div
+                ref={projectsRef}
+                id="Projects"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Projects />
               </div>
             </div>
