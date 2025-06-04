@@ -139,18 +139,18 @@ export default function Home() {
     <>
       {canHandleComplexAnimation ? (
         <AuroraBackground>
-          <div className="flex flex-row min-h-screen">
+          <div className="flex flex-row min-h-screen overflow-hidden">
             {/* Sidebar - hidden on mobile */}
             <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center md:flex hidden xl:w-1/5 lg:w-1/4 md:w-1/3">
               <Sidebar activeComponent={activeComponent} />
             </div>
 
             {/* Main content */}
-            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-x-hidden px-4 md:px-0">
+            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-hidden">
               <div
                 ref={heroRef}
                 id="Home"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Hero />
               </div>
@@ -158,21 +158,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Projects />
               </div>
@@ -181,18 +181,18 @@ export default function Home() {
         </AuroraBackground>
       ) : (
         <AnimatedBackground>
-          <div className="flex flex-row min-h-screen">
+          <div className="flex flex-row min-h-screen overflow-hidden">
             {/* Sidebar - hidden on mobile */}
             <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center md:flex hidden xl:w-1/5 lg:w-1/4 md:w-1/3">
               <Sidebar activeComponent={activeComponent} />
             </div>
 
             {/* Main content */}
-            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-x-hidden px-4 md:px-0">
+            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-hidden">
               <div
                 ref={heroRef}
                 id="Home"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Hero />
               </div>
@@ -200,21 +200,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
+                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
               >
                 <Projects />
               </div>
