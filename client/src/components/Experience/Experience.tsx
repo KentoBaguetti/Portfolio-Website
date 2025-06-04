@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import * as motion from "motion/react-client";
 import { useInView } from "motion/react";
-import TypeWriter from "typewriter-effect";
+import ExperienceCard from "./ExperienceCard";
 
 export default function Experience() {
   const ref = useRef(null);
@@ -14,9 +14,22 @@ export default function Experience() {
   return (
     <div
       ref={ref}
-      className="relative mx-auto w-full h-auto md:h-screen p-0 md:p-2 flex items-center justify-center"
+      className="relative mx-auto w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8"
     >
-      <motion.div
+      <ExperienceCard
+        position="Software Engineer"
+        company="Consign AI"
+        workPeriod="Jun 2024 - Mar 2025"
+        summary="Developed AI automation tools, built full-stack applications, worked on real-time over the phone AI translations."
+      />
+      <ExperienceCard
+        position="Software Engineering Intern"
+        company="Consign AI"
+        workPeriod="Feb 2024 - Jun 2024"
+        summary="Worked on AI automation tools to make data entry faster for clients."
+      />
+
+      {/* <motion.div
         initial={{ x: 400, opacity: 0 }}
         animate={{
           x: isInView ? 0 : 100,
@@ -102,7 +115,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
