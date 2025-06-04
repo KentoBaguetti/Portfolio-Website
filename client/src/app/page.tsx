@@ -59,10 +59,10 @@ export default function Home() {
   useEffect(() => {
     const isLowEndDevice = () => {
       // Check for mobile devices
-      const isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        );
+      // const isMobile =
+      //   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      //     navigator.userAgent
+      //   );
 
       // Check for low memory with proper typing
       const navigatorWithMemory = navigator as Navigator & {
@@ -80,7 +80,7 @@ export default function Home() {
         navigatorWithConcurrency.hardwareConcurrency &&
         navigatorWithConcurrency.hardwareConcurrency <= 2;
 
-      return isMobile || hasLowMemory || hasSlowCPU;
+      return hasLowMemory || hasSlowCPU;
     };
 
     if (isLowEndDevice()) {
