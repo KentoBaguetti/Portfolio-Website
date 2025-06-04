@@ -146,10 +146,11 @@ const projectsObj = {
     imgAlt: "No img",
   },
   Portfolio: {
-    name: "Portfolio Website",
-    githubLink: "https://github.com/KentoBaguetti/Portfolio-Website",
-    shortDesc: "My Portfolio website to teach me frontend",
-    techStack: ["TypeScript", "NextJS", "Tailwind"],
+    name: "Maze Solver",
+    githubLink: "https://github.com/KentoBaguetti/Maze-Solver",
+    shortDesc:
+      "Visual maze solver with algorithms such as DFS, BFS, Backtracking, and Dijkstras.",
+    techStack: ["Python", "matplotlib"],
     imgUrl: "",
     imgAlt: "No img",
   },
@@ -169,9 +170,9 @@ function ProjectCard({
         <Image
           src={imgUrl}
           alt={imgAlt}
-          width={100}
-          height={100}
-          className="w-1/4 mx-3"
+          width={50}
+          height={50}
+          className="w-1/7 mx-3"
         />
       ) : null}
 
