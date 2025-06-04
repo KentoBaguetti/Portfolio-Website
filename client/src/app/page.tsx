@@ -11,7 +11,49 @@ import { useEffect, useState, useRef } from "react";
 export default function Home() {
   const [canHandleComplexAnimation, setCanHandleComplexAnimation] =
     useState(true);
+  const [activeComponent, setActiveComponent] = useState("Home");
   const performanceChecked = useRef(false);
+
+  // Refs for each section
+  const heroRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const experienceRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for active section detection
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            setActiveComponent(id);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the element is visible
+        rootMargin: "-20% 0px -20% 0px", // Adjust when to trigger
+      }
+    );
+
+    // Observe all sections
+    const sections = [
+      heroRef.current,
+      aboutRef.current,
+      experienceRef.current,
+      projectsRef.current,
+    ];
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
+  }, []);
 
   // device performance detection
   useEffect(() => {
@@ -99,30 +141,44 @@ export default function Home() {
         <AuroraBackground>
           <div className="flex flex-row">
             <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
-              <Sidebar activeComponent="Home" />
+              <Sidebar activeComponent={activeComponent} />
             </div>
 
             <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
-              <div className="mr-[20%]">
+              <div ref={heroRef} id="Home" className="mr-[20%]">
                 <Hero />
               </div>
 
-              <About />
-              <Experience />
-              <Projects />
+              <div ref={aboutRef} id="About">
+                <About />
+              </div>
+              <div ref={experienceRef} id="Experience">
+                <Experience />
+              </div>
+              <div ref={projectsRef} id="Projects">
+                <Projects />
+              </div>
             </div>
           </div>
         </AuroraBackground>
       ) : (
         <AnimatedBackground>
           <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
-            <Sidebar />
+            <Sidebar activeComponent={activeComponent} />
           </div>
           <div className="ml-[20%] w-4/5 overflow-x-hidden">
-            <Hero />
-            <About />
-            <Experience />
-            <Projects />
+            <div ref={heroRef} id="Home">
+              <Hero />
+            </div>
+            <div ref={aboutRef} id="About">
+              <About />
+            </div>
+            <div ref={experienceRef} id="Experience">
+              <Experience />
+            </div>
+            <div ref={projectsRef} id="Projects">
+              <Projects />
+            </div>
           </div>
         </AnimatedBackground>
       )}
