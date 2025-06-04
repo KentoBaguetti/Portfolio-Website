@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <div
       ref={ref}
-      className="relative ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8 dark:text-gray-200"
+      className="relative md:ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8 dark:text-gray-200"
     >
       {projectArr.map((project, index) => (
         <ProjectCard

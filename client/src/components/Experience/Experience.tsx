@@ -8,7 +8,7 @@ export default function Experience() {
   return (
     <div
       ref={ref}
-      className="relative ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8"
+      className="relative md:ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8"
     >
       {experienceArr.map((thingy, index) => (
         <ExperienceCard
