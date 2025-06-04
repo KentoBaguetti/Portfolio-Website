@@ -145,7 +145,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
-              <div ref={heroRef} id="Home" className="mr-[20%]">
+              <div ref={heroRef} id="Home" className="mr-[25%]">
                 <Hero />
               </div>
 
@@ -163,21 +163,25 @@ export default function Home() {
         </AuroraBackground>
       ) : (
         <AnimatedBackground>
-          <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
-            <Sidebar activeComponent={activeComponent} />
-          </div>
-          <div className="ml-[20%] w-4/5 overflow-x-hidden">
-            <div ref={heroRef} id="Home">
-              <Hero />
+          <div className="flex flex-row">
+            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
+              <Sidebar activeComponent={activeComponent} />
             </div>
-            <div ref={aboutRef} id="About">
-              <About />
-            </div>
-            <div ref={experienceRef} id="Experience">
-              <Experience />
-            </div>
-            <div ref={projectsRef} id="Projects">
-              <Projects />
+
+            <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
+              <div ref={heroRef} id="Home" className="mr-[25%]">
+                <Hero />
+              </div>
+
+              <div ref={aboutRef} id="About">
+                <About />
+              </div>
+              <div ref={experienceRef} id="Experience">
+                <Experience />
+              </div>
+              <div ref={projectsRef} id="Projects">
+                <Projects />
+              </div>
             </div>
           </div>
         </AnimatedBackground>
