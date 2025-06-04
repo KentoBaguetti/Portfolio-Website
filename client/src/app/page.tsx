@@ -150,7 +150,7 @@ export default function Home() {
               <div
                 ref={heroRef}
                 id="Home"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Hero />
               </div>
@@ -158,21 +158,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Projects />
               </div>
@@ -192,7 +192,7 @@ export default function Home() {
               <div
                 ref={heroRef}
                 id="Home"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Hero />
               </div>
@@ -200,21 +200,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="min-h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%] px-4 md:px-0"
+                className="min-h-screen px-4 md:px-0 md:pr-[25%] lg:pr-[20%] xl:pr-[25%] flex items-center justify-center md:block"
               >
                 <Projects />
               </div>
