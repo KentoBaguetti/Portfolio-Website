@@ -150,7 +150,7 @@ export default function Home() {
               <div
                 ref={heroRef}
                 id="Home"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Hero />
               </div>
@@ -158,21 +158,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Projects />
               </div>
@@ -192,7 +192,7 @@ export default function Home() {
               <div
                 ref={heroRef}
                 id="Home"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Hero />
               </div>
@@ -200,21 +200,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="h-screen md:pr-[25%] lg:pr-[20%] xl:pr-[25%]"
               >
                 <Projects />
               </div>
