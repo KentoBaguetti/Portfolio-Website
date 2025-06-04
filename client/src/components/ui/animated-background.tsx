@@ -1,6 +1,10 @@
-import React from 'react';
+import React from "react";
 
-export default function AnimatedBackground({ children }: {children: React.ReactNode}) {
+export default function AnimatedBackground({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       {/* Custom keyframes defined here so no need to touch tailwind.config.js */}
@@ -43,9 +47,7 @@ export default function AnimatedBackground({ children }: {children: React.ReactN
 
       <div className="relative flex min-h-[100vh] flex-col items-center justify-center">
         {/* Animated gradient background */}
-        <div
-          className="fixed inset-0 z-[-1] pointer-events-none animate-gradient animate-fadeIn animated-bg"
-        />
+        <div className="fixed inset-0 z-[-1] pointer-events-none animate-gradient animate-fadeIn animated-bg" />
         {children}
       </div>
     </>
