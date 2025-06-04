@@ -109,11 +109,11 @@ export default function Home() {
     return (
         <>
 		{ /* next, pass props to make the diferent headers pop out */ }
-            <div className={`fixed left-10 top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ease-in-out ${
+            {/* <div className={`fixed left-10 top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ease-in-out ${
                 showSidebar ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
             }`}>
                 <Sidebar />
-            </div>
+            </div> */}
 
             {canHandleComplexAnimation ? (
                 <AuroraBackground>
@@ -121,6 +121,9 @@ export default function Home() {
                         <Hero />
                     </div>
                     <div>
+                        <div>
+                            <Sidebar />
+                        </div>
                         <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
                             <About />
                         </div>
@@ -137,16 +140,22 @@ export default function Home() {
                     <div ref={heroRef} className="h-screen flex justify-center items-center px-4 hardware-accelerated">
                         <Hero />
                     </div>
-                    <div>
-                        <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-                            <About />
+                    <div className="flex flex-row">
+                        <div className="">
+                            <Sidebar />
                         </div>
-                        <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-                            <Experience />
+                        <div className="flex flex-col">
+                            <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+                                <About />
+                            </div>
+                            <div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+                                <Experience />
+                            </div>
+                            <div className="hardware-accelerated">
+                                <Projects />
+                            </div>
                         </div>
-                        <div className="hardware-accelerated">
-                            <Projects />
-                        </div>
+                        
                     </div>
                 </AnimatedBackground>
             )}
