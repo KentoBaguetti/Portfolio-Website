@@ -4,6 +4,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience/Experience";
 import About from "@/components/About";
+import Sidebar from "@/components/Sidebar/Sidebar";
 import AnimatedBackground from "@/components/ui/animated-background";
 import { useEffect, useState } from 'react';
 
@@ -86,29 +87,40 @@ export default function Home() {
 				<div className="h-screen flex justify-center items-center px-4 hardware-accelerated">
 					<Hero />
 				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-					<About />
+				<div>
+					<div className="">
+						<Sidebar />
+					</div>
+					<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+						<About />
+					</div>
+					<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+						<Experience />
+					</div>
+					<div className="hardware-accelerated">
+						<Projects />
+					</div>
 				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-					<Experience />
-				</div>
-				<div className="hardware-accelerated">
-					<Projects />
-				</div>
+				
 			</AuroraBackground>
 		) : (
 			<AnimatedBackground>
 				<div className="h-screen flex justify-center items-center px-4 hardware-accelerated">
 					<Hero />
 				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-					<About />
-				</div>
-				<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
-					<Experience />
-				</div>
-				<div className="hardware-accelerated">
-					<Projects />
+				<div>
+					<div className="">
+						<Sidebar />
+					</div>
+					<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+						<About />
+					</div>
+					<div className="min-h-screen flex flex-col justify-center items-center px-4 gap-8 hardware-accelerated">
+						<Experience />
+					</div>
+					<div className="hardware-accelerated">
+						<Projects />
+					</div>
 				</div>
 			</AnimatedBackground>
 		)
