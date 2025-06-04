@@ -26,7 +26,7 @@ export default function Experience() {
         position="Software Engineering Intern"
         company="Consign AI"
         workPeriod="Feb 2024 - Jun 2024"
-        summary="Worked on AI automation tools to make data entry faster for clients."
+        summary="Worked on AI automation tools to improve data entry efficiency by 85% for clients."
       />
 
       {/* <motion.div
