@@ -94,14 +94,9 @@ function ProjectCard({
         <div className="flex flex-col">
           <div className="text-lg flex flex-row items-center font-bold">
             <h1>{name}</h1>
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2"
-            >
+            <div className="mx-2">
               <FaGithub size={24} />
-            </a>
+            </div>
           </div>
           <div className="text-sm">
             <p>{shortDesc}</p>
