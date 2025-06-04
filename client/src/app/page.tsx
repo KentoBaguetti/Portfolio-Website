@@ -139,23 +139,41 @@ export default function Home() {
     <>
       {canHandleComplexAnimation ? (
         <AuroraBackground>
-          <div className="flex flex-row">
-            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
+          <div className="flex flex-row min-h-screen">
+            {/* Sidebar - hidden on mobile */}
+            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center md:flex hidden xl:w-1/5 lg:w-1/4 md:w-1/3">
               <Sidebar activeComponent={activeComponent} />
             </div>
 
-            <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
-              <div ref={heroRef} id="Home" className="mr-[25%]">
+            {/* Main content */}
+            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-x-hidden px-4 md:px-0">
+              <div
+                ref={heroRef}
+                id="Home"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Hero />
               </div>
 
-              <div ref={aboutRef} id="About">
+              <div
+                ref={aboutRef}
+                id="About"
+                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <About />
               </div>
-              <div ref={experienceRef} id="Experience">
+              <div
+                ref={experienceRef}
+                id="Experience"
+                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Experience />
               </div>
-              <div ref={projectsRef} id="Projects">
+              <div
+                ref={projectsRef}
+                id="Projects"
+                className="w-full md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Projects />
               </div>
             </div>
@@ -163,23 +181,29 @@ export default function Home() {
         </AuroraBackground>
       ) : (
         <AnimatedBackground>
-          <div className="flex flex-row">
-            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center">
+          <div className="flex flex-row min-h-screen">
+            {/* Sidebar - hidden on mobile */}
+            <div className="fixed left-0 w-1/5 top-0 h-screen z-50 flex items-center justify-center md:flex hidden xl:w-1/5 lg:w-1/4 md:w-1/3">
               <Sidebar activeComponent={activeComponent} />
             </div>
 
-            <div className="flex flex-col ml-[20%] w-4/5 overflow-x-hidden">
-              <div ref={heroRef} id="Home" className="mr-[25%]">
+            {/* Main content */}
+            <div className="flex flex-col w-full md:ml-[20%] lg:ml-[25%] xl:ml-[20%] md:w-4/5 lg:w-3/4 xl:w-4/5 overflow-x-hidden px-4 md:px-0">
+              <div
+                ref={heroRef}
+                id="Home"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+              >
                 <Hero />
               </div>
 
-              <div ref={aboutRef} id="About">
+              <div ref={aboutRef} id="About" className="w-full">
                 <About />
               </div>
-              <div ref={experienceRef} id="Experience">
+              <div ref={experienceRef} id="Experience" className="w-full">
                 <Experience />
               </div>
-              <div ref={projectsRef} id="Projects">
+              <div ref={projectsRef} id="Projects" className="w-full">
                 <Projects />
               </div>
             </div>
