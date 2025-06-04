@@ -32,13 +32,13 @@ export default function About() {
       className="relative mx-auto w-full h-auto md:h-screen p-0 md:p-2 flex items-center justify-center"
     >
       <motion.div
-        initial={{ x: -200, opacity: 0 }}
+        initial={{ x: 200, opacity: 0 }}
         animate={{
-          x: isInView ? 0 : -100,
+          x: isInView ? 0 : 100,
           opacity: isInView ? 1 : 0,
         }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-3/5 h-auto md:h-auto"
+        className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-11/12 h-auto md:h-auto"
       >
         <div className="flex flex-col p-3">
           <div className="text-3xl text-center font-bold px-1"></div>
