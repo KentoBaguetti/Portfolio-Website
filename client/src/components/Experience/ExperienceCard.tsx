@@ -21,7 +21,7 @@ export default function ExperienceCard({
   });
 
   return (
-    <div ref={ref} className="">
+    <div ref={ref} className="w-full flex justify-center">
       <motion.div
         initial={{ x: 400, opacity: 0 }}
         animate={{
@@ -30,7 +30,7 @@ export default function ExperienceCard({
         }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         whileHover={{ scale: 1.2 }}
-        className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-10/12 h-auto md:h-auto"
+        className="border-solid border-4 border-zinc-900/80 dark:border-gray-200 dark:text-gray-200 rounded-4xl dark:bg-zinc-900/80 shadow-2xl w-full max-w-2xl h-auto"
       >
         <div className="p-8">
           <p className="text-lg font-bold">
