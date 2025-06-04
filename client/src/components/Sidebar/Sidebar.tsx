@@ -1,7 +1,5 @@
 import React from "react";
 
-const onHoverStyle: string = "text-indigo-500";
-
 export default function Sidebar({
   activeComponent,
 }: {
