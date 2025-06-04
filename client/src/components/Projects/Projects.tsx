@@ -18,49 +18,19 @@ export default function Projects() {
       ref={ref}
       className="relative ml-[10%] w-full h-auto md:h-screen p-0 md:p-2 flex flex-col items-center justify-center space-y-8 dark:text-gray-200"
     >
-      <ProjectCard
-        name={projectsObj.Sonura.name}
-        githubLink={projectsObj.Sonura.githubLink}
-        shortDesc={projectsObj.Sonura.shortDesc}
-        techStack={projectsObj.Sonura.techStack}
-        imgUrl={projectsObj.Sonura.imgUrl}
-        imgAlt={projectsObj.Sonura.imgAlt}
-        delay={0.0}
-        isInView={isInView}
-      />
-
-      <ProjectCard
-        name={projectsObj.DebateBot.name}
-        githubLink={projectsObj.DebateBot.githubLink}
-        shortDesc={projectsObj.DebateBot.shortDesc}
-        techStack={projectsObj.DebateBot.techStack}
-        imgUrl={projectsObj.DebateBot.imgUrl}
-        imgAlt={projectsObj.DebateBot.imgAlt}
-        delay={0.1}
-        isInView={isInView}
-      />
-
-      <ProjectCard
-        name={projectsObj.Shuukan.name}
-        githubLink={projectsObj.Shuukan.githubLink}
-        shortDesc={projectsObj.Shuukan.shortDesc}
-        techStack={projectsObj.Shuukan.techStack}
-        imgUrl={projectsObj.Shuukan.imgUrl}
-        imgAlt={projectsObj.Shuukan.imgAlt}
-        delay={0.2}
-        isInView={isInView}
-      />
-
-      <ProjectCard
-        name={projectsObj.Portfolio.name}
-        githubLink={projectsObj.Portfolio.githubLink}
-        shortDesc={projectsObj.Portfolio.shortDesc}
-        techStack={projectsObj.Portfolio.techStack}
-        imgUrl={projectsObj.Portfolio.imgUrl}
-        imgAlt={projectsObj.Portfolio.imgAlt}
-        delay={0.3}
-        isInView={isInView}
-      />
+      {projectArr.map((project, index) => (
+        <ProjectCard
+          key={index}
+          name={project.name}
+          githubLink={project.githubLink}
+          shortDesc={project.shortDesc}
+          techStack={project.techStack}
+          imgUrl={project.imgUrl}
+          imgAlt={project.imgAlt}
+          delay={index / 10 + 0.1}
+          isInView={isInView}
+        />
+      ))}
     </div>
   );
 }
@@ -79,6 +49,8 @@ interface projectDetails {
 const projectBoxStyle =
   "border-zinc-900/80 dark:border-gray-200 border-4 rounded-3xl p-3";
 
+// project card component
+// #TODO should probably move this into a separate component
 function ProjectCard({
   name,
   githubLink,
@@ -90,7 +62,10 @@ function ProjectCard({
   isInView,
 }: projectDetails) {
   return (
-    <motion.div
+    <motion.a
+      href={githubLink}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`w-full max-w-4xl ${projectBoxStyle}`}
       initial={{ y: 50, opacity: 0 }}
       animate={{
@@ -123,7 +98,7 @@ function ProjectCard({
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mx-2 hover:scale-125"
+              className="mx-2"
             >
               <FaGithub size={24} />
             </a>
@@ -147,12 +122,12 @@ function ProjectCard({
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 
-const projectsObj = {
-  Sonura: {
+const projectArr = [
+  {
     name: "Sonura",
     githubLink: "https://github.com/marlotea/sonura",
     shortDesc: "Tinder-swipe style Spotify recommendation full-stack app",
@@ -160,7 +135,7 @@ const projectsObj = {
     imgUrl: "/Spotify_logo_without_text.svg.webp",
     imgAlt: "Spotify logo",
   },
-  DebateBot: {
+  {
     name: "Debate Bot",
     githubLink: "https://github.com/KentoBaguetti/Debate-Bot",
     shortDesc:
@@ -169,7 +144,7 @@ const projectsObj = {
     imgUrl: "",
     imgAlt: "Ace Lawyer",
   },
-  Shuukan: {
+  {
     name: "Shuukan",
     githubLink: "https://github.com/KentoBaguetti/Shuukan",
     shortDesc:
@@ -178,7 +153,7 @@ const projectsObj = {
     imgUrl: "",
     imgAlt: "No img",
   },
-  Portfolio: {
+  {
     name: "Maze Solver",
     githubLink: "https://github.com/KentoBaguetti/Maze-Solver",
     shortDesc:
@@ -187,4 +162,4 @@ const projectsObj = {
     imgUrl: "",
     imgAlt: "No img",
   },
-};
+];
