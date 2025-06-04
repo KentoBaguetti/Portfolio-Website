@@ -150,7 +150,7 @@ export default function Home() {
               <div
                 ref={heroRef}
                 id="Home"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
               >
                 <Hero />
               </div>
@@ -158,21 +158,21 @@ export default function Home() {
               <div
                 ref={aboutRef}
                 id="About"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
               >
                 <About />
               </div>
               <div
                 ref={experienceRef}
                 id="Experience"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
               >
                 <Experience />
               </div>
               <div
                 ref={projectsRef}
                 id="Projects"
-                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%]"
+                className="md:mr-[25%] lg:mr-[20%] xl:mr-[25%] h-screen"
               >
                 <Projects />
               </div>
