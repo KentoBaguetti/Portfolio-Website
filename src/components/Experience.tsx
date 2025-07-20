@@ -9,7 +9,7 @@ export default function Experience() {
         />
         <ExperienceItem
           work="Software Engineering Intern @ Consign AI"
-          date="Feb 2024 - Mar 2024"
+          date="Feb 2024 - Mar 2025"
         />
       </div>
     </div>
