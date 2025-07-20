@@ -1,8 +1,9 @@
-@import "tailwindcss/preflight";
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Kanit", sans-serif;
+  font-family: "Saira", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -10,9 +11,9 @@
 }
 
 body {
-  background-color: #03001c;
-  color: #b6eada;
-  font-family: "Kanit", sans-serif;
+  background-color: #eeeeee;
+  color: #000000;
+  font-family: "Saira", sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;

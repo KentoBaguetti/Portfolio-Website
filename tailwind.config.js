@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Kanit", "sans-serif"],
+        sans: ["Saira", "sans-serif"],
+      },
+      boxShadow: {
+        custom: "7px 7px 10px rgba(255, 255, 255, 0.6)",
       },
     },
   },
