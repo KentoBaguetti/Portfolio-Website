@@ -68,7 +68,7 @@ const ProjectItem = ({
     <div className="flex flex-row justify-between items-center w-full mb-1 py-1">
       <div className="text-lg text-tron-grey">
         <a
-          className="underline text-blue-700"
+          className="underline text-tron-blue"
           rel="noopener noreferrer"
           target="_blank"
           href={link}
