@@ -4,10 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Saira", "sans-serif"],
+        sans: ["EB Garamond", "serif"],
       },
       boxShadow: {
         custom: "7px 7px 10px rgba(255, 255, 255, 0.6)",
+      },
+      colors: {
+        "tron-yellow": "#f7c530ff",
+        "tron-blue": "#6ee2ffff",
+        "tron-grey": "#d0dfe6ff",
       },
     },
   },

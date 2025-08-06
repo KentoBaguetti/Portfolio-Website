@@ -1,16 +1,12 @@
 import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import CardSelector from "./components/CardSelector";
 
 function App() {
   return (
-    <div className="flex justify-center w-full">
-      <div className="w-1/2 mx-auto">
+    <div className="flex justify-center w-full overflow-x-hidden">
+      <div className="w-full md:w-11/12 lg:w-3/4 mx-auto">
         <Hero />
-        <Experience />
-        <Projects />
-        <Footer />
+        <CardSelector />
       </div>
     </div>
   );

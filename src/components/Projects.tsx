@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 const projects = [
   {
     name: "Cournot Game",
@@ -31,17 +33,24 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col font-sans w-full py-16">
-      <h2 className="text-4xl mb-5 self-start">Projects</h2>
-      <div className="w-full">
-        {projects.map((project) => (
-          <ProjectItem
-            name={project.name}
-            link={project.link}
-            basicDescription={project.basicDescription}
-          />
-        ))}
-      </div>
+    <div className="overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col w-full py-16"
+      >
+        <h2 className="text-4xl mb-5 self-start font-bold">Projects</h2>
+        <div className="w-full">
+          {projects.map((project) => (
+            <ProjectItem
+              name={project.name}
+              link={project.link}
+              basicDescription={project.basicDescription}
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -57,7 +66,7 @@ const ProjectItem = ({
 }) => {
   return (
     <div className="flex flex-row justify-between items-center w-full mb-1 py-1">
-      <div className="text-lg">
+      <div className="text-lg text-tron-grey">
         <a
           className="underline text-blue-700"
           rel="noopener noreferrer"
