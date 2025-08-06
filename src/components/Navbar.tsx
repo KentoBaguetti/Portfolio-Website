@@ -7,9 +7,9 @@ export default function Navbar({
 }) {
   const [selectedCard, setSelectedCard] = useState<string>("About");
   const selectedLinkStyles =
-    "text-lg sm:text-xl md:text-2xl font-sans text-tron-yellow cursor-pointer font-bold hover:scale-110";
+    "text-lg sm:text-3xl md:text-2xl font-sans text-tron-yellow cursor-pointer font-bold hover:scale-110";
   const unselectedLinkStyles =
-    "text-lg sm:text-xl md:text-2xl font-sans text-tron-blue cursor-pointer hover:scale-110";
+    "text-lg sm:text-3xl md:text-2xl font-sans text-tron-blue cursor-pointer hover:scale-110";
 
   return (
     <div className="w-full flex flex-row items-center gap-2 sm:gap-4 md:gap-8overflow-x-auto pb-2">
