@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import About from "./About";
 
 export default function CardSelector() {
-  const [selectedCard, setSelectedCard] = useState<string>("Experience");
+  const [selectedCard, setSelectedCard] = useState<string>("About");
 
   const handleSelectedCardFromNavbar = (card: string) => {
     setSelectedCard(card);
