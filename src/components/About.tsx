@@ -23,7 +23,7 @@ export default function About() {
               <span className="text-tron-yellow">AI + Machine Learning</span>
             </li>
             <li>
-              My interests include programming, football, snowboarding, and many
+              My interests include programming, football, snowboarding, and much
               more
             </li>
             <li>
