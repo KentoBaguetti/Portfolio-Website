@@ -27,8 +27,18 @@ export default function About() {
               more.
             </li>
             <li>
-              Feel free to <span className="text-tron-yellow">reach out</span>{" "}
-              and <span className="text-tron-yellow">connect</span>!
+              Feel free to{" "}
+              <span className="text-tron-yellow">
+                <a
+                  href="https://www.linkedin.com/in/barneskentaro/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-2 no-underline hover:underline"
+                >
+                  reach out and connect
+                </a>
+              </span>
+              !
             </li>
           </ul>
         </div>
