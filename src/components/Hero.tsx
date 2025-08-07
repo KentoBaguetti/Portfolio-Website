@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="flex flex-col justify-between items-center mt-16 md:mt-24 mb-0 min-h-[250px] w-full overflow-hidden">
       <div className="flex flex-col justify-center w-full px-4 md:px-6 font-sans">
         <div className="flex flex-col md:flex-row w-full overflow-x-auto md:overflow-visible">
-          <pre className="font-mono text-[0.6rem] sm:text-xs md:text-sm whitespace-pre overflow-x-auto scrollbar-hide">
+          <pre className="font-mono text-[0.6rem] leading-none sm:text-xs md:text-sm whitespace-pre overflow-x-auto scrollbar-hide">
             {`██╗  ██╗███████╗███╗   ██╗████████╗ █████╗ ██████╗  ██████╗     
 ██║ ██╔╝██╔════╝████╗  ██║╚══██╔══╝██╔══██╗██╔══██╗██╔═══██╗    
 █████╔╝ █████╗  ██╔██╗ ██║   ██║   ███████║██████╔╝██║   ██║    
@@ -14,7 +14,7 @@ export default function Hero() {
 ██║  ██╗███████╗██║ ╚████║   ██║   ██║  ██║██║  ██║╚██████╔╝    
 ╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝`}
           </pre>
-          <pre className="font-mono text-[0.6rem] sm:text-xs md:text-sm whitespace-pre overflow-x-auto scrollbar-hide">
+          <pre className="font-mono text-[0.6rem] leading-none sm:text-xs md:text-sm whitespace-pre overflow-x-auto scrollbar-hide">
             {`██████╗  █████╗ ██████╗ ███╗   ██╗███████╗███████╗
 ██╔══██╗██╔══██╗██╔══██╗████╗  ██║██╔════╝██╔════╝
 ██████╔╝███████║██████╔╝██╔██╗ ██║█████╗  ███████╗
