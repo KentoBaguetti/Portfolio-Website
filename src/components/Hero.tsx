@@ -29,7 +29,7 @@ export default function Hero() {
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝`}
           </pre>
         </div>
-        <p className="text-xl md:text-2xl font-sans mt-2">
+        <p className="text-xl md:text-2xl font-sans mt-2 text-tron-grey">
           Hey! I'm a CS Student at the University of British Columbia and an
           aspiring software engineer
         </p>
