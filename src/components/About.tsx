@@ -11,7 +11,7 @@ export default function About() {
       >
         <h2 className="text-4xl mb-5 self-start font-bold">About Me</h2>
         <div className="flex flex-row w-full text-2xl text-tron-grey">
-          <ul>
+          <ul className="">
             <li>I'm a third year CS student at UBC.</li>
             <li>
               Most of my experience is in{" "}
@@ -23,8 +23,8 @@ export default function About() {
               <span className="text-tron-yellow">AI + Machine Learning</span>.
             </li>
             <li>
-              My interests include programming, football, snowboarding, and much
-              more.
+              In my spare time, I enjoy programming, playing football, going
+              snowboarding, and taking photos.
             </li>
             <li>
               Feel free to{" "}
