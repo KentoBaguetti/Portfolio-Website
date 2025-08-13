@@ -2,6 +2,12 @@ import { motion } from "motion/react";
 
 const projects = [
   {
+    name: "GO Web Crawler",
+    link: "https://github.com/KentoBaguetti/Web-Crawler-GO",
+    basicDescription:
+      "Web Crawler that searches for more URLs based on an inital URL and given keywords",
+  },
+  {
     name: "Cournot Game",
     link: "https://cournot-game.vercel.app/",
     basicDescription: "Multiplayer cournot competition simulator",
