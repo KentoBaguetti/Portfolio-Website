@@ -20,7 +20,7 @@ export default function About() {
             <li>
               I'm interested in{" "}
               <span className="text-tron-yellow">Backend Development</span> and{" "}
-              <span className="text-tron-yellow">AI + Machine Learning</span>.
+              <span className="text-tron-yellow">Systems Engineering</span>.
             </li>
             <li>
               In my spare time, I enjoy programming, playing football, going
