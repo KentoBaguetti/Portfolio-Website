@@ -12,7 +12,10 @@ export default function About() {
         <h2 className="text-4xl mb-5 self-start font-bold">About Me</h2>
         <div className="flex flex-row w-full text-2xl text-tron-grey">
           <ul className="">
-            <li>I'm a third year CS student at UBC.</li>
+            <li>
+              I'm a third year CS student at UBC and currently a backend
+              engineering intern at Wello.
+            </li>
             <li>
               Most of my experience is in{" "}
               <span className="text-tron-yellow">full stack development</span>.
