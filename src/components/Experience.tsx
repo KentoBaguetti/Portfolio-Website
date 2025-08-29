@@ -12,16 +12,22 @@ export default function Experience() {
         <h2 className="text-4xl mb-5 self-start font-bold">Experience</h2>
         <div className="text-tron-grey">
           <ExperienceItem
-            work="Backend Engineering Intern @ Wello"
+            role="Backend Engineering Intern"
+            company="Wello"
             date="Sep 2025 - Present"
+            url="https://www.wello.tech/"
           />
           <ExperienceItem
-            work="Software Developer @ CUHK Business School"
-            date="May 2025 - Present"
+            role="Software Developer"
+            company="CUHK Business School"
+            date="May 2025 - Aug 2025"
+            url="https://www.bschool.cuhk.edu.hk/"
           />
           <ExperienceItem
-            work="Software Engineering Intern @ Consign AI"
+            role="Software Engineering Intern"
+            company="Consign AI"
             date="Feb 2024 - Mar 2025"
+            url="https://consignai.co/"
           />
         </div>
       </motion.div>
@@ -29,10 +35,32 @@ export default function Experience() {
   );
 }
 
-const ExperienceItem = ({ work, date }: { work: string; date: string }) => {
+const ExperienceItem = ({
+  role,
+  company,
+  date,
+  url,
+}: {
+  role: string;
+  company: string;
+  date: string;
+  url: string;
+}) => {
   return (
     <div className="flex flex-row justify-between items-center w-2/3 mb-1 py-1">
-      <div className="text-lg text-tron-grey">{work}</div>
+      <div className="text-lg text-tron-grey">
+        {role} @{" "}
+        <span className="text-tron-yellow">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-offset-2 no-underline hover:underline"
+          >
+            {company}
+          </a>
+        </span>
+      </div>
       <div className="text-lg text-tron-grey">{`[${date}]`}</div>
     </div>
   );
