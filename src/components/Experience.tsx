@@ -12,6 +12,12 @@ export default function Experience() {
         <h2 className="text-4xl mb-5 self-start font-bold">Experience</h2>
         <div className="text-tron-grey">
           <ExperienceItem
+            role="Incoming Software Engineering Intern"
+            company="Microsoft"
+            date="Jan 2026"
+            url="https://www.microsoft.com/en-ca/"
+          />
+          <ExperienceItem
             role="Backend Engineering Intern"
             company="Wello"
             date="Sep 2025 - Present"

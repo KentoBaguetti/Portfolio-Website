@@ -13,8 +13,8 @@ export default function About() {
         <div className="flex flex-row w-full text-2xl text-tron-grey">
           <ul className="">
             <li>
-              I'm a third year CS student at UBC and currently a backend
-              engineering intern at Wello.
+              I'm a third year CS student at UBC, currently a backend
+              engineering intern at Wello, and incoming SWE Intern at Microsoft.
             </li>
             <li>
               Most of my experience is in{" "}
