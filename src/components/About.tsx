@@ -26,7 +26,7 @@ export default function About() {
               <span className="text-tron-yellow">Systems Engineering</span>.
             </li>
             <li>
-              In my spare time, I enjoy programming, playing football, going
+              In my spare time, I enjoy programming, playing football,
               snowboarding, and taking photos.
             </li>
             <li>
