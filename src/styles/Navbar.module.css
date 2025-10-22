@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  border-color: black;
+  border-width: 2px;
+  max-width: fit-content;
+  gap: 8px;
+  background-color: gray;
+}
+
+.nb_bubble {
+  margin: 3px 10px;
+  padding: 5px;
+  border-radius: 35px;
+  border-color: black;
+  border-width: 2px;
+  cursor: pointer;
+  background-color: green;
+}
+
+.nb_bubble_selected {
+  background-color: red;
+}
