@@ -5,10 +5,9 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="flex flex-col justify-center w-full overflow-x-hidden">
-      {/* <div className="z-50 fixed">
+      <div className="z-50 fixed top-0 left-0 right-0 mt-10">
         <Navbar />
-      </div> */}
-      <Navbar />
+      </div>
       <Hero />
       <Experience />
     </div>

@@ -14,20 +14,27 @@
   border-color: black;
   border-width: 2px;
   max-width: fit-content;
-  gap: 8px;
-  background-color: gray;
+  gap: 5px;
+  background: rgba(159, 222, 255, 0.58);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(159, 222, 255, 0.14);
 }
 
 .nb_bubble {
   margin: 3px 10px;
   padding: 5px;
-  border-radius: 35px;
-  border-color: black;
-  border-width: 2px;
   cursor: pointer;
-  background-color: green;
 }
 
 .nb_bubble_selected {
-  background-color: red;
+  /* From https://css.glass */
+  background: rgba(121, 205, 249, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(121, 205, 249, 1);
 }
