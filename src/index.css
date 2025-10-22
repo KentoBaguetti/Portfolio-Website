@@ -16,26 +16,7 @@ body {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: #d9f0ff;
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(217, 240, 255, 1) 0%,
-    rgba(222, 253, 255, 1) 63%,
-    rgba(201, 246, 255, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(217, 240, 255, 1) 0%,
-    rgba(222, 253, 255, 1) 63%,
-    rgba(201, 246, 255, 1) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(217, 240, 255, 1) 0%,
-    rgba(222, 253, 255, 1) 63%,
-    rgba(201, 246, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D9F0FF", endColorstr="#C9F6FF", GradientType=0);
+  background: #f5feff;
 }
 
 h1,

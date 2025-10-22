@@ -1,9 +1,44 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import kenPfp from "../assets/ken_pizza_pfp.webp";
+import { motion } from "motion/react";
+import styles from "../styles/HeroStyling.module.css";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col justify-between items-center mt-16 md:mt-24 mb-0 min-h-[250px] w-full overflow-hidden">
+    <div
+      className={`${styles.gradientBg} flex justify-center items-center min-h-screen`}
+    >
+      <div className="flex flex-row items-center gap-8 px-4">
+        <motion.div
+          initial={{ y: 200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex flex-col justify-center items-start">
+            <h3 className="text-4xl md:text-5xl font-extrabold">Hey, I'm</h3>
+            <h1 className="text-5xl md:text-6xl font-extrabold">Kentaro</h1>
+            <p className="text-lg max-w-md">
+              I'm a third year computer science student at the University of
+              British Columbia and incoming SWE Intern at Microsoft
+            </p>
+          </div>
+        </motion.div>
+        <div className="flex-shrink-0">
+          <motion.img
+            initial={{ y: -200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="w-72 rounded-3xl transform-gpu will-change-transform"
+            src={kenPfp}
+            alt="placeholder image" // TODO: change this to a different pfp
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+{
+  /* <div className="flex flex-col justify-between items-center mt-16 md:mt-24 mb-0 min-h-[250px] w-full overflow-hidden">
       <div className="flex flex-col justify-center w-full px-4 md:px-6 font-sans">
         <div className="flex flex-col md:flex-row w-full overflow-x-auto md:overflow-visible">
           <pre className="font-mono text-[0.6rem] leading-none sm:text-xs md:text-sm whitespace-pre overflow-x-auto scrollbar-hide">
@@ -54,6 +89,5 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </div>
-  );
+    </div> */
 }
