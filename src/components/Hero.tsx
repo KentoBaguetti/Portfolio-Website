@@ -20,34 +20,40 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl ">Kentaro</h1>
             <p className="text-lg max-w-md">
               I'm a third year computer science student at the University of
-              British Columbia and incoming SWE Intern at Microsoft
+              British Columbia and an aspiring software engineer
             </p>
           </div>
           <div className={`${styles.socials}`}>
-            <a
-              href="https://www.github.com/KentoBaguetti"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 hover:scale-110"
-            >
-              <FaGithub size={25} className="md:w-[30px] md:h-[30px]" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/barneskentaro/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 hover:scale-110"
-            >
-              <FaLinkedin size={25} className="md:w-[30px] md:h-[30px]" />
-            </a>
-            <a
-              href="mailto:kentaro.barnes5@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 hover:scale-110"
-            >
-              <MdEmail size={25} className="md:w-[30px] md:h-[30px]" />
-            </a>
+            <motion.button whileHover={{ scale: 1.2 }}>
+              <a
+                href="https://www.github.com/KentoBaguetti"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-3"
+              >
+                <FaGithub size={25} className="md:w-[30px] md:h-[30px]" />
+              </a>
+            </motion.button>
+            <motion.button whileHover={{ scale: 1.2 }}>
+              <a
+                href="https://www.linkedin.com/in/barneskentaro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-3"
+              >
+                <FaLinkedin size={25} className="md:w-[30px] md:h-[30px]" />
+              </a>
+            </motion.button>
+            <motion.button whileHover={{ scale: 1.2 }}>
+              <a
+                href="mailto:kentaro.barnes5@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-3"
+              >
+                <MdEmail size={25} className="md:w-[30px] md:h-[30px]" />
+              </a>
+            </motion.button>
           </div>
         </motion.div>
         <div className="flex-shrink-0">
