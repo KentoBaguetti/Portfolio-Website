@@ -1,4 +1,5 @@
 import styles from "../styles/ExperienceStyling.module.css";
+import { motion } from "framer-motion";
 
 import microsoftLogo from "../assets/microsoft_logo.png";
 import welloLogo from "../assets/wello_logo.png";
@@ -9,7 +10,7 @@ export default function Experience() {
   return (
     <div className="flex flex-row justify-center items-center">
       <div className="flex flex-col overflow-hidden items-center justify-center gap-8 w-2/3">
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 pb-20">
           <div className={styles.header}>What I've been up to...</div>
           <ExperienceItem
             role="Incoming Software Engineer Intern"
@@ -59,7 +60,17 @@ const ExperienceItem = ({
   logo: string;
 }) => {
   return (
-    <div className="flex flex-row gap-4">
+    <motion.div
+      className="flex flex-row gap-4"
+      variants={{
+        hidden: { opacity: 0, y: 100 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
       <div>
         <img src={logo} className="w-24 rounded-md" />
       </div>
@@ -80,6 +91,6 @@ const ExperienceItem = ({
         </div>
         <div className={styles.date}>{date}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
