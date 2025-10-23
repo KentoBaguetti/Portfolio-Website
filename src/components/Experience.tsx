@@ -61,11 +61,12 @@ const ExperienceItem = ({
 }) => {
   return (
     <motion.div
-      className="flex flex-row gap-4"
+      className={`flex flex-row gap-4 ${styles.experience_container} hover:cursor-pointer`}
       variants={{
         hidden: { opacity: 0, y: 100 },
         visible: { opacity: 1, y: 0 },
       }}
+      whileHover={{ scale: 1.1 }}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
