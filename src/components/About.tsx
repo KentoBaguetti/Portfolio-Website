@@ -8,11 +8,11 @@ import { TypeAnimation } from "react-type-animation";
 export default function About() {
   return (
     <div
-      className={`flex flex-row w-full justify-center items-center pb-16 ${styles.main_container}`}
+      className={`flex w-full justify-center items-center py-8 md:py-16 md:pl-60 ${styles.main_container}`}
     >
-      <div className="overflow-hidden flex items-center justify-center h-screen gap-16 w-2/3">
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-screen gap-8 md:gap-16 w-full max-w-6xl px-4 md:px-8">
         <motion.div
-          className="text-center font-japanese flex flex-col justify-center items-center w-1/3 sm:text-3xl md:text-6xl"
+          className="text-center font-japanese flex flex-col justify-center items-center w-full md:w-1/3 text-3xl md:text-6xl"
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -31,7 +31,7 @@ export default function About() {
         <div className="text-5xl">健太郎</div> */}
         </motion.div>
         <motion.div
-          className={`flex flex-col gap-4 max-w-2/3 ${styles.ol_styles} `}
+          className={`flex flex-col gap-6 w-full md:max-w-2/3 text-center md:text-left ${styles.ol_styles}`}
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },

@@ -41,7 +41,7 @@ import styles from "../styles/ProjectsStyling.module.css";
 export default function Projects() {
   return (
     <div
-      className={`overflow-hidden py-40 ${styles.main_container} flex flex-col justify-center items-center font-japanese text-2xl`}
+      className={`overflow-hidden py-40 ${styles.main_container} flex flex-col justify-center items-center font-japanese text-2xl text-center`}
     >
       <div>Projects - Coming Soon!</div>
       <div>
