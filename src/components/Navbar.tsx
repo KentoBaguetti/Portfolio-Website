@@ -40,15 +40,16 @@ export default function Navbar() {
             Experience
           </button>
         </Link>
-
-        <button
-          className={`${styles.nb_bubble} ${
-            activeButton === "Projects" ? styles.nb_bubble_selected : ""
-          }`}
-          onClick={() => setActiveButton("Projects")}
-        >
-          Projects
-        </button>
+        <Link to="projects" smooth={true} offset={0} duration={600}>
+          <button
+            className={`${styles.nb_bubble} ${
+              activeButton === "Projects" ? styles.nb_bubble_selected : ""
+            }`}
+            onClick={() => setActiveButton("Projects")}
+          >
+            Projects
+          </button>
+        </Link>
       </div>
     </div>
   );

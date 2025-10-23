@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
       </section>
       <section id="experience">
         <Experience />
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
 
       <Footer />
