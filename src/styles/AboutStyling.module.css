@@ -5,6 +5,9 @@
 .subheaders {
   font-size: x-large;
   font-weight: 600;
+  background: -webkit-linear-gradient(#020024, #04b5d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 li {
