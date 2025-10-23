@@ -1,5 +1,7 @@
 .ol_styles ol {
   list-style-type: circle;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .subheaders {

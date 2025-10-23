@@ -3,10 +3,11 @@
 }
 
 .company {
+  font-weight: 400;
 }
 
 .date {
-  color: darkgray;
+  color: #8690aa;
 }
 
 .header {

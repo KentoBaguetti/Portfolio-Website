@@ -1,6 +1,5 @@
 import styles from "../styles/Navbar.module.css";
 import { useState } from "react";
-import { motion } from "motion/react";
 
 export default function Navbar() {
   const [activeButton, setActiveButton] = useState("Home");

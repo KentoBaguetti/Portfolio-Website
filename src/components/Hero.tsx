@@ -9,7 +9,7 @@ export default function Hero() {
     <div
       className={`${styles.gradientBg} flex justify-center items-center h-screen overflow-hidden`}
     >
-      <div className="flex flex-row items-center gap-8 px-4">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-8 px-4 w-2/3 justify-center">
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 200 },
