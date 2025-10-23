@@ -11,8 +11,13 @@ export default function Hero() {
     >
       <div className="flex flex-row items-center gap-8 px-4">
         <motion.div
-          initial={{ y: 200, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          variants={{
+            hidden: { opacity: 0, y: 200 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-col justify-center items-start">
@@ -59,8 +64,13 @@ export default function Hero() {
         </motion.div>
         <div className="flex-shrink-0">
           <motion.img
-            initial={{ y: -200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            variants={{
+              hidden: { opacity: 0, y: -200 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
             transition={{ duration: 0.5 }}
             className="w-72 rounded-3xl transform-gpu will-change-transform"
             src={kenPfp}
