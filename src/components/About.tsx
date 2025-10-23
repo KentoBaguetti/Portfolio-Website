@@ -10,7 +10,7 @@ export default function About() {
     <div className="flex flex-row w-full justify-center items-center">
       <div className="overflow-hidden flex items-center justify-center h-screen gap-16 w-2/3">
         <motion.div
-          className="text-right font-japanese w-1/5 text-6xl"
+          className="text-right font-japanese w-1/3 text-6xl"
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
