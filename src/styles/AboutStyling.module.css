@@ -1,0 +1,12 @@
+.ol_styles ol {
+  list-style-type: circle;
+}
+
+.subheaders {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+li {
+  font-size: large;
+}

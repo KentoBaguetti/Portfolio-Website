@@ -1,6 +1,6 @@
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Navbar />
       </div>
       <Hero />
-      <Experience />
+      <About />
     </div>
   );
 }

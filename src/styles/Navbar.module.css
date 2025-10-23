@@ -37,4 +37,5 @@
   backdrop-filter: blur(5.8px);
   -webkit-backdrop-filter: blur(5.8px);
   border: 1px solid rgba(121, 205, 249, 1);
+  font-weight: 500;
 }
