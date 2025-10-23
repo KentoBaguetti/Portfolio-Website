@@ -7,7 +7,9 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function About() {
   return (
-    <div className="flex flex-row w-full justify-center items-center pb-16">
+    <div
+      className={`flex flex-row w-full justify-center items-center pb-16 ${styles.main_container}`}
+    >
       <div className="overflow-hidden flex items-center justify-center h-screen gap-16 w-2/3">
         <motion.div
           className="text-center font-japanese flex flex-col justify-center items-center w-1/3 sm:text-3xl md:text-6xl"

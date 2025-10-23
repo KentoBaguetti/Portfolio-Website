@@ -8,7 +8,9 @@ import consignLogo from "../assets/consign_ai_logo.jpeg";
 
 export default function Experience() {
   return (
-    <div className="flex flex-row justify-center items-center">
+    <div
+      className={`flex flex-row justify-center items-center ${styles.main_container}`}
+    >
       <div className="flex flex-col overflow-hidden items-center justify-center gap-8 w-2/3">
         <div className="flex flex-col gap-12 pb-20">
           <div className={styles.header}>What I've been up to...</div>

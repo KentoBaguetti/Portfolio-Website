@@ -1,3 +1,7 @@
+.main_container {
+  background: #f5feff;
+}
+
 .ol_styles ol {
   list-style-type: circle;
   text-align: left;

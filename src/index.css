@@ -22,7 +22,7 @@ body {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: #f5feff;
+  background: #a1efff;
 }
 
 /* Custom utility class for hiding scrollbars */
