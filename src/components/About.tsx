@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import styles from "../styles/AboutStyling.module.css";
 
+// TODO: split the motion div into two divs: one for the name+typewriter, one for the text content
+
 export default function About() {
   return (
     <motion.div
