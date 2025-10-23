@@ -72,7 +72,7 @@ const ExperienceItem = ({
       transition={{ duration: 0.5 }}
     >
       <div>
-        <img src={logo} className="w-24 rounded-md" />
+        <img src={logo} className="w-16 rounded-md" />
       </div>
       <div className="flex flex-col justify-center">
         <div>
