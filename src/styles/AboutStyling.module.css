@@ -1,0 +1,34 @@
+.main_container {
+  background: #f5feff;
+}
+
+.ol_styles ol {
+  list-style-type: circle;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.subheaders {
+  font-size: large;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#020024, #04b5d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .subheaders {
+    font-size: x-large;
+  }
+}
+
+li {
+  font-size: medium;
+}
+
+@media (min-width: 768px) {
+  li {
+    font-size: large;
+  }
+}

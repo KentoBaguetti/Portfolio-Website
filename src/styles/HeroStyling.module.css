@@ -1,0 +1,29 @@
+.gradientBg {
+  background: #f5feff;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(245, 254, 255, 1) 0%,
+    rgba(171, 249, 255, 1) 71%,
+    rgba(161, 239, 255, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(245, 254, 255, 1) 0%,
+    rgba(171, 249, 255, 1) 71%,
+    rgba(161, 239, 255, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(245, 254, 255, 1) 0%,
+    rgba(171, 249, 255, 1) 71%,
+    rgba(161, 239, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5FEFF", endColorstr="#A1EFFF", GradientType=0);
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}

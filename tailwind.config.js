@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["EB Garamond", "serif"],
+        english: ["M PlUS 1p", "serif"],
+        japanese: ["Rampart One", "serif"],
       },
       boxShadow: {
         custom: "7px 7px 10px rgba(255, 255, 255, 0.6)",

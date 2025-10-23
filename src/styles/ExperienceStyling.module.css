@@ -1,0 +1,35 @@
+.main_container {
+  background: #f5feff;
+}
+
+.role {
+  font-weight: 600;
+}
+
+.company {
+  font-weight: 400;
+}
+
+.date {
+  color: #8690aa;
+}
+
+.header {
+  font-size: xx-large;
+  font-weight: 700;
+  text-align: left;
+  background: -webkit-linear-gradient(#020024, #04b5d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.experience_container {
+  background: rgba(203, 232, 248, 0.62);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(159, 222, 255, 0.14);
+  padding: 20px;
+}

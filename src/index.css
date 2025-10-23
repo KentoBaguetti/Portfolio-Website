@@ -3,35 +3,26 @@
 @tailwind utilities;
 
 :root {
-  font-family: "EB Garamond", serif;
+  font-family: "Rampart One", serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #030504;
-  color: #6ee2ffff;
-  font-family: "EB Garamond", serif;
+  font-family: "M PlUS 1p", "Rampart One", serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-div,
-button,
-a {
-  font-family: "EB Garamond", serif;
+  background: #a1efff;
 }
 
 /* Custom utility class for hiding scrollbars */

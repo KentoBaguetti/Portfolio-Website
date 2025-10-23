@@ -1,60 +1,55 @@
+import styles from "../styles/Navbar.module.css";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
-export default function Navbar({
-  handleSelectedCardFromNavbar,
-}: {
-  handleSelectedCardFromNavbar: (card: string) => void;
-}) {
-  const [selectedCard, setSelectedCard] = useState<string>("About");
-  const selectedLinkStyles =
-    "text-lg sm:text-3xl md:text-2xl font-sans text-tron-yellow cursor-pointer font-bold hover:scale-110";
-  const unselectedLinkStyles =
-    "text-lg sm:text-3xl md:text-2xl font-sans text-tron-blue cursor-pointer hover:scale-110";
+export default function Navbar() {
+  const [activeButton, setActiveButton] = useState("Home");
 
   return (
-    <div className="w-full flex flex-row items-center gap-2 sm:gap-4 md:gap-8overflow-x-auto pb-2">
-      <div>
-        <h2
-          className={
-            selectedCard === "About" ? selectedLinkStyles : unselectedLinkStyles
-          }
-          onClick={() => {
-            handleSelectedCardFromNavbar("About");
-            setSelectedCard("About");
-          }}
-        >
-          ~/About
-        </h2>
-      </div>
-      <div>
-        <h2
-          className={
-            selectedCard === "Experience"
-              ? selectedLinkStyles
-              : unselectedLinkStyles
-          }
-          onClick={() => {
-            handleSelectedCardFromNavbar("Experience");
-            setSelectedCard("Experience");
-          }}
-        >
-          ~/Experience
-        </h2>
-      </div>
-      <div>
-        <h2
-          className={
-            selectedCard === "Projects"
-              ? selectedLinkStyles
-              : unselectedLinkStyles
-          }
-          onClick={() => {
-            handleSelectedCardFromNavbar("Projects");
-            setSelectedCard("Projects");
-          }}
-        >
-          ~/Projects
-        </h2>
+    <div className={`${styles.wrapper}`}>
+      <div className={`${styles.navbar}`}>
+        <Link to="hero" smooth={true} duration={600}>
+          <button
+            className={`${styles.nb_bubble} ${
+              activeButton === "Home" ? styles.nb_bubble_selected : ""
+            }`}
+            onClick={() => setActiveButton("Home")}
+          >
+            Home
+          </button>
+        </Link>
+
+        <Link to="about" smooth={true} offset={0} duration={600}>
+          <button
+            className={`${styles.nb_bubble} ${
+              activeButton === "About" ? styles.nb_bubble_selected : ""
+            }`}
+            onClick={() => setActiveButton("About")}
+          >
+            About
+          </button>
+        </Link>
+
+        <Link to="experience" smooth={true} offset={-90} duration={600}>
+          <button
+            className={`${styles.nb_bubble} ${
+              activeButton === "Experience" ? styles.nb_bubble_selected : ""
+            }`}
+            onClick={() => setActiveButton("Experience")}
+          >
+            Experience
+          </button>
+        </Link>
+        <Link to="projects" smooth={true} offset={0} duration={600}>
+          <button
+            className={`${styles.nb_bubble} ${
+              activeButton === "Projects" ? styles.nb_bubble_selected : ""
+            }`}
+            onClick={() => setActiveButton("Projects")}
+          >
+            Projects
+          </button>
+        </Link>
       </div>
     </div>
   );
