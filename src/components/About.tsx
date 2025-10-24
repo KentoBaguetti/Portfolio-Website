@@ -56,6 +56,7 @@ export default function About() {
               <li>Snowboarding</li>
               <li>Fishing</li>
               <li>System Design</li>
+              <li>Any other coding topics!</li>
             </ol>
           </div>
           <div>
