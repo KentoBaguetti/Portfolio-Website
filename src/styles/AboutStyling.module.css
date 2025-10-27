@@ -9,11 +9,12 @@
   padding-left: 20px;
   max-width: fit-content;
   list-style-position: outside;
+  margin-left: calc(50% - 200px);
 }
 
 @media (min-width: 768px) {
   .ol_styles ol {
-    margin-left: 20px;
+    margin-left: calc(50% - 250px);
     margin-right: 0;
     max-width: none;
   }
@@ -27,11 +28,14 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin-left: calc(50% - 200px);
 }
 
 @media (min-width: 768px) {
   .subheaders {
     font-size: x-large;
+    margin-left: calc(50% - 250px);
   }
 }
 
