@@ -83,9 +83,9 @@ const ProjectItem = ({
       transition={{ duration: 0.5 }}
       className={`${styles.project_item} flex flex-col items-center justify-center`}
     >
-      <div className="flex flex-row w-full gap-4 md:gap-8 justify-center items-center px-2">
+      <div className="flex flex-row w-2/3 gap-4 md:gap-4 justify-center items-center px-2">
         <div
-          className={`text-lg md:text-2xl font-bold ${styles.title} flex-1 text-center`}
+          className={`text-lg md:text-2xl font-bold ${styles.title} text-center`}
         >
           {name}
         </div>
