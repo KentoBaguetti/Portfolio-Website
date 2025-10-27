@@ -4,14 +4,24 @@
 
 .ol_styles ol {
   list-style-type: circle;
-  text-align: left;
-  margin-left: 20px;
+  text-align: center;
+  margin-left: 0;
+  list-style-position: inside;
+}
+
+@media (min-width: 768px) {
+  .ol_styles ol {
+    text-align: left;
+    margin-left: 20px;
+    list-style-position: outside;
+  }
 }
 
 .subheaders {
   font-size: large;
   font-weight: 600;
   background: -webkit-linear-gradient(#020024, #04b5d9);
+  background: linear-gradient(#020024, #04b5d9);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

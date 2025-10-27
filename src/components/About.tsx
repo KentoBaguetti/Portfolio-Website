@@ -66,10 +66,8 @@ export default function About() {
             <ol>
               <li>Most of my experience is in fullstack development</li>
               <li>I'm interested in backend and systems engineering</li>
-              <li>
-                I love being placed into a competitive environment
-                <li>I enjoy learning new things</li>
-              </li>
+              <li>I love being placed into a competitive environment</li>
+              <li>I enjoy learning new things</li>
             </ol>
           </div>
         </motion.div>
