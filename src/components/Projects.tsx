@@ -71,49 +71,51 @@ const ProjectItem = ({
   technologies?: string[];
 }) => {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      whileHover={{ scale: 1.05 }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className={`${styles.project_item} flex flex-col items-center justify-center`}
-    >
-      <div className="flex flex-row w-2/3 gap-4 md:gap-4 justify-center items-center px-2">
-        <div
-          className={`text-lg md:text-2xl font-bold ${styles.title} text-center`}
-        >
-          {name}
-        </div>
-        <motion.button
-          whileHover={{ scale: 1.2 }}
-          transition={{ duration: 0.5 }}
-          className="flex-shrink-0"
-        >
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 md:mx-3"
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        whileHover={{ scale: 1.05 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className={`${styles.project_item} flex flex-col items-center justify-center`}
+      >
+        <div className="flex flex-row w-2/3 gap-4 md:gap-4 justify-center items-center px-2">
+          <div
+            className={`text-lg md:text-2xl font-bold ${styles.title} text-center`}
           >
-            <FaGithub size={20} className="md:w-[30px] md:h-[30px]" />
-          </a>
-        </motion.button>
-      </div>
+            {name}
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2 md:mx-3"
+            >
+              <FaGithub size={20} className="md:w-[30px] md:h-[30px]" />
+            </a>
+          </motion.button>
+        </div>
 
-      <div className="text-left text-xs md:text-sm px-2 mt-3 leading-relaxed">
-        {basicDescription}
-      </div>
-      <div className="flex flex-wrap gap-2 md:gap-4 w-full justify-center items-center mt-4 md:mt-6 px-2">
-        {technologies?.map((tech) => (
-          <TechItem name={tech} />
-        ))}
-      </div>
-    </motion.div>
+        <div className="text-left text-xs md:text-sm px-2 mt-3 leading-relaxed">
+          {basicDescription}
+        </div>
+        <div className="flex flex-wrap gap-2 md:gap-4 w-full justify-center items-center mt-4 md:mt-6 px-2">
+          {technologies?.map((tech) => (
+            <TechItem name={tech} />
+          ))}
+        </div>
+      </motion.div>
+    </a>
   );
 };
 

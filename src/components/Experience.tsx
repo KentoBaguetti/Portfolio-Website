@@ -52,7 +52,6 @@ const ExperienceItem = ({
   role,
   company,
   date,
-  url,
   logo,
 }: {
   role: string;
@@ -80,17 +79,7 @@ const ExperienceItem = ({
       <div className="flex flex-col justify-center">
         <div>
           <span className={styles.role}>{role}</span>{" "}
-          <span className={styles.company}>
-            @{" "}
-            <a
-              className="hover:underline"
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {company}
-            </a>{" "}
-          </span>
+          <span className={styles.company}>@ {company}</span>
         </div>
         <div className={styles.date}>{date}</div>
       </div>
