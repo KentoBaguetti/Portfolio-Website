@@ -7,6 +7,7 @@ export default function Navbar() {
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const isScrollingRef = useRef(false);
 
   const tabs = useMemo(() => ["Home", "About", "Experience", "Projects"], []);
 
@@ -30,6 +31,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (isScrollingRef.current) return;
+
       const sections = tabs.map((tab) => ({
         id: tab,
         element: document.getElementById(
@@ -57,7 +60,12 @@ export default function Navbar() {
   }, [tabs]);
 
   const scrollToSection = (tab: string) => {
+    isScrollingRef.current = true;
     setActiveButton(tab);
+
+    setTimeout(() => {
+      isScrollingRef.current = false;
+    }, 800);
   };
 
   return (
