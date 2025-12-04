@@ -33,3 +33,23 @@
   border: 1px solid rgba(159, 222, 255, 0.14);
   padding: 20px;
 }
+
+.tech_item {
+  border-radius: 12px;
+  border: 1px solid rgba(8, 85, 124, 1);
+  padding: 4px 8px;
+  background: -webkit-linear-gradient(#020024, #04b5d9);
+  background: linear-gradient(#020024, #04b5d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .tech_item {
+    border-radius: 16px;
+    padding: 3px 10px;
+  }
+}
