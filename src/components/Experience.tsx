@@ -33,8 +33,8 @@ const experiences: ExperienceData[] = [
     date: "January 2026 - April 2026",
     url: "https://www.microsoft.com/en-ca/",
     logo: microsoftLogo,
-    description: "Joining the Xbox team",
-    technologies: ["C++"],
+    description: "Joining the XGTG team",
+    technologies: ["C++", "Unreal Engine"],
   },
   {
     id: "wello",
