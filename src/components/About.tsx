@@ -45,8 +45,8 @@ export default function About() {
             <div className={`${styles.subheaders}`}>Currently...</div>
             <ol>
               <li>BSc. Computer Science Student @ UBC</li>
-              <li>Software Engineering Intern @ Wello</li>
-              <li>Incoming Software Engineering Intern @ Microsoft</li>
+              <li>Software Engineering Intern @ Microsoft</li>
+              <li>Prev Software Engineering Intern @ Wello</li>
             </ol>
           </div>
           <div>

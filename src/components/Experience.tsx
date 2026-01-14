@@ -28,12 +28,12 @@ interface ExperienceData {
 const experiences: ExperienceData[] = [
   {
     id: "microsoft",
-    role: "Incoming Software Engineer Intern",
+    role: "Software Engineer Intern",
     company: "Microsoft",
     date: "January 2026 - April 2026",
     url: "https://www.microsoft.com/en-ca/",
     logo: microsoftLogo,
-    description: "Joining the XGTG team",
+    description: "XGTG team",
     technologies: ["C++", "Unreal Engine"],
   },
   {
