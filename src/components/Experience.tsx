@@ -95,7 +95,7 @@ export default function Experience() {
           className="flex flex-col gap-8 md:gap-10 w-full md:w-2/3"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: false, amount: 0.1 }}
           variants={{
             hidden: { opacity: 0 },
             visible: {
