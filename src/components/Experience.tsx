@@ -25,7 +25,7 @@ const experiences: ExperienceData[] = [
     company: "Microsoft",
     url: "https://www.microsoft.com/en-ca/",
     logo: microsoftLogo,
-    description: "XGTG team",
+    description: "XGTG team @ The Coalition",
     technologies: ["C++", "Unreal Engine", "C#", ".NET", "Azure IaC"],
   },
   {
@@ -63,7 +63,7 @@ const experiences: ExperienceData[] = [
     url: "",
     logo: consignLogo,
     description:
-      "Developed AI Automation scripts and worked on AI Translation Applications. Developed a frontend dashboard for clients.",
+      "Developed AI Automation scripts and worked on AI Translation Applications. Developed a secure frontend dashboard for clients.",
     technologies: ["JavaScript", "Python", "Puppeteer", "MongoDB", "Redis"],
   },
 ];

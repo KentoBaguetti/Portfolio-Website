@@ -3,7 +3,7 @@
 }
 
 :global(html[data-theme="dark"]) .main_container {
-  background: #16263d;
+  background: #0f0f0f;
 }
 
 .about_section {

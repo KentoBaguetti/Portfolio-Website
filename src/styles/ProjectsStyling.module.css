@@ -3,7 +3,7 @@
 }
 
 :global(html[data-theme="dark"]) .main_container {
-  background: #16263d;
+  background: #0f0f0f;
 }
 
 .header {
@@ -88,8 +88,8 @@
 }
 
 :global(html[data-theme="dark"]) .project_card {
-  background: rgba(14, 28, 45, 0.84);
-  border-color: rgba(109, 149, 187, 0.55);
+  background: rgba(23, 23, 23, 0.1);
+  border-color:rgba(138, 205, 255, 0.75);
   box-shadow: 0 12px 28px rgba(2, 8, 18, 0.38);
 }
 
