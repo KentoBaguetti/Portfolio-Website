@@ -2,7 +2,6 @@ import kenPfp from "../assets/ken_pizza_pfp.webp";
 import { motion } from "motion/react";
 import styles from "../styles/HeroStyling.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -48,16 +47,6 @@ export default function Hero() {
                 className="mx-3"
               >
                 <FaLinkedin size={25} className="md:w-[30px] md:h-[30px]" />
-              </a>
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.2 }}>
-              <a
-                href="https://www.instagram.com/kentaro.barnes/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-3"
-              >
-                <FaInstagram size={25} className="md:w-[30px] md:h-[30px]" />
               </a>
             </motion.button>
           </div>
