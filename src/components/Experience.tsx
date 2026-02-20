@@ -76,8 +76,11 @@ export default function Experience() {
   useEffect(() => {
     const updateLineMetrics = () => {
       const container = timelineContainerRef.current;
-      const firstLogo = logoRefs.current[0];
-      const lastLogo = logoRefs.current[logoRefs.current.length - 1];
+      const logoElements = logoRefs.current.filter(
+        (logo): logo is HTMLDivElement => logo !== null
+      );
+      const firstLogo = logoElements[0];
+      const lastLogo = logoElements[logoElements.length - 1];
 
       if (!container || !firstLogo || !lastLogo) return;
 
@@ -85,9 +88,10 @@ export default function Experience() {
       const firstLogoRect = firstLogo.getBoundingClientRect();
       const lastLogoRect = lastLogo.getBoundingClientRect();
 
-      const top = firstLogoRect.top - containerRect.top + firstLogoRect.height / 2;
-      const bottom = lastLogoRect.top - containerRect.top + lastLogoRect.height / 2;
-
+      const top =
+        firstLogoRect.top - containerRect.top + firstLogoRect.height / 2;
+      const bottom =
+        lastLogoRect.top - containerRect.top + lastLogoRect.height / 2;
       setLineMetrics({
         top,
         height: Math.max(bottom - top, 0),
@@ -159,7 +163,6 @@ const ExperienceItem = ({
       className="grid grid-cols-1 md:grid-cols-[64px_minmax(0,1fr)] gap-5 md:gap-7 items-start"
     >
       <div className="relative flex justify-start md:justify-center">
-        <div className="hidden md:block absolute left-8 top-1/2 w-8 h-px bg-tron-blue/40 -translate-y-1/2" />
         <div
           ref={setLogoRef}
           className="z-10 w-14 h-14 md:w-16 md:h-16 rounded-xl bg-white/90 border border-tron-blue/35 p-2 shadow-md"
