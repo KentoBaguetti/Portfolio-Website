@@ -22,5 +22,5 @@
 }
 
 :global(html[data-theme="dark"]) .footer_background {
-  background: linear-gradient(180deg, #0a1321 0%, #0b1c30 75%, #0f243d 100%);
+  background: linear-gradient(180deg, #1a2a40 0%, #223a58 75%, #2b4a70 100%);
 }

@@ -3,7 +3,7 @@
 }
 
 :global(html[data-theme="dark"]) .main_container {
-  background: #0a1321;
+  background: #16263d;
 }
 
 .role {
@@ -49,6 +49,12 @@
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+:global(html[data-theme="dark"]) .tech_item {
+  border: 1px solid rgba(138, 205, 255, 0.75);
+  background: transparent;
+  -webkit-text-fill-color: #c7ecff;
 }
 
 @media (min-width: 768px) {

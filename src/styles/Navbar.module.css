@@ -68,9 +68,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 58px;
+  height:58px;
+  border-radius: 18px;
   border: 1px solid rgba(159, 222, 255, 0.2);
   background: rgba(159, 222, 255, 0.58);
   color: #1f2937;
@@ -110,5 +110,5 @@
 :global(html[data-theme="dark"]) .theme_toggle {
   background: rgba(20, 33, 50, 0.78);
   border: 1px solid rgba(75, 102, 131, 0.45);
-  color: #f4c95d;
+  color: #eaf2fb;
 }

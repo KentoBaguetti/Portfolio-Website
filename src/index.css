@@ -30,8 +30,8 @@ body {
 }
 
 html[data-theme="dark"] {
-  --page-bg: #070d16;
-  --page-text: #dbe7f3;
+  --page-bg: #101a2b;
+  --page-text: #e6eef8;
 }
 
 html[data-theme="dark"] .text-slate-800 {
