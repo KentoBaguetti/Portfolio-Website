@@ -1,6 +1,7 @@
 import styles from "../styles/Navbar.module.css";
 import { useState, useRef, useEffect, useMemo } from "react";
 import { Link } from "react-scroll";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function Navbar() {
   const [activeButton, setActiveButton] = useState("Home");
@@ -8,8 +9,25 @@ export default function Navbar() {
   const navRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
   const isScrollingRef = useRef(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const tabs = useMemo(() => ["Home", "About", "Experience", "Projects"], []);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const nextTheme =
+      savedTheme === "light" || savedTheme === "dark"
+        ? savedTheme
+        : systemPrefersDark
+          ? "dark"
+          : "light";
+
+    setTheme(nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  }, []);
 
   useEffect(() => {
     const updateIndicator = () => {
@@ -66,6 +84,13 @@ export default function Navbar() {
     setTimeout(() => {
       isScrollingRef.current = false;
     }, 800);
+  };
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
   };
 
   return (
@@ -134,6 +159,14 @@ export default function Navbar() {
           </button>
         </Link>
       </div>
+      <button
+        type="button"
+        className={styles.theme_toggle}
+        onClick={toggleTheme}
+        aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      >
+        {theme === "light" ? <MdDarkMode size={22} /> : <MdLightMode size={22} />}
+      </button>
     </div>
   );
 }

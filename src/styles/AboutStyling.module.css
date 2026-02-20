@@ -2,6 +2,10 @@
   background: #f5feff;
 }
 
+:global(html[data-theme="dark"]) .main_container {
+  background: #0a1321;
+}
+
 .ol_styles ol {
   list-style-type: circle;
   text-align: left;
