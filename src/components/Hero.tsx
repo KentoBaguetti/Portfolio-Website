@@ -1,4 +1,4 @@
-import kenPfp from "../assets/ken_pizza_pfp.webp";
+import kenPfp from "../assets/kentaroPhoto.jpeg";
 import { motion } from "motion/react";
 import styles from "../styles/HeroStyling.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";

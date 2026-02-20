@@ -20,3 +20,7 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5FEFF", endColorstr="#A1EFFF", GradientType=0);
 }
+
+:global(html[data-theme="dark"]) .footer_background {
+  background: linear-gradient(180deg, #0f0f0f 0%, #0f0f0f 75%, #0f0f0f 100%);
+}

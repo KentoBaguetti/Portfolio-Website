@@ -8,6 +8,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --page-bg: #a1efff;
+  --page-text: #0f172a;
 }
 
 html,
@@ -22,7 +24,26 @@ body {
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: #a1efff;
+  background: var(--page-bg);
+  color: var(--page-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html[data-theme="dark"] {
+  --page-bg: #101a2b;
+  --page-text: #e6eef8;
+}
+
+html[data-theme="dark"] .text-slate-800 {
+  color: #e5eef8 !important;
+}
+
+html[data-theme="dark"] .text-slate-700 {
+  color: #cfdced !important;
+}
+
+html[data-theme="dark"] .text-slate-600 {
+  color: #9fb2c9 !important;
 }
 
 /* Custom utility class for hiding scrollbars */

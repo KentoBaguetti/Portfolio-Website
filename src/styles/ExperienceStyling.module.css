@@ -2,6 +2,10 @@
   background: #f5feff;
 }
 
+:global(html[data-theme="dark"]) .main_container {
+  background: #0f0f0f;
+}
+
 .role {
   font-weight: 600;
 }
@@ -45,6 +49,12 @@
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+:global(html[data-theme="dark"]) .tech_item {
+  border: 1px solid rgba(138, 205, 255, 0.75);
+  background: transparent;
+  -webkit-text-fill-color: #c7ecff;
 }
 
 @media (min-width: 768px) {
