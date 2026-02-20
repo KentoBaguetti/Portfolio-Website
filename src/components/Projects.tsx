@@ -146,16 +146,16 @@ const ProjectItem = ({
             rotateX,
             transformStyle: "preserve-3d",
           }}
-          className="relative h-full w-full rounded-2xl bg-white/40 p-6 md:p-8 shadow-lg border border-white/60 backdrop-blur-lg transition-all duration-300 group-hover:shadow-custom group-hover:bg-white/60 group-hover:border-tron-blue/50"
+          className={`${styles.project_card} relative h-full w-full rounded-2xl p-6 md:p-8 transition-all duration-300`}
         >
           <div style={{ transform: "translateZ(75px)" }} className="flex flex-col gap-4">
-            <div className="flex justify-between items-center border-b border-black/10 pb-4">
+            <div className={`${styles.project_header} flex justify-between items-center pb-4`}>
               <h3 className={`text-xl md:text-3xl font-bold text-left font-english ${styles.title}`}>
                 {name}
               </h3>
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 15 }}
-                className="text-slate-700 group-hover:text-tron-blue transition-colors"
+                className={`${styles.project_icon} transition-colors`}
               >
                 <FaGithub size={28} />
               </motion.div>
@@ -163,17 +163,14 @@ const ProjectItem = ({
             
             <p
               style={{ transform: "translateZ(50px)" }}
-              className="text-left text-slate-700 text-sm md:text-base leading-relaxed font-medium"
+              className={`${styles.project_description} text-left text-sm md:text-base leading-relaxed font-medium`}
             >
               {basicDescription}
             </p>
 
-            <div className="flex flex-wrap gap-2 mt-2 pt-4 border-t border-black/5">
+            <div className={`${styles.tech_row} flex flex-wrap gap-2 mt-2 pt-4`}>
               {technologies?.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 text-xs font-bold text-slate-600 bg-white/50 rounded-full border border-tron-blue/30 shadow-sm group-hover:border-tron-blue/60 transition-colors"
-                >
+                <span key={tech} className={styles.tech_item}>
                   {tech}
                 </span>
               ))}

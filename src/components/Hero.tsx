@@ -51,7 +51,7 @@ export default function Hero() {
             </motion.button>
           </div>
         </motion.div>
-        <div className="flex-shrink-0">
+        <div className="hidden md:flex flex-shrink-0">
           <motion.img
             variants={{
               hidden: { opacity: 0, y: -200 },
