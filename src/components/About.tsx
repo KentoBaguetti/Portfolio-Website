@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "../styles/AboutStyling.module.css";
 import snowPhoto from "../assets/snow.jpeg"
+import footballImage from "../assets/football.jpeg"
 
 // TODO: split the motion div into two divs: one for the name+typewriter, one for the text content
 //
@@ -22,11 +23,17 @@ export default function About() {
           viewport={{ once: false }}
           transition={{ duration: 0.5 }}
         >
-          <motion.img
-            src={snowPhoto}
-            alt="Snow photo"
-            className="rounded-3xl min-w-80"
-          />
+          <div className={styles.photo_stack}>
+            <div className={`${styles.polaroid} ${styles.photo_one}`}>
+              <img src={footballImage} alt="Snow photo 1" className={styles.photo_image} />
+            </div>
+            <div className={`${styles.polaroid} ${styles.photo_two}`}>
+              <img src={snowPhoto} alt="Snow photo 2" className={styles.photo_image} />
+            </div>
+            {/* <div className={`${styles.polaroid} ${styles.photo_three}`}>
+              <img src={snowPhoto} alt="Snow photo 3" className={styles.photo_image} />
+            </div> */}
+          </div>
         </motion.div>
         <motion.div
           className={`flex flex-col gap-6 w-full md:max-w-2/3 text-center md:text-left ${styles.ol_styles}`}
