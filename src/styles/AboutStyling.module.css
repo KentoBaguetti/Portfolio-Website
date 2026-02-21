@@ -41,6 +41,19 @@
   margin-bottom: 2px;
 }
 
+:global(html[data-theme="dark"]) .subheaders {
+  font-weight: 600;
+  background: -webkit-linear-gradient(#c0bfce, #04b5d9);
+  background: linear-gradient(#c0bfce, #04b5d9);  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 2px;
+
+}
+
 @media (min-width: 768px) {
   .subheaders {
     font-size: x-large;
