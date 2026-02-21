@@ -9,11 +9,11 @@ import footballImage from "../assets/football.jpeg"
 export default function About() {
   return (
     <div
-      className={`flex w-full justify-center items-center py-8 md:py-16 lg:pl-60 ${styles.main_container}`}
+      className={`flex w-full justify-center items-center py-8 md:py-16 xl:pl-60 ${styles.main_container}`}
     >
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen gap-8 md:gap-8 w-full max-w-6xl px-4 md:px-8">
+      <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center min-h-screen gap-8 md:gap-8 w-full max-w-6xl px-4 md:px-8">
         <motion.div
-          className={`hidden md:flex text-center font-japanese flex-col justify-center items-center w-full lg:w-[22rem] lg:flex-shrink-0 ${styles.photo_column}`}
+          className={`hidden md:flex text-center font-japanese flex-col justify-center items-center w-full xl:w-[22rem] xl:flex-shrink-0 ${styles.photo_column}`}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </motion.div>
         <motion.div
-          className={`flex flex-col gap-6 w-full lg:flex-1 lg:min-w-0 text-center md:text-left ${styles.ol_styles}`}
+          className={`flex flex-col gap-6 w-full xl:flex-1 xl:min-w-0 text-center md:text-left ${styles.ol_styles}`}
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },
