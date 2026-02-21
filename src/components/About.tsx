@@ -11,9 +11,9 @@ export default function About() {
     <div
       className={`flex w-full justify-center items-center py-8 md:py-16 lg:pl-60 ${styles.main_container}`}
     >
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen gap-8 md:gap-8 w-full max-w-6xl px-4 md:px-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen gap-8 md:gap-8 w-full max-w-6xl px-4 md:px-8">
         <motion.div
-          className={`hidden md:flex text-center font-japanese flex-col justify-center items-center w-full md:w-[22rem] md:flex-shrink-0 ${styles.photo_column}`}
+          className={`hidden md:flex text-center font-japanese flex-col justify-center items-center w-full lg:w-[22rem] lg:flex-shrink-0 ${styles.photo_column}`}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </motion.div>
         <motion.div
-          className={`flex flex-col gap-6 w-full md:flex-1 md:min-w-0 text-center md:text-left ${styles.ol_styles}`}
+          className={`flex flex-col gap-6 w-full lg:flex-1 lg:min-w-0 text-center md:text-left ${styles.ol_styles}`}
           variants={{
             hidden: { opacity: 0, y: 100 },
             visible: { opacity: 1, y: 0 },

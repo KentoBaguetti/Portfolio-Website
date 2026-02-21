@@ -78,7 +78,7 @@
   box-shadow: 0 14px 28px rgba(2, 6, 23, 0.55);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .about_section {
     margin-left: auto;
     margin-right: 0;
