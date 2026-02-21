@@ -31,3 +31,15 @@
 :global(html[data-theme="dark"]) .gradientBg {
   background: linear-gradient(0deg, #0f0f0f 0%, #0f0f0f 65%, #0f0f0f 100%);
 }
+
+:global(html[data-theme="dark"]) .nameHeader {
+  font-weight: 400;
+  background: -webkit-linear-gradient(#c0bfce, #04b5d9);
+  background: linear-gradient(#c0bfce, #04b5d9);  
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 2px;
+}
