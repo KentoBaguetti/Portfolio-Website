@@ -20,8 +20,8 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-col justify-center items-start">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl">Hey, I'm</h3>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl">Kentaro</h1>
+            <h3 className={`text-3xl md:text-4xl lg:text-5xl ${styles.nameHeader}`}>Hey, I'm</h3>
+            <h1 className={`text-4xl md:text-5xl lg:text-7xl ${styles.nameHeader}`}>Kentaro</h1>
             <p className="text-base md:text-lg max-w-sm md:max-w-md">
               I'm a third year CS student at the University of British Columbia
               and an aspiring software engineer interested in building scalable

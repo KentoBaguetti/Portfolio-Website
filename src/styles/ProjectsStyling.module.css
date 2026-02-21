@@ -18,6 +18,18 @@
   text-align: center;
 }
 
+:global(html[data-theme="dark"]) .header {
+  font-size: xx-large;
+  font-weight: 700;
+  text-align: left;
+  background: -webkit-linear-gradient(#c0bfce, #04b5d9);
+  background: linear-gradient(#c0bfce, #04b5d9);  
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
 .project_item {
   background: rgba(203, 232, 248, 0.62);
   border-radius: 16px;
@@ -130,6 +142,17 @@
   text-align: left;
   background: -webkit-linear-gradient(#020024, #04b5d9);
   background: linear-gradient(#020024, #04b5d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+:global(html[data-theme="dark"]) .title {
+  font-weight: 700;
+  text-align: left;
+  background: -webkit-linear-gradient(#c0bfce, #04b5d9);
+  background: linear-gradient(#c0bfce, #04b5d9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
