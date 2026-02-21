@@ -26,13 +26,12 @@ export default function About() {
           <div className={styles.photo_stack}>
             <div className={`${styles.polaroid} ${styles.photo_one}`}>
               <img src={footballImage} alt="Snow photo 1" className={styles.photo_image} />
+              <p className={styles.photo_caption}>Footy</p>
             </div>
             <div className={`${styles.polaroid} ${styles.photo_two}`}>
               <img src={snowPhoto} alt="Snow photo 2" className={styles.photo_image} />
+              <p className={styles.photo_caption}>Cypress, BC</p>
             </div>
-            {/* <div className={`${styles.polaroid} ${styles.photo_three}`}>
-              <img src={snowPhoto} alt="Snow photo 3" className={styles.photo_image} />
-            </div> */}
           </div>
         </motion.div>
         <motion.div

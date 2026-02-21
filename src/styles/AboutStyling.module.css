@@ -45,6 +45,16 @@
   border-radius: 2px;
 }
 
+.photo_caption {
+  margin: 0.65rem 0 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: "Shadows Into Light", cursive;
+  color: #1e293b;
+  letter-spacing: 0.01em;
+}
+
 .photo_one {
   top: 1.2rem;
   left: 0rem;
@@ -55,17 +65,9 @@
 .photo_two {
   top: 0.8rem;
   left: 12.0rem;
-  transform: rotate(3deg);
+  transform: rotate(5deg);
   z-index: 2;
 }
-
-/* .photo_three {
-  top: 1.3rem;
-  left: 20rem;
-  transform: rotate(11deg);
-  z-index: 3;
-} */
-
 :global(html[data-theme="dark"]) .polaroid {
   background: #f1f5f9;
   border-color: rgba(148, 163, 184, 0.6);
@@ -104,10 +106,6 @@
     left: 8rem;
   }
 
-  /* .photo_three {
-    top: 1.4rem;
-    left: 7.7rem;
-  } */
 }
 
 .subheaders {

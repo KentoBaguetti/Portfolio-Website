@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        english: ["M PlUS 1p", "serif"],
+        english: ["M PlUS 1p", "Shadows Into Light", "serif"],
         japanese: ["Rampart One", "serif"],
       },
       boxShadow: {
