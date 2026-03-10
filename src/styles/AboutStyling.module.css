@@ -23,12 +23,17 @@
 
 .photo_stack {
   position: relative;
-  width: 25.5rem;
+  width: 100%;
+  max-width: 28.5rem;
   height: 27rem;
+  margin: 0 auto;
 }
 
 .photo_column {
   align-self: flex-start;
+  width: 100%;
+  max-width: 28.5rem;
+  flex: 0 0 auto;
 }
 
 .polaroid {
@@ -61,14 +66,14 @@
 
 .photo_one {
   top: 1.2rem;
-  left: 0rem;
+  left: 0;
   transform: rotate(-8deg);
   z-index: 1;
 }
 
 .photo_two {
   top: 0.8rem;
-  left: 12.0rem;
+  right: 0;
   transform: rotate(5deg);
   z-index: 2;
 }
@@ -111,7 +116,7 @@
 
   .photo_two {
     top: 0.2rem;
-    left: 6.7rem;
+    right: 0;
   }
 
 }

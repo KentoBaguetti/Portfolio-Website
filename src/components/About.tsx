@@ -13,7 +13,7 @@ export default function About() {
     >
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen gap-8 md:gap-8 w-full max-w-6xl px-4 md:px-8">
         <motion.div
-          className={`hidden md:flex text-center font-japanese flex-col justify-center items-center w-full lg:w-[22rem] lg:flex-shrink-0 ${styles.photo_column}`}
+          className={`hidden lg:flex text-center font-japanese flex-col justify-center items-center w-full lg:flex-shrink-0 ${styles.photo_column}`}
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
