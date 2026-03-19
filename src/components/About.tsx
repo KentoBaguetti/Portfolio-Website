@@ -50,6 +50,7 @@ export default function About() {
             <ol>
               <li>BSc. Computer Science Student @ UBC</li>
               <li>Software Engineering Intern @ Microsoft</li>
+              <li>Incoming SWE Intern @ Apple</li>
               <li>Prev Software Engineering Intern @ Wello</li>
             </ol>
           </div>

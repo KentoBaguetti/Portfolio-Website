@@ -7,6 +7,7 @@ import microsoftLogo from "../assets/microsoft_logo.png";
 import welloLogo from "../assets/wello_logo.png";
 import cuhkLogo from "../assets/cuhk_logo.jpg";
 import consignLogo from "../assets/consign_ai_logo.jpeg";
+import appleLogo from "../assets/Apple-Logo.png";
 
 interface ExperienceData {
   id: string;
@@ -19,6 +20,15 @@ interface ExperienceData {
 }
 
 const experiences: ExperienceData[] = [
+  {
+    id: "apple",
+    role: "Incoming Software Engineering Intern",
+    company: "Apple",
+    url: "https://www.apple.com/",
+    logo: appleLogo,
+    description: "Workflow reliability team",
+    technologies: ["Scala", "Swift"],
+  },
   {
     id: "microsoft",
     role: "Software Engineer Intern",
