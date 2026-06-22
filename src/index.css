@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Rampart One", serif;
+  font-family: "Inter", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --page-bg: #a1efff;
-  --page-text: #0f172a;
+  --page-bg: #0a0a0a;
+  --page-text: #f5f5f7;
 }
 
 html,
@@ -19,7 +19,7 @@ body,
 }
 
 body {
-  font-family: "M PlUS 1p", "Rampart One", "Shadows Into One", serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -29,21 +29,9 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-html[data-theme="dark"] {
-  --page-bg: #101a2b;
-  --page-text: #e6eef8;
-}
-
-html[data-theme="dark"] .text-slate-800 {
-  color: #e5eef8 !important;
-}
-
-html[data-theme="dark"] .text-slate-700 {
-  color: #cfdced !important;
-}
-
-html[data-theme="dark"] .text-slate-600 {
-  color: #9fb2c9 !important;
+html[data-theme="light"] {
+  --page-bg: #f5f5f7;
+  --page-text: #0a0a0a;
 }
 
 /* Custom utility class for hiding scrollbars */
