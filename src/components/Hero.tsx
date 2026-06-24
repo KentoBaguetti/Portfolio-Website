@@ -50,9 +50,9 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 pt-10 pb-24 flex flex-col md:flex-row items-center gap-14">
         <motion.div
           className="flex-1"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, x: -16 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className={styles.eyebrowRow}>
             <TategakiLabel text="自己紹介" />
@@ -93,7 +93,7 @@ export default function Hero() {
           className="flex-shrink-0 w-[280px] md:w-[320px]"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
         >
           <img
             src={kenPhoto}
