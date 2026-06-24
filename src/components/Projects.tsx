@@ -60,10 +60,10 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.projectCard} block`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.45, delay: index * 0.06 }}
+              transition={{ duration: 0.4, delay: index * 0.07, ease: "easeOut" }}
             >
               <div className="flex items-center justify-between mb-3">
                 <h3 className={styles.cardTitle} style={{ marginBottom: 0 }}>
