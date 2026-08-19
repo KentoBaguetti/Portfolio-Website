@@ -12,7 +12,7 @@ const experiences: ExperienceData[] = [
         role: 'Software Engineering Intern',
         company: 'Apple',
         description: 'Workflow reliability team',
-        technologies: ['Swift', 'Microservices'],
+        technologies: ['Swift'],
     },
     {
         id: 'microsoft',
