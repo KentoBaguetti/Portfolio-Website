@@ -1,19 +1,11 @@
-import Hero from "./components/Hero";
-import Interests from "./components/Interests";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Home from './components/Home';
 
 function App() {
-  return (
-    <div className="w-full overflow-x-hidden">
-      <Hero />
-      <Interests />
-      <Experience />
-      <Projects />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Home />
+        </div>
+    );
 }
 
 export default App;
