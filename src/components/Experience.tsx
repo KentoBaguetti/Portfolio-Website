@@ -8,6 +8,13 @@ interface ExperienceData {
 
 const experiences: ExperienceData[] = [
     {
+        id: 'databricks',
+        role: 'Software Engineering Intern',
+        company: 'Databricks',
+        description: 'Incoming Winter 2027, Mountain View',
+        technologies: ['Code'],
+    },
+    {
         id: 'apple',
         role: 'Software Engineering Intern',
         company: 'Apple',
