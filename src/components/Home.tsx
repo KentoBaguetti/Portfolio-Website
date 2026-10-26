@@ -41,8 +41,8 @@ export default function Home() {
                     </div>
 
                     <div className="mt-3 max-w-2xl leading-relaxed">
-                        I am working as a Software Engineering Intern at Apple
-                        and previously interned at Microsoft and various other
+                        I am an incoming SWE intern at Databricks
+                        and previously interned at Apple and Microsoft as well as various other
                         startups, in fintech and automation.
                     </div>
                     <div className="mt-3 max-w-2xl leading-relaxed">
@@ -57,11 +57,16 @@ export default function Home() {
                 <section className="mt-16">
                     <h2 className="mb-3 text-2xl font-semibold">Education</h2>
                     <div className="leading-relaxed">
-                        <div className="flex justify-between">
-                            <span>University of British Columbia</span>
-                            <span>2024-2028 | Vancouver, CA</span>
+                        <div className="flex justify-between gap-6">
+                            <div>
+                                <div>University of British Columbia</div>
+                                <div>BSc. Computer Science</div>
+                            </div>
+                            <div className="shrink-0 text-right">
+                                <div>2024-2028</div>
+                                <div>Vancouver, CA</div>
+                            </div>
                         </div>
-                        <div>BSc. Computer Science</div>
                     </div>
                 </section>
 

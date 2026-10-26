@@ -2,8 +2,9 @@ interface ExperienceData {
     id: string;
     role: string;
     company: string;
-    description: string;
     technologies: string[];
+    dateRange?: string;
+    location?: string;
 }
 
 const experiences: ExperienceData[] = [
@@ -11,46 +12,49 @@ const experiences: ExperienceData[] = [
         id: 'databricks',
         role: 'Software Engineering Intern',
         company: 'Databricks',
-        description: 'Incoming Winter 2027, Mountain View',
         technologies: [],
+        dateRange: 'Winter 2027',
+        location: 'Mountain View, CA',
     },
     {
         id: 'apple',
         role: 'Software Engineering Intern',
         company: 'Apple',
-        description: 'Workflow reliability team',
         technologies: ['Swift'],
+        dateRange: 'May 2026 - September 2026',
+        location: 'Vancouver, British Columbia',
     },
     {
         id: 'microsoft',
         role: 'Software Engineering Intern',
         company: 'Microsoft',
-        description: 'XGTG team @ The Coalition',
         technologies: ['C++', 'Unreal Engine', 'C#', '.NET'],
+        dateRange: 'January 2026 - April 2026',
+        location: 'Vancouver, British Columbia',
     },
     {
         id: 'wello',
         role: 'Backend Engineering Intern',
         company: 'Wello Wallet',
-        description:
-            'Backend engineering for Fintech applications. Engineered an OAuth2 server in Golang, migrated and refactored legacy Java code.',
         technologies: ['Go', 'Java', 'SpringBoot', 'Redis'],
+        dateRange: 'September 2025 - December 2025',
+        location: 'Vancouver, British Columbia',
     },
     {
         id: 'cuhk',
         role: 'Software Developer',
         company: 'CUHK Business School',
-        description:
-            'Developed an interactive, real-time multiplayer game platform for economics students to better understand Game Theory.',
         technologies: ['TypeScript', 'React.js', 'Socket.IO', 'Express'],
+        dateRange: 'June 2025 - August 2025',
+        location: 'Vancouver, British Columbia',
     },
     {
         id: 'consign',
         role: 'Software Engineering Intern',
         company: 'Consign AI',
-        description:
-            'Developed AI Automation scripts and worked on AI Translation Applications. Developed a secure frontend dashboard for clients.',
         technologies: ['JavaScript', 'Python', 'Puppeteer', 'MongoDB'],
+        dateRange: 'February 2024 - March 2025',
+        location: 'Montreal, Quebec',
     },
 ];
 
@@ -63,20 +67,31 @@ export default function Experience() {
                         key={exp.id}
                         className="w-full border-b pb-6 last:border-b-0"
                     >
-                        <div className="flex items-center justify-between">
-                            <div className="text-lg">{exp.company}</div>
-                            <div className="text-right">{exp.role}</div>
-                        </div>
+                        <div className="flex justify-between gap-6">
+                            <div>
+                                <div className="text-lg">{exp.company}</div>
+                                <div>{exp.role}</div>
 
-                        <div className="mt-1 flex flex-wrap text-sm">
-                            {exp.technologies.map((tech, index) => (
-                                <span key={tech}>
-                                    {index > 0 && (
-                                        <span className="mx-2">,</span>
-                                    )}
-                                    {tech}
-                                </span>
-                            ))}
+                                {exp.technologies.length > 0 && (
+                                    <div className="mt-1 flex flex-wrap text-sm">
+                                        {exp.technologies.map((tech, index) => (
+                                            <span key={tech}>
+                                                {index > 0 && (
+                                                    <span className="mx-2">,</span>
+                                                )}
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {(exp.dateRange || exp.location) && (
+                                <div className="shrink-0 text-right">
+                                    {exp.dateRange && <div>{exp.dateRange}</div>}
+                                    {exp.location && <div>{exp.location}</div>}
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
