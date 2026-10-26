@@ -12,7 +12,7 @@ const experiences: ExperienceData[] = [
         role: 'Software Engineering Intern',
         company: 'Databricks',
         description: 'Incoming Winter 2027, Mountain View',
-        technologies: ['Code'],
+        technologies: [],
     },
     {
         id: 'apple',
@@ -61,7 +61,7 @@ export default function Experience() {
                 {experiences.map((exp) => (
                     <div
                         key={exp.id}
-                        className="max-w-xl border-b pb-6 last:border-b-0"
+                        className="w-full border-b pb-6 last:border-b-0"
                     >
                         <div className="flex items-center justify-between">
                             <div className="text-lg">{exp.company}</div>
